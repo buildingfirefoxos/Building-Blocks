@@ -1,0 +1,72 @@
+/* ----------------------------------
+ * Scrolling
+ * ---------------------------------- */
+nav[data-type="scrollbar"] {
+  font-family: "MozTT", "Moz", Sans-serif;
+  position: absolute;
+  right: 0;
+  top: 0;
+ }
+
+/* Mirror */
+nav[data-type="scrollbar"] p {
+  position: absolute;
+  right: 4rem;
+  top: 30%;
+  margin: 0;
+  width: 10.5rem;
+  height: 10.5rem;
+  opacity: 0;
+  font: 200 6rem/10.5rem "MozTT", "Moz", Sans-serif;
+  color: #fff;
+  background: url(scrolling/images/ui/background.png) repeat left top;
+  pointer-events: none;
+  text-align: center;
+  transition: opacity;
+}
+
+nav[data-type="scrollbar"] ol {
+  padding: 0.3rem 0 0;
+  margin: 0;
+  border-radius: 4rem;
+  list-style: none;
+}
+
+nav[data-type="scrollbar"] li {
+  font-size: 1rem;
+  line-height: 1.35rem;
+  text-align: center;
+  text-transform: uppercase;
+  width: 4.5rem;
+}
+
+nav[data-type="scrollbar"] li a {
+  display: block;
+  color: #333;
+  width: 100%;
+  padding-left: 1.1rem;
+  text-decoration: none;
+}
+
+/* Top action icons */
+nav[data-type="scrollbar"] li .pack-icon-search,
+nav[data-type="scrollbar"] li .pack-icon-favorites {
+  width: 1.6rem;
+  height: 1.6rem;
+  font-size: 0;
+  vertical-align: middle;
+  background: transparent no-repeat 50% 50%;
+}
+
+nav[data-type="scrollbar"] li span:not([hidden]) {
+  display: inline-block;
+}
+
+nav[data-type="scrollbar"] li .pack-icon-search {
+  background-image: url(scrolling/images/icons/search.png);
+}
+
+nav[data-type="scrollbar"] li .pack-icon-favorites {
+  margin-bottom: 0.6rem;
+  background-image: url(scrolling/images/icons/favorites.png);
+}
