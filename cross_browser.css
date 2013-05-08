@@ -1,0 +1,164 @@
+/* ----------------------------------------------------------------- */
+/* This CSS file will make your Firefox OS app using Building Blocks */
+/* compatible with: ie 9, Firefox 18, Chrome 24, Safari 5.1          */
+/* By Arnau March - @rnowm                                           */
+/* ----------------------------------------------------------------- */
+
+/* Action menu */
+form[role="dialog"][data-type="action"] > header:first-child, 
+form[role="dialog"][data-type="object"] > header:first-child {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* Buttons */
+button,
+a[role="button"],
+.button {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+button.danger:active,
+a[role="button"].danger:active,
+.button.danger:active {
+  background-image: none;
+}
+
+/* Confirm */
+form[role="dialog"][data-type="confirm"] > section {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+form[role="dialog"][data-type="confirm"] menu {
+  display: inline-block;
+  width: 100%;
+}
+
+form[role="dialog"][data-type="confirm"] menu button,
+form[role="dialog"][data-type="edit"] menu button {
+  width: 48%;
+}
+
+
+/* Edit mode */
+form[role="dialog"][data-type="edit"] header menu[type="toolbar"] button {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* headers */
+section[role="region"] > header:first-child input[type="text"] {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  line-height: 3rem;
+}
+
+section[role="region"] > header:first-child menu[type="toolbar"] a,
+section[role="region"] > header:first-child menu[type="toolbar"] button {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+section[role="region"] > header:first-child menu[type="toolbar"] a:last-child, 
+section[role="region"] > header:first-child menu[type="toolbar"] button:last-child {
+  background: url(../style/headers/images/ui/separator.png) no-repeat left center;
+  background-size: auto 3.4rem;
+}
+
+section[role="region"] > header:first-child form button[type="reset"] {
+  background: url(../style/headers/images/icons/clear.png) no-repeat center center;
+  background-size: 1.7rem auto;
+}
+
+section[role="region"] > header:first-child > button,
+section[role="region"] > header:first-child > a {
+  background: url(../style/headers/images/ui/separator-large.png) no-repeat 2rem center;
+  background-size: auto 4.8rem;
+}
+
+section[role="region"] > header:first-child .icon {
+  background: transparent no-repeat center center;
+  background-size: 3rem auto;
+}
+
+section[role="region"] > header:first-child > button .icon:after,
+section[role="region"] > header:first-child > a .icon:after {
+  background: #9d3d26 url(../style/headers/images/ui/negative.png) repeat-x left bottom;
+  background-size: auto 100%;
+}
+
+section[role="region"] header h2 {
+  background: url(../style/headers/images/ui/subheader.png) repeat 0 100%;
+  background-size: auto 100%;
+}
+
+/* Input areas */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="search"],
+input[type="url"],
+input[type="number"],
+textarea {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+fieldset legend {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+form[role="search"] p {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+form[role="search"] p input {
+  line-height: 3rem;
+}
+
+/* Switches */
+label input[type="checkbox"][data-type="switch"] + span {
+  background-size: 2.4rem;
+  -moz-transition: none;
+  -webkit-transition: none;
+  /*-webkit-transition: background 0.18s ease;*/
+}
+
+label input[data-type="switch"] + span:after,
+label input[data-type="switch"] + span:before {
+  -moz-transition: none;
+  -webkit-transition: none;
+  /*-webkit-transition: -webkit-transform 0.2s ease;*/
+}
+
+label input[data-type="switch"] + span:before {
+  width: 100%;
+}
+
+label input[data-type="switch"] + span:after {
+  -moz-transform: translateX(-5.4rem);
+  -webkit-transform: translateX(-5.4rem);
+}
+
+label input[data-type="switch"]:checked + span:before {
+  -moz-transform: translateX(5.4rem);
+  -webkit-transform: translateX(5.4rem);
+}
+
+label input[data-type="switch"]:checked + span:after {
+  -moz-transform: translateX(0);
+  -webkit-transform: translateX(0);
+}
+
+
+label input[type="checkbox"][data-type="switch"].uninit + span,
+label input[type="checkbox"][data-type="switch"].uninit + span:before,
+label input[type="checkbox"][data-type="switch"].uninit + span:after {
+  -moz-transform: none;
+  -webkit-transform: none;
+}
