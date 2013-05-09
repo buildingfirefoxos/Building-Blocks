@@ -1,0 +1,34 @@
+/* Feel free to add any useful code */
+html {
+	/* Set base font to 10px and define all your units in rem*/
+	font-size: 10px;
+}
+
+/* This will help you scroll just the content of your app. Eg:
+	 <header class="fixed">
+   ...
+   <section data-type="list" class="scrollable header">
+*/
+body {
+  margin: 0;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+section[role="region"] > header.fixed:first-child {
+	position: absolute;
+	width: 100%;
+}
+
+.scrollable {
+	overflow: scroll;
+	height: 100%;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.scrollable.header {
+	border-top: transparent solid 5rem;
+}
