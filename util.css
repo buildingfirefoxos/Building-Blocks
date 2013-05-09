@@ -1,20 +1,19 @@
 /* Feel free to add any useful code */
 html {
-	/* Set base font to 10px and define all your units in rem*/
-	font-size: 10px;
+	height: 100%;
+	font-size: 62.5%; /* Setting base font to 10px and define all your units in rem. 1rem = 10px */
 }
 
 /* This will help you scroll just the content of your app. Eg:
-	 <header class="fixed">
-   ...
-   <section data-type="list" class="scrollable header">
+  <header class="fixed">
+  ...
+  <section data-type="list" class="scrollable header">
 */
 body {
   margin: 0;
   height: 100%;
   display: block;
   overflow: hidden;
-  position: relative;
 }
 
 section[role="region"] > header.fixed:first-child {
