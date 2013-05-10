@@ -46,28 +46,34 @@ h2 { /* Subheader, Dialog title */
 p {
   font-size: 1.9rem;
   font-weight: normal;
+  line-height: 2.5rem;
 }
 
 p.large { /* Dialog body */
   font-size: 2.3rem;
   font-weight: 300;
+  line-height: 3rem;
 }
 
 p.alt { /* Body medium, Buttons */
   font-size: 1.7rem;
   font-weight: 500;
+  line-height: 2.2rem;
 }
 
 p.small { /* Status bar */
   font-size: 1.5rem;
+  line-height: 2rem;
 }
 
-p.mini { /* Fine print, Status bar */
+p.mini { /* Fine print */
   font-size: 1.4rem;
+  line-height: 1.9rem;
 }
 
 p.micro { /* App icon label */
   font-size: 1.3rem;
+  line-height: 1.8rem;
 }
 
 ul, ol, li {
