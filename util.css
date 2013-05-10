@@ -4,34 +4,6 @@ html {
 	font-size: 62.5%; /* Setting base font to 10px and define all your units in rem. 1rem = 10px */
 }
 
-/* This will help you scroll just the content of your app. Eg:
-  <header class="fixed">
-  ...
-  <section data-type="list" class="scrollable header">
-*/
-body {
-  margin: 0;
-  height: 100%;
-  display: block;
-  overflow: hidden;
-}
-
-section[role="region"] > header.fixed:first-child {
-	position: absolute;
-	width: 100%;
-}
-
-.scrollable {
-	overflow: scroll;
-	height: 100%;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-.scrollable.header {
-	border-top: transparent solid 5rem;
-}
-
 /* Fonts */
 h1 { /* Main header */
 	font-size: 2.5rem;
@@ -76,4 +48,31 @@ ul, ol, li {
   padding: 0;
   font-size: 1.9rem;
 	font-weight: normal;
+}
+
+/* This will help you scroll just the content of your app. Eg:
+  	<header class="fixed">...
+  	<section data-type="list" class="scrollable header">
+*/
+body {
+  margin: 0;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+section[role="region"] > header.fixed:first-child {
+	position: absolute;
+	width: 100%;
+}
+
+.scrollable {
+	overflow: scroll;
+	height: 100%;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.scrollable.header {
+	border-top: transparent solid 5rem;
 }
