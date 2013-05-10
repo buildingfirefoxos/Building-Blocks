@@ -1,58 +1,13 @@
 /* Feel free to add any useful code */
 html {
-	height: 100%;
-	font-size: 62.5%; /* Setting base font to 10px and define all your units in rem. 1rem = 10px */
-}
-
-/* Fonts */
-h1 { /* Main header */
-	font-size: 2.5rem;
-	font-weight: normal;
-}
-
-h2 { /* Subheader, Dialog title */
-	font-size: 1.6rem;
-	font-weight: normal;
-}
-
-p {
-	font-size: 1.9rem;
-	font-weight: normal;
-}
-
-p.large { /* Dialog body */
-	font-size: 2.3rem;
-	font-weight: 300;
-}
-
-p.alt { /* Body medium, Buttons */
-	font-size: 1.7rem;
-	font-weight: 500;
-}
-
-p.small { /* Status bar */
-	font-size: 1.5rem;
-}
-
-p.mini { /* Fine print, Status bar */
-	font-size: 1.4rem;
-}
-
-p.micro { /* App icon label */
-	font-size: 1.3rem;
-}
-
-ul, ol, li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  font-size: 1.9rem;
-	font-weight: normal;
+  height: 100%;
+  font-size: 62.5%; /* Setting base font to 10px and define all your units in rem. 1rem = 10px */
 }
 
 /* This will help you scroll just the content of your app. Eg:
-  	<header class="fixed">...
-  	<section data-type="list" class="scrollable header">
+  <header class="fixed">
+  ...
+  <section data-type="list" class="scrollable header">
 */
 body {
   margin: 0;
@@ -62,17 +17,63 @@ body {
 }
 
 section[role="region"] > header.fixed:first-child {
-	position: absolute;
-	width: 100%;
+  position: absolute;
+  width: 100%;
 }
 
 .scrollable {
-	overflow: scroll;
-	height: 100%;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+  overflow: scroll;
+  height: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .scrollable.header {
-	border-top: transparent solid 5rem;
+  border-top: transparent solid 5rem;
+}
+
+/* Fonts */
+h1 { /* Main header */
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+h2 { /* Subheader, Dialog title */
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+p {
+  font-size: 1.9rem;
+  font-weight: normal;
+}
+
+p.large { /* Dialog body */
+  font-size: 2.3rem;
+  font-weight: 300;
+}
+
+p.alt { /* Body medium, Buttons */
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+p.small { /* Status bar */
+  font-size: 1.5rem;
+}
+
+p.mini { /* Fine print, Status bar */
+  font-size: 1.4rem;
+}
+
+p.micro { /* App icon label */
+  font-size: 1.3rem;
+}
+
+ul, ol, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.9rem;
+  font-weight: normal;
 }
