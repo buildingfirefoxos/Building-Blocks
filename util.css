@@ -31,3 +31,49 @@ section[role="region"] > header.fixed:first-child {
 .scrollable.header {
 	border-top: transparent solid 5rem;
 }
+
+/* Fonts */
+h1 { /* Main header */
+	font-size: 2.5rem;
+	font-weight: normal;
+}
+
+h2 { /* Subheader, Dialog title */
+	font-size: 1.6rem;
+	font-weight: normal;
+}
+
+p {
+	font-size: 1.9rem;
+	font-weight: normal;
+}
+
+p.large { /* Dialog body */
+	font-size: 2.3rem;
+	font-weight: 300;
+}
+
+p.alt { /* Body medium, Buttons */
+	font-size: 1.7rem;
+	font-weight: 500;
+}
+
+p.small { /* Status bar */
+	font-size: 1.5rem;
+}
+
+p.mini { /* Fine print, Status bar */
+	font-size: 1.4rem;
+}
+
+p.micro { /* App icon label */
+	font-size: 1.3rem;
+}
+
+ul, ol, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.9rem;
+	font-weight: normal;
+}
