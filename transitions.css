@@ -1,0 +1,252 @@
+/* Task switching */
+@keyframes taskCurrentZoomOut {
+  0%   { transform: scale(1.0); }
+  100% { transform: scale(0.8); }
+}
+
+@keyframes taskCurrentZoomIn {
+  0%   { transform: scale(0.8); }
+  100% { transform: scale(1.0); }
+}
+
+@keyframes taskCurrentToLeft {
+  0%   { transform: scale(0.8) translateX(0);
+         z-index: 12; }
+  100% { transform: scale(0.6) translateX(-105%);
+         z-index: 10; }
+}
+
+@keyframes taskLeftOut {
+  0%   { transform: scale(0.6) translateX(-105%); 
+         z-index: 10; }
+  100% { transform: scale(0.6) translateX(-133%); 
+         z-index: 8; }
+}
+
+@keyframes taskRightZoomOut {
+  0%   { transform: scale(0.6) translateX(133%); }
+  100% { transform: scale(0.6) translateX(105%); }
+}
+
+@keyframes taskRightToCurrent {
+  0%   { transform: scale(0.6) translateX(105%); 
+         z-index: 10; }
+  100% { transform: scale(0.8) translateX(0);    
+         z-index: 12; }
+}
+
+
+@keyframes taskRightZoomIn {
+  0%   { transform: scale(0.6) translateX(105%); 
+         z-index: 10; }
+  100% { transform: scale(1) translateX(0);    
+         z-index: 12; }
+}
+
+@keyframes taskInFromLeft {
+  0%   { transform: scale(0.6) translateX(-105%); }
+  100% { transform: scale(1.0) translateX(-105%); }
+}
+
+@keyframes taskRightApp {
+  0%   { transform: scale(0.6) translateX(140%); }
+  100% { transform: scale(0.6) translateX(105%); }
+}
+
+@keyframes taskLeftApp {
+  0%   { transform: scale(0.6) translateX(-140%); }
+  100% { transform: scale(0.6) translateX(-105%); }
+}
+
+@keyframes taskLeftToCurrent {
+  0%   { transform: scale(0.6) translateX(-105%); 
+         z-index: 10; }
+  100% { transform: scale(0.8) translateX(0);    
+         z-index: 12; }
+}
+
+@keyframes taskDelete {
+  0%   { transform: scale(0.8) translateY(0);     
+         z-index: 12; }
+  100% { transform: scale(0.8) translateY(-133%);    
+         z-index: 14; }
+}
+
+
+/* Overlay */
+@keyframes hideOverlay {
+  0%   { background-color: rgba(0,0,0,0.7); }
+  100% { background-color: rgba(0,0,0,0); }
+}
+
+@keyframes showOverlay {
+  0%   { background-color: rgba(0,0,0,0); }
+  100% { background-color: rgba(0,0,0,0.7); }
+}
+
+@keyframes showCallOverlay {
+  0%   { background-color: rgba(0,0,0,0.45); }
+  100% { background-color: rgba(0,0,0,0.7); }
+}
+
+
+/* Open/close apps */
+@keyframes openApp {
+  0%   { transform: scale(0.1);
+       opacity: 0; }
+  100% { transform: scale(1.0);
+       opacity: 1; }
+}
+
+@keyframes openAppIcons {
+  0%   { transform: scale(1.0); }
+  100% { transform: scale(1.8); }
+}
+
+@keyframes closeApp {
+  0%   { transform: scale(1.0);
+       opacity: 1; }
+  100% { transform: scale(0.1);
+       opacity: 0; }
+}
+
+@keyframes closeAppIcons {
+  0%   { transform: scale(1.8); }
+  100% { transform: scale(1.0); }
+}
+
+
+/* App invokes app */
+@keyframes invokingApp {
+  0%   { transform: scale(1.0); }
+  50%  { transform: scale(0.8) translateX(0);
+         z-index: 12; }
+  100% { transform: scale(0.6) translateX(105%);
+         z-index: 10; }
+}
+
+@keyframes invokedApp {
+  0%   { transform: scale(0.6) translateX(-133%); }
+  50%  { transform: scale(0.6) translateX(-105%); 
+         z-index: 10; }
+  100% { transform: scale(1.0) translateX(0);    
+         z-index: 12; }
+}
+
+/*  Modals */
+@keyframes appUp {
+  0%   { transform: translateY(100%); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes appDown {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(100%); }
+}
+
+/* Go deeper */
+@keyframes rightToCurrent {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+@keyframes currentToLeft {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+@keyframes currentToRight {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
+@keyframes leftToCurrent {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+@keyframes headerCurrentToLeft {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-20%); }
+}
+@keyframes headerLeftToCurrent {
+  0%   { transform: translateX(-20%); }
+  100% { transform: translateX(0); }
+}
+
+/* Make call */
+@keyframes moveLeftOut {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes moveLeftIn {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes moveRightOut {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes moveRightIn {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes callNameDown {
+  0%   { transform: translateY(-10rem);
+       opacity: 0; }
+  100% { transform: translateY(0);
+       opacity: 1; }
+}
+
+@keyframes callNameUp {
+  0%   { transform: translateY(0);
+       opacity: 1; }
+  100% { transform: translateY(-10rem);
+       opacity: 0; }
+}
+
+@keyframes callPadUp {
+  0%   { transform: translateY(16.2rem);
+       opacity: 0; }
+  100% { transform: translateY(0);
+       opacity: 1; }
+}
+
+@keyframes callPadDown {
+  0%   { transform: translateY(0);
+       opacity: 1; }
+  100% { transform: translateY(16.2rem);
+       opacity: 0; }
+}
+
+@keyframes callAnswerUp {
+  0%   { transform: translateY(6.5rem);
+       opacity: 0; }
+  100% { transform: translateY(0);
+       opacity: 1; }
+}
+
+@keyframes callAnswerDown {
+  0%   { transform: translateY(0);
+       opacity: 1; }
+  100% { transform: translateY(6.5rem);
+       opacity: 0; }
+}
+
+@keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-webkit-keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-webkit-keyframes fadeOut {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}

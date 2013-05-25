@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Building blocks demo</title>
+  <!-- Building blocks -->
+  <link rel="stylesheet" href="style/action_menu.css">
+  <link rel="stylesheet" href="style/buttons.css">
+  <link rel="stylesheet" href="style/confirm.css">
+  <link rel="stylesheet" href="style/edit_mode.css">
+  <link rel="stylesheet" href="style/headers.css">
+  <link rel="stylesheet" href="style/input_areas.css">
+  <!--link rel="stylesheet" href="style/responsive.css"-->
+  <link rel="stylesheet" href="style/status.css">
+  <link rel="stylesheet" href="style/switches.css">
+  <!--link rel="stylesheet" href="style_unstable/drawer.css"-->
+  <link rel="stylesheet" href="style_unstable/lists.css">
+  <link rel="stylesheet" href="style_unstable/progress_activity.css">
+  <link rel="stylesheet" href="style_unstable/scrolling.css">
+  <link rel="stylesheet" href="style_unstable/seekbars.css">
+  <link rel="stylesheet" href="style_unstable/tabs.css">
+  <link rel="stylesheet" href="style_unstable/toolbars.css">
+  
+  <link rel="stylesheet" href="transitions.css">
+  
+  <!-- Util CSS: some extra tricks -->
+  <link rel="stylesheet" href="util.css">
+
+  <!-- Additional markup to make Building Blocks kind of cross browser -->
+  <link rel="stylesheet" href="cross_browser.css">
+
+  <style>
+    #index {
+      height: 100%;
+    }
+
+    iframe {
+      border: none;
+      height: 100%;
+      width: 100%;
+    }
+
+    [data-position="right"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      z-index: 15;
+      z-index: 100; /* -> drawer */
+    }
+    [data-position="right"].current {
+      animation: rightToCurrent 0.4s forwards;
+      -webkit-animation: rightToCurrent 0.4s forwards;
+    }
+    [data-position="right"].right {
+      animation: currentToRight 0.4s forwards;
+      -webkit-animation: currentToRight 0.4s forwards;
+    }
+    [data-position="back"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      opacity: 0;
+      /* z-index: 100; -> drawer */
+    }
+    [data-position="back"].fade-in {
+      z-index: 20;
+      animation: fadeIn 0.2s forwards;
+      -webkit-animation: fadeIn 0.2s forwards;
+    }
+    [data-position="back"].fade-out {
+      animation: fadeOut 0.2s forwards;
+      -webkit-animation: fadeOut 0.2s forwards;
+    }
+    [data-position="back"] iframe {
+      pointer-events: none;
+    }
+
+    [data-position="edit-mode"] {
+      position: absolute;
+      top: -5rem;
+      left: 0;
+      right: 0;
+      bottom: -7rem;
+      z-index: 0;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+    [data-position="edit-mode"].edit {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 20;
+      opacity: 1;
+    }
+    [data-position="edit-mode"] iframe {
+      pointer-events: none;
+    }
+
+    #scrolling iframe {
+      top: -5rem;
+    }
+  </style>
+</head>
+<body>
+  <section id="index">
+    <section role="region">
+      <header class="fixed">
+        <h1>Building Blocks <em>demo</em></h1>
+      </header>
+    </section>
+
+    <section class="scrollable header" data-type="list">
+      <ul>
+        <li>
+          <a id="btn-action-menu" href="#">
+            <p>Action menu</p>
+          </a>
+        </li>
+        <li>
+          <a id="btn-buttons" href="#">
+            <p>Buttons</p>
+          </a>
+        </li>
+        <li>
+          <a id="btn-edit-mode" href="#">
+            <p>Edit mode</p>
+          </a>
+        </li>
+        <li>
+          <a id="btn-headers" href="#">
+            <p>Headers</p>
+          </a>
+        </li>
+        <li>
+          <a id="btn-input-areas" href="#">
+            <p>Input areas</p>
+          </a>
+        </li>
+        <li>
+          <a id="btn-status" href="#">
+            <p>Status</p>
+          </a>
+        </li>
+        <li>
+          <a id="btn-switches" href="#">
+            <p>Switches</p>
+          </a>
+        </li>
+        <!--li>
+          <a id="btn-drawer" href="#">
+            <p>Drawer</p>
+          </a>
+        </li-->
+        <li>
+          <a id="btn-lists" href="#">
+            <p>Lists</p>
+          </a>
+        </li>
+        <li>
+          <a id="btn-progress" href="#">
+            <p>Progress and activity</p>
+          </a>
+        </li>
+        <li>
+          <a id="btn-scrolling" href="#">
+            <p>Scrolling</p>
+          </a>
+        </li>
+        <li>
+          <a id="btn-seek-bars" href="#">
+            <p>Seek bars</p>
+          </a>
+        </li>
+        <li>
+          <a id="btn-tabs" href="#">
+            <p>Tabs</p>
+          </a>
+        </li>
+        <li>
+          <a id="btn-filters" href="#">
+            <p>Filters</p>
+          </a>
+        </li>
+        <li>
+          <a id="btn-toolbars" href="#">
+            <p>Toolbars</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </section> <!-- end index -->
+
+  <section id="action-menu" data-position="back" class="fullscreen">
+    <iframe src="style/action_menu/index.html" class="fullscreen"></iframe>
+  </section>
+
+  <section id="buttons" data-position="right">
+     <section role="region">
+      <header class="fixed">
+        <a id="btn-buttons-back" href="#"><span class="icon icon-back">back</span></a>
+        <h1>Buttons</h1>
+      </header>
+    </section>
+    <iframe src="style/buttons/index.html" class="scrollable header"></iframe>
+  </section>
+
+  <section id="edit-mode" data-position="edit-mode">
+    <iframe src="style/edit_mode/index.html"></iframe>
+  </section>
+
+  <section id="headers" data-position="right">
+     <section role="region">
+      <header class="fixed">
+        <a id="btn-headers-back" href="#"><span class="icon icon-back">back</span></a>
+        <h1>Headers</h1>
+      </header>
+    </section>
+    <iframe src="style/headers/index.html" class="scrollable header"></iframe>
+  </section>
+
+  <section id="input-areas" data-position="right">
+     <section role="region">
+      <header class="fixed">
+        <a id="btn-input-areas-back" href="#"><span class="icon icon-back">back</span></a>
+        <h1>Input areas</h1>
+      </header>
+    </section>
+    <iframe src="style/input_areas/index.html" class="scrollable header"></iframe>
+  </section>
+
+  <section id="status" data-position="right">
+     <section role="region">
+      <header class="fixed">
+        <a id="btn-status-back" href="#"><span class="icon icon-back">back</span></a>
+        <h1>Status</h1>
+      </header>
+    </section>
+    <iframe src="style/status/index.html" class="scrollable header"></iframe>
+  </section>
+
+  <section id="switches" data-position="right">
+     <section role="region">
+      <header class="fixed">
+        <a id="btn-switches-back" href="#"><span class="icon icon-back">back</span></a>
+        <h1>Switches</h1>
+      </header>
+    </section>
+    <iframe src="style/switches/index.html" class="scrollable header"></iframe>
+  </section>
+
+  <section id="drawer" data-position="right">
+     <section role="region">
+      <header class="fixed">
+        <a id="btn-drawer-back" href="#"><span class="icon icon-back">back</span></a>
+        <h1>drawer</h1>
+      </header>
+    </section>
+    <iframe src="style_unstable/drawer/index.html" class="scrollable header"></iframe>
+  </section>
+
+  <section id="lists" data-position="right">
+     <section role="region">
+      <header class="fixed">
+        <a id="btn-lists-back" href="#"><span class="icon icon-back">back</span></a>
+        <h1>Lists</h1>
+      </header>
+    </section>
+    <iframe src="style_unstable/lists/index.html" class="scrollable header"></iframe>
+  </section>
+
+  <section id="progress" data-position="right">
+     <section role="region">
+      <header class="fixed">
+        <a id="btn-progress-back" href="#"><span class="icon icon-back">back</span></a>
+        <h1>Progress and activity</h1>
+      </header>
+    </section>
+    <iframe src="style_unstable/progress_activity/index.html" class="scrollable header"></iframe>
+  </section>
+
+  <section id="scrolling" data-position="right">
+     <section role="region">
+      <header class="fixed">
+        <a id="btn-scrolling-back" href="#"><span class="icon icon-back">back</span></a>
+        <h1>Scrolling</h1>
+      </header>
+    </section>
+    <iframe src="style_unstable/scrolling/index.html" class="scrollable"></iframe>
+  </section>
+
+  <section id="seek-bars" data-position="right">
+     <section role="region">
+      <header class="fixed">
+        <a id="btn-seek-bars-back" href="#"><span class="icon icon-back">back</span></a>
+        <h1>Seek bars</h1>
+      </header>
+    </section>
+    <iframe src="style_unstable/seekbars/index.html" class="scrollable"></iframe>
+  </section>
+
+  <section id="tabs" data-position="right">
+     <section role="region">
+      <header class="fixed">
+        <a id="btn-tabs-back" href="#"><span class="icon icon-back">back</span></a>
+        <h1>Tabs</h1>
+      </header>
+    </section>
+    <iframe src="style_unstable/tabs/index.html" class="scrollable"></iframe>
+  </section>
+
+  <section id="filters" data-position="right">
+     <section role="region">
+      <header class="fixed">
+        <a id="btn-filters-back" href="#"><span class="icon icon-back">back</span></a>
+        <h1>Filters</h1>
+      </header>
+    </section>
+    <iframe src="style_unstable/tabs/filters.html" class="scrollable"></iframe>
+  </section>
+
+  <section id="toolbars" data-position="right">
+     <section role="region">
+      <header class="fixed">
+        <a id="btn-toolbars-back" href="#"><span class="icon icon-back">back</span></a>
+        <h1>Toolbars</h1>
+      </header>
+    </section>
+    <iframe src="style_unstable/toolbars/index.html" class="scrollable"></iframe>
+  </section>
+
+
+  <script>
+    //action menu
+    document.querySelector('#btn-action-menu').addEventListener ('click', function () {
+      document.querySelector('#action-menu').className = 'fade-in';
+    });
+    document.querySelector('#action-menu').addEventListener ('click', function () {
+      this.className = 'fade-out';
+    });
+
+    //buttons
+    document.querySelector('#btn-buttons').addEventListener ('click', function () {
+      document.querySelector('#buttons').className = 'current';
+    });
+    document.querySelector('#btn-buttons-back').addEventListener ('click', function () {
+      document.querySelector('#buttons').className = 'right';
+    });
+
+    //edit mode
+    document.querySelector('#btn-edit-mode').addEventListener ('click', function () {
+      document.querySelector('#edit-mode').className = 'edit';
+    });
+    document.querySelector('#edit-mode').addEventListener ('click', function () {
+      this.className = '';
+    });
+
+    //headers
+    document.querySelector('#btn-headers').addEventListener ('click', function () {
+      document.querySelector('#headers').className = 'current';
+    });
+    document.querySelector('#btn-headers-back').addEventListener ('click', function () {
+      document.querySelector('#headers').className = 'right';
+    });
+
+    //input areas
+    document.querySelector('#btn-input-areas').addEventListener ('click', function () {
+      document.querySelector('#input-areas').className = 'current';
+    });
+    document.querySelector('#btn-input-areas-back').addEventListener ('click', function () {
+      document.querySelector('#input-areas').className = 'right';
+    });
+
+    //status
+    document.querySelector('#btn-status').addEventListener ('click', function () {
+      document.querySelector('#status').className = 'current';
+    });
+    document.querySelector('#btn-status-back').addEventListener ('click', function () {
+      document.querySelector('#status').className = 'right';
+    });
+
+    //switches
+    document.querySelector('#btn-switches').addEventListener ('click', function () {
+      document.querySelector('#switches').className = 'current';
+    });
+    document.querySelector('#btn-switches-back').addEventListener ('click', function () {
+      document.querySelector('#switches').className = 'right';
+    });
+
+    //drawer
+    document.querySelector('#btn-drawer').addEventListener ('click', function () {
+      document.querySelector('#drawer').className = 'current';
+    });
+    document.querySelector('#btn-drawer-back').addEventListener ('click', function () {
+      document.querySelector('#drawer').className = 'right';
+    });
+
+    //lists
+    document.querySelector('#btn-lists').addEventListener ('click', function () {
+      document.querySelector('#lists').className = 'current';
+    });
+    document.querySelector('#btn-lists-back').addEventListener ('click', function () {
+      document.querySelector('#lists').className = 'right';
+    });
+
+    //progress
+    document.querySelector('#btn-progress').addEventListener ('click', function () {
+      document.querySelector('#progress').className = 'current';
+    });
+    document.querySelector('#btn-progress-back').addEventListener ('click', function () {
+      document.querySelector('#progress').className = 'right';
+    });
+
+    //scrolling
+    document.querySelector('#btn-scrolling').addEventListener ('click', function () {
+      document.querySelector('#scrolling').className = 'current';
+    });
+    document.querySelector('#btn-scrolling-back').addEventListener ('click', function () {
+      document.querySelector('#scrolling').className = 'right';
+    });
+
+    //seek bars
+    document.querySelector('#btn-seek-bars').addEventListener ('click', function () {
+      document.querySelector('#seek-bars').className = 'current';
+    });
+    document.querySelector('#btn-seek-bars-back').addEventListener ('click', function () {
+      document.querySelector('#seek-bars').className = 'right';
+    });
+
+    //tabs
+    document.querySelector('#btn-tabs').addEventListener ('click', function () {
+      document.querySelector('#tabs').className = 'current';
+    });
+    document.querySelector('#btn-tabs-back').addEventListener ('click', function () {
+      document.querySelector('#tabs').className = 'right';
+    });
+
+    //filters
+    document.querySelector('#btn-filters').addEventListener ('click', function () {
+      document.querySelector('#filters').className = 'current';
+    });
+    document.querySelector('#btn-filters-back').addEventListener ('click', function () {
+      document.querySelector('#filters').className = 'right';
+    });
+
+    //toolbars
+    document.querySelector('#btn-toolbars').addEventListener ('click', function () {
+      document.querySelector('#toolbars').className = 'current';
+    });
+    document.querySelector('#btn-toolbars-back').addEventListener ('click', function () {
+      document.querySelector('#toolbars').className = 'right';
+    });
+
+  </script>
+</body>
+</html>
+
