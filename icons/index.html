@@ -6,28 +6,36 @@
 
   <link rel="stylesheet" type="text/css" href="../style/buttons.css">
   <link rel="stylesheet" type="text/css" href="../style/headers.css">
+  <link rel="stylesheet" type="text/css" href="../style_unstable/lists.css">
+  <link rel="stylesheet" type="text/css" href="../style_unstable/tabs.css">
+  <link rel="stylesheet" type="text/css" href="../style_unstable/toolbars.css">
 
-  <link rel="stylesheet" type="text/css" href="bb_cross_browser.css">
+  <link rel="stylesheet" type="text/css" href="../cross_browser.css">
 
   <link rel="stylesheet" type="text/css" href="styles/action_icons.css">
   <link rel="stylesheet" type="text/css" href="styles/media_icons.css">
+  <link rel="stylesheet" type="text/css" href="styles/comms_icons.css">
 
   <style>
+    /* Styles to make this demo work, don't need to use them in your apps */
     html, body {
       margin: 0;
       padding: 0;
       font-size: 10px;
       background-color: #fff;
-    }    
+    }
     h2 {
       font-size: 1.8rem;
-      font-family: "MozTT", Sans-serif;
       font-weight: lighter;
       color: #666;
       margin: -1px 0 0;
       background-color: #f5f5f5;
       padding: 0.4rem 0.4rem 0.4rem 3rem;
       border: solid 1px #e8e8e8;
+      margin: 30px 0 10px 0;
+    }
+    h2:first-child {
+      margin-top: 0;
     }
     section.icons {
       margin-bottom: 20px;
@@ -37,11 +45,12 @@
     section.icons ul {
       list-style: none;
       margin: 0;
-      padding: 30px;
+      padding: 0 30px;
       display: block;
       overflow: hidden;
     }
     section.icons li.action-icon,
+    section.icons li.comms-icon,
     section.icons li.media-icon {
       line-height: 30px;
       font-size: 16px;
@@ -51,6 +60,7 @@
       width: 270px;
     }
     section.icons li.action-icon:after,
+    section.icons li.comms-icon:after,
     section.icons li.media-icon:after {
         background: rgba(0,0,0, 0.8);
         content: "";
@@ -62,34 +72,36 @@
         -moz-border-radius: 3px;
         -webkit-border-radius: 3px;
     }
+    section.icons li.comms-icon.dark:after {
+        background: rgba(0,0,0, 0.4);
+    }
     section.icons li.action-icon:before,
+    section.icons li.comms-icon:before,
     section.icons li.media-icon:before {
         z-index: 1;
     }
     section.icons li.action-icon span,
+    section.icons li.comms-icon span,
     section.icons li.media-icon span {
         padding-left: 40px;
     }
 
-    section.icons [role="toolbar"] {
-      height: 40px;
-      width: 320px;
-      background: rgba(0,0,0, 0.85);
+    section.examples .action-icon {
+      margin: 0 0 0 30px;
+      width: 14rem;
+    }
+    section.examples [role="toolbar"] {
       display: block;
       overflow: hidden;
-      margin-bottom: 20px;
+      position: relative;
+      margin: 0 0 30px 0;
     }
-    section.icons [role="toolbar"] ul {
-      float: left;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    section.icons [role="toolbar"] li {
-      float: left;
-    }
-    section.examples > div {
-      margin: 30px;
+    section.examples [role="tablist"] {
+      height: 5rem;
+      display: block;
+      overflow: hidden;
+      position: relative;
+      margin: 0 0 30px 0;
     }
   </style>
 </head>
@@ -98,21 +110,21 @@
   <section class="icons">
     <h2>Action icons</h2>
     <ul>
-      <li class="action-icon alarm_stop"><span>alarm_stop</span></li>
+      <li class="action-icon alarm-stop"><span>alarm-stop</span></li>
       <li class="action-icon back"><span>back</span></li>
       <li class="action-icon bluetooth"><span>bluetooth</span></li>
-      <li class="action-icon bluetooth_transfer"><span>bluetooth_transfer</span></li>
+      <li class="action-icon bluetooth-transfer"><span>bluetooth-transfer</span></li>
       <li class="action-icon bookmark"><span>bookmark</span></li>
       <li class="action-icon bookmarked"><span>bookmarked</span></li>
-      <li class="action-icon browser_back"><span>browser_back</span></li>
-      <li class="action-icon browser_forward"><span>browser_forward</span></li>
-      <li class="action-icon calendar_agendaview"><span>calendar_agendaview</span></li>
-      <li class="action-icon calendar_dayview"><span>calendar_dayview</span></li>
-      <li class="action-icon calendar_monthview"><span>calendar_monthview</span></li>
-      <li class="action-icon calendar_today"><span>calendar_today</span></li>
-      <li class="action-icon calendar_weekview"><span>calendar_weekview</span></li>
+      <li class="action-icon browser-back"><span>browser-back</span></li>
+      <li class="action-icon browser-forward"><span>browser-forward</span></li>
+      <li class="action-icon calendar-agendaview"><span>calendar-agendaview</span></li>
+      <li class="action-icon calendar-dayview"><span>calendar-dayview</span></li>
+      <li class="action-icon calendar-monthview"><span>calendar-monthview</span></li>
+      <li class="action-icon calendar-today"><span>calendar-today</span></li>
+      <li class="action-icon calendar-weekview"><span>calendar-weekview</span></li>
       <li class="action-icon cancel"><span>cancel</span></li>
-      <li class="action-icon clock_addalarm"><span>clock_addalarm</span></li>
+      <li class="action-icon clock-addalarm"><span>clock-addalarm</span></li>
       <li class="action-icon compose"><span>compose</span></li>
       <li class="action-icon contacts"><span>contacts</span></li>
       <li class="action-icon copy"><span>copy</span></li>
@@ -122,16 +134,16 @@
       <li class="action-icon download"><span>download</span></li>
       <li class="action-icon downloaddark"><span>downloaddark</span></li>
       <li class="action-icon editcontact"><span>editcontact</span></li>
-      <li class="action-icon email_editlist"><span>email_editlist</span></li>
-      <li class="action-icon email_flag"><span>email_flag</span></li>
-      <li class="action-icon email_forward"><span>email_forward</span></li>
-      <li class="action-icon email_markread"><span>email_markread</span></li>
-      <li class="action-icon email_markunread"><span>email_markunread</span></li>
-      <li class="action-icon email_reply"><span>email_reply</span></li>
-      <li class="action-icon email_replyall"><span>email_replyall</span></li>
-      <li class="action-icon email_send"><span>email_send</span></li>
-      <li class="action-icon email_share"><span>email_share</span></li>
-      <li class="action-icon email_sync"><span>email_sync</span></li>
+      <li class="action-icon email-editlist"><span>email-editlist</span></li>
+      <li class="action-icon email-flag"><span>email-flag</span></li>
+      <li class="action-icon email-forward"><span>email-forward</span></li>
+      <li class="action-icon email-markread"><span>email-markread</span></li>
+      <li class="action-icon email-markunread"><span>email-markunread</span></li>
+      <li class="action-icon email-reply"><span>email-reply</span></li>
+      <li class="action-icon email-replyall"><span>email-replyall</span></li>
+      <li class="action-icon email-send"><span>email-send</span></li>
+      <li class="action-icon email-share"><span>email-share</span></li>
+      <li class="action-icon email-sync"><span>email-sync</span></li>
       <li class="action-icon forward"><span>forward</span></li>
       <li class="action-icon lock"><span>lock</span></li>
       <li class="action-icon menu"><span>menu</span></li>
@@ -145,78 +157,154 @@
       <li class="action-icon snooze"><span>snooze</span></li>
       <li class="action-icon unlock"><span>unlock</span></li>
       <li class="action-icon user"><span>user</span></li>
-      <li class="action-icon ut_airplanemode"><span>ut_airplanemode</span></li>
-      <li class="action-icon ut_airplanemode_focused"><span>ut_airplanemode_focused</span></li>
-      <li class="action-icon ut_bluetooth"><span>ut_bluetooth</span></li>
-      <li class="action-icon ut_bluetooth_focused"><span>ut_bluetooth_focused</span></li>
-      <li class="action-icon ut_airplanemode_focused"><span>ut_airplanemode_focused</span></li>
-      <li class="action-icon ut_settings"><span>ut_settings</span></li>
-      <li class="action-icon ut_settings_data"><span>ut_settings_data</span></li>
-      <li class="action-icon ut_settings_data_2g_focused"><span>ut_settings_data_2g_focused</span></li>
-      <li class="action-icon ut_settings_data_3g_focused"><span>ut_settings_data_3g_focused</span></li>
-      <li class="action-icon ut_settings_data_4g_focused"><span>ut_settings_data_4g_focused</span></li>
-      <li class="action-icon ut_settings_data_e_focused"><span>ut_settings_data_e_focused</span></li>
-      <li class="action-icon ut_settings_data_hp_focused"><span>ut_settings_data_hp_focused</span></li>
-      <li class="action-icon ut_settings_data_h_focused"><span>ut_settings_data_h_focused</span></li>
-      <li class="action-icon ut_settings_data_o_focused"><span>ut_settings_data_o_focused</span></li>
-      <li class="action-icon ut_settings_focused"><span>ut_settings_focused</span></li>
-      <li class="action-icon ut_wifi"><span>ut_wifi</span></li>
-      <li class="action-icon ut_wifi_focus"><span>ut_wifi_focus</span></li>
+      <li class="action-icon ut-airplanemode"><span>ut-airplanemode</span></li>
+      <li class="action-icon ut-bluetooth"><span>ut-bluetooth</span></li>
+      <li class="action-icon ut-settings"><span>ut-settings</span></li>
+      <li class="action-icon ut-settings-data"><span>ut-settings-data</span></li>
+      <li class="action-icon ut-settings-data-2g"><span>ut-settings-data-2g</span></li>
+      <li class="action-icon ut-settings-data-3g"><span>ut-settings-data-3g</span></li>
+      <li class="action-icon ut-settings-data-4g"><span>ut-settings-data-4g</span></li>
+      <li class="action-icon ut-settings-data-e"><span>ut-settings-data-e</span></li>
+      <li class="action-icon ut-settings-data-hp"><span>ut-settings-data-hp</span></li>
+      <li class="action-icon ut-settings-data-h"><span>ut-settings-data-h</span></li>
+      <li class="action-icon ut-settings-data-o"><span>ut-settings-data-o</span></li>
+      <li class="action-icon ut-wifi"><span>ut-wifi</span></li>
     </ul>
 
     <h2>Media icons</h2>
     <ul class="icons-view">
       <li class="media-icon camera"><span>camera</span></li>
-      <li class="media-icon camera_cameraback"><span>camera_cameraback</span></li>
-      <li class="media-icon camera_camerafront"><span>camera_camerafront</span></li>
-      <li class="media-icon camera_flashauto"><span>camera_flashauto</span></li>
-      <li class="media-icon camera_flashoff"><span>camera_flashoff</span></li>
-      <li class="media-icon camera_gridview"><span>camera_gridview</span></li>
-      <li class="media-icon camera_select"><span>camera_select</span></li>
-      <li class="media-icon gallery_crop1x1"><span>gallery_crop1x1</span></li>
-      <li class="media-icon gallery_crop2x3"><span>gallery_crop2x3</span></li>
-      <li class="media-icon gallery_crop3x2"><span>gallery_crop3x2</span></li>
-      <li class="media-icon gallery_editphoto"><span>gallery_editphoto</span></li>
-      <li class="media-icon gallery_freecrop"><span>gallery_freecrop</span></li>
-      <li class="media-icon gallery_slideshow"><span>gallery_slideshow</span></li>
-      <li class="media-icon media_albumfilter"><span>media_albumfilter</span></li>
-      <li class="media-icon media_alphabetical"><span>media_alphabetical</span></li>
-      <li class="media-icon media_date"><span>media_date</span></li>
-      <li class="media-icon media_gridview"><span>media_gridview</span></li>
-      <li class="media-icon media_pause"><span>media_pause</span></li>
-      <li class="media-icon media_play"><span>media_play</span></li>
-      <li class="media-icon media_playlistfilter"><span>media_playlistfilter</span></li>
-      <li class="media-icon media_repeatinfinite"><span>media_repeatinfinite</span></li>
-      <li class="media-icon media_repeatoff"><span>media_repeatoff</span></li>
-      <li class="media-icon media_repeatonce"><span>media_repeatonce</span></li>
-      <li class="media-icon media_seekbackward"><span>media_seekbackward</span></li>
-      <li class="media-icon media_seekfroward"><span>media_seekfroward</span></li>
-      <li class="media-icon media_shuffleoff"><span>media_shuffleoff</span></li>
-      <li class="media-icon media_shuffleon"><span>media_shuffleon</span></li>
-      <li class="media-icon media_skipbackwards"><span>media_skipbackwards</span></li>
-      <li class="media-icon media_skipforward"><span>media_skipforward</span></li>
-      <li class="media-icon media_songsfilter"><span>media_songsfilter</span></li>
-      <li class="media-icon media_stop"><span>media_stop</span></li>
+      <li class="media-icon camera-cameraback"><span>camera-cameraback</span></li>
+      <li class="media-icon camera-camerafront"><span>camera-camerafront</span></li>
+      <li class="media-icon camera-flashauto"><span>camera-flashauto</span></li>
+      <li class="media-icon camera-flashoff"><span>camera-flashoff</span></li>
+      <li class="media-icon camera-gridview"><span>camera-gridview</span></li>
+      <li class="media-icon camera-select"><span>camera-select</span></li>
+      <li class="media-icon gallery-crop1x1"><span>gallery-crop1x1</span></li>
+      <li class="media-icon gallery-crop2x3"><span>gallery-crop2x3</span></li>
+      <li class="media-icon gallery-crop3x2"><span>gallery-crop3x2</span></li>
+      <li class="media-icon gallery-editphoto"><span>gallery-editphoto</span></li>
+      <li class="media-icon gallery-freecrop"><span>gallery-freecrop</span></li>
+      <li class="media-icon gallery-slideshow"><span>gallery-slideshow</span></li>
+      <li class="media-icon media-albumfilter"><span>media-albumfilter</span></li>
+      <li class="media-icon media-alphabetical"><span>media-alphabetical</span></li>
+      <li class="media-icon media-artistfilter"><span>media-alphabetical</span></li>
+      <li class="media-icon media-date"><span>media-date</span></li>
+      <li class="media-icon media-gridview"><span>media-gridview</span></li>
+      <li class="media-icon media-pause"><span>media-pause</span></li>
+      <li class="media-icon media-play"><span>media-play</span></li>
+      <li class="media-icon media-playlistfilter"><span>media-playlistfilter</span></li>
+      <li class="media-icon media-repeatinfinite"><span>media-repeatinfinite</span></li>
+      <li class="media-icon media-repeatoff"><span>media-repeatoff</span></li>
+      <li class="media-icon media-repeatonce"><span>media-repeatonce</span></li>
+      <li class="media-icon media-seekbackward"><span>media-seekbackward</span></li>
+      <li class="media-icon media-seekfroward"><span>media-seekfroward</span></li>
+      <li class="media-icon media-shuffleoff"><span>media-shuffleoff</span></li>
+      <li class="media-icon media-shuffleon"><span>media-shuffleon</span></li>
+      <li class="media-icon media-skipbackwards"><span>media-skipbackwards</span></li>
+      <li class="media-icon media-skipforward"><span>media-skipforward</span></li>
+      <li class="media-icon media-songsfilter"><span>media-songsfilter</span></li>
+      <li class="media-icon media-stop"><span>media-stop</span></li>
       <li class="media-icon undo"><span>undo</span></li>
       <li class="media-icon videorecorder"><span>videorecorder</span></li>
+    </ul>
+
+    <h2>Communications icons</h2>
+    <ul class="icons-view">
+      <li class="comms-icon activecall-dismisskeyboard"><span>activecall-dismisskeyboard</span></li>
+      <li class="comms-icon dark calllog-incomingcall"><span>calllog-incomingcall</span></li>
+      <li class="comms-icon dark calllog-incomingsms"><span>calllog-incomingsms</span></li>
+      <li class="comms-icon dark calllog-missedcallgrey"><span>calllog-missedcallgrey</span></li>
+      <li class="comms-icon dark calllog-missedcallred"><span>calllog-missedcallred</span></li>
+      <li class="comms-icon dark calllog-outgoingcall"><span>calllog-outgoingcall</span></li>
+      <li class="comms-icon dark calllog-outgoingsms"><span>calllog-outgoingsms</span></li>
+      <li class="comms-icon contacts-addfavorite"><span>contacts-addfavorite</span></li>
+      <li class="comms-icon contacts-email"><span>contacts-email</span></li>
+      <li class="comms-icon contacts-facebook"><span>contacts-facebook</span></li>
+      <li class="comms-icon contacts-favorite"><span>contacts-favorite</span></li>
+      <li class="comms-icon contacts-importfromsim"><span>contacts-importfromsim</span></li>
+      <li class="comms-icon contacts-link"><span>contacts-link</span></li>
+      <li class="comms-icon contacts-location"><span>contacts-location</span></li>
+      <li class="comms-icon contacts-phone"><span>contacts-phone</span></li>
+      <li class="comms-icon contacts-sms"><span>contacts-sms</span></li>
+      <li class="comms-icon contacts-twitter"><span>contacts-twitter</span></li>
+      <li class="comms-icon dailer-contacts"><span>dailer-contacts</span></li>
+      <li class="comms-icon dailer-dialpad"><span>dailer-dialpad</span></li>
+      <li class="comms-icon dailer-recentcalls"><span>dailer-recentcalls</span></li>
     </ul>
   </section>
 
   <section class="examples">
-    <h2>Examples</h2>
+    <h2>Example: <strong>header</strong></h2>
 
     <section role="region">
       <header>
         <menu type="toolbar">
-          <a href="#"><span class="icon action-icon email_editlist">edit</span></a>
+          <a href="#"><span class="icon action-icon email-editlist">edit</span></a>
           <a href="#"><span class="icon action-icon new">add</span></a>
         </menu>
         <h1>Messages</h1>
       </header>
     </section>
     
+    <h2>Example: <strong>button</strong></h2>
     <div>
       <a class="action-icon downloaddark"role="button" href="#">download</a>
+      <button class="action-icon download recommend">download</button>
+    </div>
+    
+    <h2>Example: <strong>List</strong></h2>
+    <section data-type="list">
+      <ul>
+        <li>
+          <aside class="icon comms-icon calllog-incomingcall">
+            asidecall
+          </aside>
+          <a href="#">
+            <p>Margherita <strong>Gomez</strong></p>
+            <p>Family</p>
+          </a>
+        </li>
+        <li>
+          <aside class="icon comms-icon calllog-missedcallred">
+            asidecall
+          </aside>
+          <p>
+            Margherita <strong>Gomez</strong>
+            <em>(2)</em>
+          </p>
+          <p>
+            <time datetime="17:43">5:43PM</time>
+            Mobile, Vivo
+          </p>
+        </li>
+      </ul>
+    </section>
+    
+    <h2>Example: <strong>Tabs</strong></h2>
+    <ul role="tablist" data-items="3" class="bottom">
+      <li id="panel1" role="tab">
+        <a href="#panel1" class="icon comms-icon dailer-recentcalls">comms</a>
+        <div role="tabpanel"></div>
+      </li>
+      <li id="panel2" role="tab">
+        <a href="#panel2" class="icon comms-icon dailer-contacts">contacts</a>
+        <div role="tabpanel"></div>
+      </li>
+      <li id="panel3" role="tab">
+        <a class="icon comms-icon dailer-dialpad">dialer</a>
+        <div role="tabpanel"></div>
+      </li>
+    </ul>
+
+    <h2>Example: <strong>Toolbar</strong></h2>
+    <div role="toolbar">
+      <ul>
+        <li><button class="media-icon gallery-editphoto">Edit</button></li>
+        <li><button class="media-icon gallery-slideshow">Slideshow</button></li>
+        <li><button class="media-icon media-gridview">Grid</button></li>
+      </ul>
+      <ul></ul>
     </div>
   </section>
 </body>
