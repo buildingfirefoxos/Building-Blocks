@@ -1,0 +1,42 @@
+* { font-family: 'FeuraSans'; }
+
+@font-face {
+  font-family: 'FeuraSans';
+  src: url('fonts/FeuraSans-1.0/FeuraSans-1.0/FeuraSans-Regular.eot');
+  src: url('fonts/FeuraSans-1.0/FeuraSans-Regular.eot?#iefix') format('embedded-opentype'),
+       url('fonts/FeuraSans-1.0/FeuraSans-Regular.woff') format('woff'),
+       url('fonts/FeuraSans-1.0/FeuraSans-Regular.ttf') format('truetype'),
+       url('fonts/FeuraSans-1.0/FeuraSans-Regular.svg#mozttregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FeuraSans';
+  src: url('fonts/FeuraSans-1.0/FeuraSans-Light.eot');
+  src: url('fonts/FeuraSans-1.0/FeuraSans-Light.eot?#iefix') format('embedded-opentype'),
+       url('fonts/FeuraSans-1.0/FeuraSans-Light.woff') format('woff'),
+       url('fonts/FeuraSans-1.0/FeuraSans-Light.ttf') format('truetype'),
+       url('fonts/FeuraSans-1.0/FeuraSans-Light.svg#mozttregular') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FeuraSans';
+  src: url('fonts/FeuraSans-1.0/FeuraSans-Medium.eot');
+  src: url('fonts/FeuraSans-1.0/FeuraSans-Medium.eot?#iefix') format('embedded-opentype'),
+       url('fonts/FeuraSans-1.0/FeuraSans-Medium.woff') format('woff'),
+       url('fonts/FeuraSans-1.0/FeuraSans-Medium.ttf') format('truetype'),
+       url('fonts/FeuraSans-1.0/FeuraSans-Medium.svg#mozttregular') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FeuraSans';
+  src: url('fonts/FeuraSans-1.0/FeuraSans-Bold.eot');
+  src: url('fonts/FeuraSans-1.0/FeuraSans-Bold.eot?#iefix') format('embedded-opentype'),
+       url('fonts/FeuraSans-1.0/FeuraSans-Bold.woff') format('woff'),
+       url('fonts/FeuraSans-1.0/FeuraSans-Bold.ttf') format('truetype'),
+       url('fonts/FeuraSans-1.0/FeuraSans-Bold.svg#mozttregular') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
