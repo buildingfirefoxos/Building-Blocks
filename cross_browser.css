@@ -123,42 +123,11 @@ form[role="search"] p input {
 
 /* Switches */
 label input[type="checkbox"][data-type="switch"] + span {
-  background-size: 2.4rem;
-  -moz-transition: none;
-  -webkit-transition: none;
-  /*-webkit-transition: background 0.18s ease;*/
+  -moz-transition: background 0.2s ease, border 0.2s ease;
+  -webkit-transition: background 0.2s ease, border 0.2s ease;
 }
 
-label input[data-type="switch"] + span:after,
-label input[data-type="switch"] + span:before {
-  -moz-transition: none;
-  -webkit-transition: none;
-  /*-webkit-transition: -webkit-transform 0.2s ease;*/
-}
-
-label input[data-type="switch"] + span:before {
-  width: 100%;
-}
-
-label input[data-type="switch"] + span:after {
-  -moz-transform: translateX(-5.4rem);
-  -webkit-transform: translateX(-5.4rem);
-}
-
-label input[data-type="switch"]:checked + span:before {
-  -moz-transform: translateX(5.4rem);
-  -webkit-transform: translateX(5.4rem);
-}
-
-label input[data-type="switch"]:checked + span:after {
-  -moz-transform: translateX(0);
-  -webkit-transform: translateX(0);
-}
-
-
-label input[type="checkbox"][data-type="switch"].uninit + span,
-label input[type="checkbox"][data-type="switch"].uninit + span:before,
-label input[type="checkbox"][data-type="switch"].uninit + span:after {
+label input[type="checkbox"][data-type="switch"].uninit + span {
   -moz-transform: none;
   -webkit-transform: none;
 }

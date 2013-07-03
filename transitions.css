@@ -237,25 +237,6 @@
          z-index: 12; }
 }
 
-/*  Modals */
-@keyframes appUp {
-  0%   { transform: translateY(100%); }
-  100% { transform: translateY(0); }
-}
-@-webkit-keyframes appUp {
-  0%   { -webkit-transform: translateY(100%); }
-  100% { -webkit-transform: translateY(0); }
-}
-
-@keyframes appDown {
-  0%   { transform: translateY(0); }
-  100% { transform: translateY(100%); }
-}
-@-webkit-keyframes appDown {
-  0%   { -webkit-transform: translateY(0); }
-  100% { -webkit-transform: translateY(100%); }
-}
-
 /* Go deeper */
 @keyframes rightToCurrent {
   0%   { transform: translateX(100%); }
@@ -443,4 +424,34 @@
 @-webkit-keyframes fadeOut {
   0%   { opacity: 1; }
   100% { opacity: 0; }
+}
+
+@keyframes show {
+  0%   { transform: translateY(100%); }
+  100% { transform: translateY(0); }
+}
+@-webkit-keyframes show {
+  0%   { -webkit-transform: translateY(100%); }
+  100% { -webkit-transform: translateY(0); }
+}
+
+@keyframes hide {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(100%); }
+}
+@-webkit-keyframes hide {
+  0%   { -webkit-transform: translateY(0); }
+  100% { -webkit-transform: translateY(100%); }
+}
+
+/* Building Blocks */
+/* Status */
+section[role="status"] {
+  animation: hide .3s forwards;
+  -webkit-animation: hide .3s forwards;
+}
+
+section[role="status"].onviewport {
+  animation: show .3s forwards;
+  -webkit-animation: show .3s forwards;
 }
