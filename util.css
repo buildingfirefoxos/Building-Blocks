@@ -35,6 +35,7 @@ section[role="region"] > header.fixed:first-child {
   height: 100%;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  position: relative;
 }
 
 .scrollable.header {
@@ -47,8 +48,21 @@ section[role="region"] > .content {
   background: #fff;
 }
 
+section[role="region"] > .content header h2 {
+  margin: 3rem -3rem 1.5rem -3rem;
+}
+
+section[role="region"] > .content header:first-child h2 {
+  margin-top: 0;
+}
+
+/* This should be fixed in lists BB */
 section[role="region"] > .content [data-type="list"] {
   margin: 0 -3rem;
+}
+
+section[role="region"] > .content [data-type="list"] li > p {
+  margin: 0 1.5rem;
 }
 
 section[role="region"] > .content [data-type="list"] li > a {
@@ -58,14 +72,6 @@ section[role="region"] > .content [data-type="list"] li > a {
 section[role="region"] > .content [data-type="list"] li > a:after {
   left: -1.5rem;
   right: -1.5rem;
-}
-
-section[role="region"] > .content header h2 {
-  margin: 3rem -3rem 1.5rem -3rem;
-}
-
-section[role="region"] > .content header:first-child h2 {
-  margin-top: 0;
 }
 
 /* Fonts */

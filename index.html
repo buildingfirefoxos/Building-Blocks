@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="style/edit_mode.css">
   <link rel="stylesheet" href="style/headers.css">
   <link rel="stylesheet" href="style/input_areas.css">
-  <!--link rel="stylesheet" href="style/responsive.css"-->
   <link rel="stylesheet" href="style/status.css">
   <link rel="stylesheet" href="style/switches.css">
   <!--link rel="stylesheet" href="style_unstable/drawer.css"-->
@@ -22,7 +21,13 @@
   <link rel="stylesheet" href="style_unstable/seekbars.css">
   <link rel="stylesheet" href="style_unstable/tabs.css">
   <link rel="stylesheet" href="style_unstable/toolbars.css">
-  
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="icons/styles/action_icons.css">
+  <link rel="stylesheet" href="icons/styles/media_icons.css">
+  <link rel="stylesheet" href="icons/styles/comms_icons.css">
+
+  <!-- Transitions -->
   <link rel="stylesheet" href="transitions.css">
   
   <!-- Util CSS: some extra tricks -->
@@ -181,11 +186,11 @@
               <p>Switches</p>
             </a>
           </li>
-          <li>
+          <!--li>
             <a id="btn-drawer" href="#">
               <p>Drawer</p>
             </a>
-          </li>
+          </li-->
           <li>
             <a id="btn-lists" href="#">
               <p>Lists</p>
@@ -626,17 +631,48 @@
   </section>
 
   <!--····························· Drawer ·····························-->
-  <section id="drawer" data-position="right">
+  <!--section id="drawer_demo" data-position="right">
      <section role="region">
       <header class="fixed">
         <a id="btn-drawer-back" href="#"><span class="icon icon-back">back</span></a>
         <h1>drawer</h1>
       </header>
-      <!--article class="content scrollable header">
-      </article-->
-      <iframe src="style_unstable/drawer/index.html" class="scrollable header"></iframe>
+      <article class="content scrollable header">
+        <section data-type="sidebar">
+          <header>
+            <menu type="toolbar">
+              <a href="#"><span class="icon icon-add">add</span></a>
+            </menu>
+            <h1>Title <em>(9)</em></h1>
+          </header>
+          <nav>
+            <ul>
+              <li><a href="#">label</a></li>
+              <li><a href="#">label</a></li>
+              <li><a href="#">label</a></li>
+              <li><a href="#">label</a></li>
+            </ul>
+            <h2>Subtitle</h2>
+            <ul>
+              <li><a href="#">label</a></li>
+              <li><a href="#">label</a></li>
+              <li><a href="#">label larger label than the </a></li>
+              <li><a href="#">label</a></li>
+            </ul>
+          </nav>
+        </section>
+
+        <section id="drawer" role="region">
+          <header>
+            <a href="#"><span class="icon icon-menu">hide sidebar</span></a>
+            <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
+            <h1>Inbox</h1>
+          </header>
+          <div role="main"></div>
+        </section>
+      </article>
     </section>
-  </section>
+  </section-->
 
   <!--····························· Lists ·····························-->
   <section id="lists" data-position="right">
@@ -645,7 +681,55 @@
         <a id="btn-lists-back" href="#"><span class="icon icon-back">back</span></a>
         <h1>Lists</h1>
       </header>
-      <iframe src="style_unstable/lists/index.html" class="scrollable header"></iframe>
+      <article class="content scrollable header">
+        <section data-type="list">
+          <header>Title</header>
+          <ul>
+            <li>
+              <p>Travis Gray</p>
+            </li>
+            <li>
+              <a href="#">
+                <p>Travis Gray</p>
+                <p>Clickable item</p>
+              </a>
+            </li>
+            <li>
+              <aside class="pack-end">
+                <img alt="photo" src="images/photo.jpg">
+              </aside>
+              <a href="#">
+                <p>Travis Gray</p>
+                <p>Beginning of message</p>
+              </a>
+            </li>
+          </ul>
+          <header>Another title</header>
+          <ul>
+            <li aria-disabled="true">
+              <aside class="pack-end">
+                <img alt="photo" src="images/photo.jpg">
+              </aside>
+              <a href="#">
+                <p>Travis Gray</p>
+                <p>Disabled item</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <aside class="icon comms-icon calllog-incomingcall">
+                  asidecall
+                </aside>
+                <p>Travis Gray <em>(2)</em></p>
+                <p>
+                  <time datetime="17:43">5:43PM</time>
+                  Mobile
+                </p>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
     </section>
   </section>
 
@@ -773,12 +857,12 @@
     });
 
     //drawer
-    document.querySelector('#btn-drawer').addEventListener ('click', function () {
-      document.querySelector('#drawer').className = 'current';
+    /*document.querySelector('#btn-drawer').addEventListener ('click', function () {
+      document.querySelector('#drawer_demo').className = 'current';
     });
     document.querySelector('#btn-drawer-back').addEventListener ('click', function () {
-      document.querySelector('#drawer').className = 'right';
-    });
+      document.querySelector('#drawer_demo').className = 'right';
+    });*/
 
     //lists
     document.querySelector('#btn-lists').addEventListener ('click', function () {
