@@ -740,7 +740,22 @@
         <a id="btn-progress-back" href="#"><span class="icon icon-back">back</span></a>
         <h1>Progress and activity</h1>
       </header>
-      <iframe src="style_unstable/progress_activity/index.html" class="scrollable header"></iframe>
+      <article class="content scrollable header">
+        <header><h2>Spinner</h2></header>
+        <progress></progress>
+
+        <header><h2>Activity bar</h2></header>
+        <progress class="pack-activity" value="0" max="100"></progress>
+
+        <header><h2>Progress bar</h2></header>
+        <progress value="80" max="100"></progress>
+
+        <header><h2>Progress + activity bar</h2></header>
+        <progress class="pack-activity" value="80" max="100"></progress>
+
+        <header><h2>Light progress + activity bar</h2></header>
+        <progress class="pack-activity light" value="0" max="100"></progress>
+      </article>
     </section>
   </section>
 

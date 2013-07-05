@@ -169,3 +169,43 @@ section[data-type="sidebar"] > nav > ul > li > a {
   box-sizing: border-box;
   -webkit-box-sizing: border-box; 
 }
+
+/* Progress and activity */
+progress {
+  -webkit-appearance: none;
+}
+
+progress:not([value]) {
+  -webkit-animation: 0.9s rotate infinite steps(30);
+}
+
+progress:not([value])::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+progress[value]::-webkit-progress-bar {
+  background: #333;
+}
+
+progress[value]::-webkit-progress-value {
+  background: #01c5ed;
+}
+
+progress[value].pack-activity::-webkit-progress-bar {
+  background-image: url(style_unstable/progress_activity/images/ui/activity.png);
+  -webkit-animation: 0.5s move infinite steps(15);
+}
+
+progress[value].pack-activity.light::-webkit-progress-bar {
+  background-color: #f4f4f4;
+}
+
+@-webkit-keyframes rotate {
+  from { -webkit-transform: rotate(1deg); }
+  to   { -webkit-transform: rotate(360deg); }
+}
+
+@-webkit-keyframes move {
+  from { background-position: 0 0; }
+  to   { background-position: 1rem 0; }
+}
