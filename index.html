@@ -150,6 +150,11 @@
     nav[data-type="scrollbar"] p {
       opacity: 1;
     }
+
+    div[role="slider"] > label.icon {
+      background: no-repeat right top;
+      background-size: 3rem auto;
+    }
   </style>
 </head>
 <body>
@@ -821,7 +826,35 @@
         <a id="btn-seek-bars-back" href="#"><span class="icon icon-back">back</span></a>
         <h1>Seek bars</h1>
       </header>
-      <iframe src="style_unstable/seekbars/index.html" class="scrollable"></iframe>
+      <article class="content scrollable header">
+        <header><h2>Default seeker</h2></header>
+        <div role="slider" aria-valuemin="0" aria-valuenow="80" aria-valuemax="100" aria-valuetext="slider description">
+          <div>
+            <progress value="80" max="100"></progress>
+            <button>handler</button>
+          </div>
+        </div>
+
+        <header><h2>Value seeker</h2></header>
+        <div role="slider" aria-valuemin="0" aria-valuenow="80" aria-valuemax="100" aria-valuetext="slider description">
+          <label>0</label>
+          <label>100</label>
+          <div>
+            <progress value="80" max="100"></progress>
+            <button>handler</button>
+          </div>
+        </div>
+
+        <header><h2>Icon seeker</h2></header>
+        <div role="slider" aria-valuemin="0" aria-valuenow="80" aria-valuemax="100" aria-valuetext="slider description">
+          <label class="icon">0</label>
+          <label class="icon">100</label>
+          <div>
+            <progress value="80" max="100"></progress>
+            <button>handler</button>
+          </div>
+        </div>
+      </article>
     </section>
   </section>
 

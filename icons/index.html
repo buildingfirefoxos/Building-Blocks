@@ -15,6 +15,7 @@
   <link rel="stylesheet" type="text/css" href="styles/action_icons.css">
   <link rel="stylesheet" type="text/css" href="styles/media_icons.css">
   <link rel="stylesheet" type="text/css" href="styles/comms_icons.css">
+  <link rel="stylesheet" type="text/css" href="styles/settings_icons.css">
 
   <style>
     /* Styles to make this demo work, don't need to use them in your apps */
@@ -51,6 +52,7 @@
     }
     section.icons li.action-icon,
     section.icons li.comms-icon,
+    section.icons li.settings-icon,
     section.icons li.media-icon {
       line-height: 30px;
       font-size: 16px;
@@ -61,6 +63,7 @@
     }
     section.icons li.action-icon:after,
     section.icons li.comms-icon:after,
+    section.icons li.settings-icon:after,
     section.icons li.media-icon:after {
         background: rgba(0,0,0, 0.8);
         content: "";
@@ -72,16 +75,21 @@
         -moz-border-radius: 3px;
         -webkit-border-radius: 3px;
     }
+    section.icons li.settings-icon:after {
+        background: #fff;
+    }
     section.icons li.comms-icon.dark:after {
         background: rgba(0,0,0, 0.4);
     }
     section.icons li.action-icon:before,
     section.icons li.comms-icon:before,
+    section.icons li.settings-icon:before,
     section.icons li.media-icon:before {
         z-index: 1;
     }
     section.icons li.action-icon span,
     section.icons li.comms-icon span,
+    section.icons li.settings-icon span,
     section.icons li.media-icon span {
         padding-left: 40px;
     }
@@ -232,6 +240,73 @@
       <li class="comms-icon dailer-dialpad"><span>dailer-dialpad</span></li>
       <li class="comms-icon dailer-recentcalls"><span>dailer-recentcalls</span></li>
     </ul>
+
+    <h2>Communications icons</h2>
+    <ul class="icons-view">
+      <li class="settings-icon aboutphone"><span>aboutphone</span></li>
+      <li class="settings-icon accessibility"><span>accessibility</span></li>
+      <li class="settings-icon airplanemode"><span>airplanemode</span></li>
+      <li class="settings-icon apppermissions"><span>apppermissions</span></li>
+      <li class="settings-icon apps"><span>apps</span></li>
+      <li class="settings-icon battery"><span>battery</span></li>
+      <li class="settings-icon bluetooth"><span>bluetooth</span></li>
+      <li class="settings-icon brightness"><span>brightness</span></li>
+      <li class="settings-icon call-waiting-disabled"><span>call-waiting-disabled</span></li>
+      <li class="settings-icon callsettings"><span>callsettings</span></li>
+      <li class="settings-icon datetime"><span>datetime</span></li>
+      <li class="settings-icon developer"><span>developer</span></li>
+      <li class="settings-icon devicestorage"><span>devicestorage</span></li>
+      <li class="settings-icon donottrack"><span>donottrack</span></li>
+      <li class="settings-icon email"><span>email</span></li>
+      <li class="settings-icon enableusbstorage"><span>enableusbstorage</span></li>
+      <li class="settings-icon feedback"><span>feedback</span></li>
+      <li class="settings-icon gps"><span>gps</span></li>
+      <li class="settings-icon help"><span>help</span></li>
+      <li class="settings-icon import-from-sd-card"><span>import-from-sd-card</span></li>
+      <li class="settings-icon import-from-sim-card"><span>import-from-sim-card</span></li>
+      <li class="settings-icon keyboard"><span>keyboard</span></li>
+      <li class="settings-icon languages"><span>languages</span></li>
+      <li class="settings-icon lower-brightness"><span>lower-brightness</span></li>
+      <li class="settings-icon mediastorage"><span>mediastorage</span></li>
+      <li class="settings-icon network"><span>network</span></li>
+      <li class="settings-icon notifications"><span>notifications</span></li>
+      <li class="settings-icon permissions-camera"><span>permissions-camera</span></li>
+      <li class="settings-icon permissions-contacts"><span>permissions-contacts</span></li>
+      <li class="settings-icon permissions-devicestorage"><span>permissions-devicestorage</span></li>
+      <li class="settings-icon permissions-fmradio"><span>permissions-fmradio</span></li>
+      <li class="settings-icon permissions-geolocation"><span>permissions-geolocation</span></li>
+      <li class="settings-icon permissions-wifiinfo"><span>permissions-wifiinfo</span></li>
+      <li class="settings-icon persona"><span>persona</span></li>
+      <li class="settings-icon phonelock"><span>phonelock</span></li>
+      <li class="settings-icon simcardlock"><span>simcardlock</span></li>
+      <li class="settings-icon simtoolkit"><span>simtoolkit</span></li>
+      <li class="settings-icon sound"><span>sound</span></li>
+      <li class="settings-icon tethering"><span>tethering</span></li>
+      <li class="settings-icon topUp"><span>topUp</span></li>
+      <li class="settings-icon topUpAndPay"><span>topUpAndPay</span></li>
+      <li class="settings-icon topUpWithCode"><span>topUpWithCode</span></li>
+      <li class="settings-icon updateBalance"><span>updateBalance</span></li>
+      <li class="settings-icon wallpaper"><span>topUpWithCode</span></li>
+      <li class="settings-icon wifi"><span>wifi</span></li>
+      <li class="settings-icon wifi-locked"><span>wifi-locked</span></li>
+      <li class="settings-icon wifi-locked-connected-1"><span>wifi-locked-connected-1</span></li>
+      <li class="settings-icon wifi-locked-connected-2"><span>wifi-locked-connected-2</span></li>
+      <li class="settings-icon wifi-locked-connected-3"><span>wifi-locked-connected-3</span></li>
+      <li class="settings-icon wifi-locked-connected-4"><span>wifi-locked-connected-4</span></li>
+      <li class="settings-icon wifi-locked-not-connected-1"><span>wifi-locked-not-connected-1</span></li>
+      <li class="settings-icon wifi-locked-not-connected-2"><span>wifi-locked-not-connected-2</span></li>
+      <li class="settings-icon wifi-locked-not-connected-3"><span>wifi-locked-not-connected-3</span></li>
+      <li class="settings-icon wifi-locked-not-connected-4"><span>wifi-locked-not-connected-4</span></li>
+      <li class="settings-icon wifi-open"><span>wifi-locked-open</span></li>
+      <li class="settings-icon wifi-open-connected-1"><span>wifi-open-connected-1</span></li>
+      <li class="settings-icon wifi-open-connected-2"><span>wifi-open-connected-2</span></li>
+      <li class="settings-icon wifi-open-connected-3"><span>wifi-open-connected-3</span></li>
+      <li class="settings-icon wifi-open-connected-4"><span>wifi-open-connected-4</span></li>
+      <li class="settings-icon wifi-open-not-connected-1"><span>wifi-open-not-connected-1</span></li>
+      <li class="settings-icon wifi-open-not-connected-2"><span>wifi-open-not-connected-2</span></li>
+      <li class="settings-icon wifi-open-not-connected-3"><span>wifi-open-not-connected-3</span></li>
+      <li class="settings-icon wifi-open-not-connected-4"><span>wifi-open-not-connected-4</span></li>
+    </ul>
   </section>
 
   <section class="examples">
@@ -261,21 +336,18 @@
             asidecall
           </aside>
           <a href="#">
-            <p>Margherita <strong>Gomez</strong></p>
-            <p>Family</p>
+            <p>Travis Gray</p>
+            <p>Home</p>
           </a>
         </li>
         <li>
           <aside class="icon comms-icon calllog-missedcallred">
             asidecall
           </aside>
-          <p>
-            Margherita <strong>Gomez</strong>
-            <em>(2)</em>
-          </p>
+          <p>Travis Gray <em>(2)</em></p>
           <p>
             <time datetime="17:43">5:43PM</time>
-            Mobile, Vivo
+            Mobile
           </p>
         </li>
       </ul>
