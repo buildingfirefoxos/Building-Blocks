@@ -209,3 +209,15 @@ progress[value].pack-activity.light::-webkit-progress-bar {
   from { background-position: 0 0; }
   to   { background-position: 1rem 0; }
 }
+
+/* Seek bars */
+div[role="slider"] progress::-webkit-progress-value {
+  height: 0.6rem;
+  top: -0.3rem;
+  position: relative;
+}
+
+div[role="slider"] button {
+  -moz-transition: border 0.15s ease;
+  -webkit-transition: border 0.15s ease;
+}

@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="icons/styles/action_icons.css">
   <link rel="stylesheet" href="icons/styles/media_icons.css">
   <link rel="stylesheet" href="icons/styles/comms_icons.css">
+  <link rel="stylesheet" href="icons/styles/settings_icons.css">
 
   <!-- Transitions -->
   <link rel="stylesheet" href="transitions.css">
@@ -834,6 +835,18 @@
             <button>handler</button>
           </div>
         </div>
+        <div role="slider" aria-valuemin="0" aria-valuenow="0" aria-valuemax="100" aria-valuetext="slider description">
+          <div>
+            <progress value="0" max="100"></progress>
+            <button>handler</button>
+          </div>
+        </div>
+        <div role="slider" aria-valuemin="0" aria-valuenow="100" aria-valuemax="100" aria-valuetext="slider description">
+          <div>
+            <progress value="100" max="100"></progress>
+            <button>handler</button>
+          </div>
+        </div>
 
         <header><h2>Value seeker</h2></header>
         <div role="slider" aria-valuemin="0" aria-valuenow="80" aria-valuemax="100" aria-valuetext="slider description">
@@ -847,8 +860,8 @@
 
         <header><h2>Icon seeker</h2></header>
         <div role="slider" aria-valuemin="0" aria-valuenow="80" aria-valuemax="100" aria-valuetext="slider description">
-          <label class="icon">0</label>
-          <label class="icon">100</label>
+          <label class="icon settings-icon lower-brightness">0</label>
+          <label class="icon settings-icon brightness">100</label>
           <div>
             <progress value="80" max="100"></progress>
             <button>handler</button>
@@ -892,6 +905,8 @@
   </section>
 
 
+  <script type="text/javascript" defer src="js/status.js"></script>
+  <script type="text/javascript" defer src="js/seekbars.js"></script>
   <script>
     //action menu
     document.querySelector('#btn-action-menu').addEventListener ('click', function () {
@@ -1013,7 +1028,7 @@
     });
 
   </script>
-  <script type="text/javascript" src="js/status.js"></script>
+
 </body>
 </html>
 
