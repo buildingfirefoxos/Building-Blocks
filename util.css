@@ -33,8 +33,9 @@ section[role="region"] > header.fixed:first-child {
 .scrollable {
   overflow: scroll;
   height: 100%;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   position: relative;
 }
 
@@ -72,6 +73,10 @@ section[role="region"] > .content [data-type="list"] li > a {
 section[role="region"] > .content [data-type="list"] li > a:after {
   left: -1.5rem;
   right: -1.5rem;
+}
+
+[aria-disabled="true"] {
+  pointer-events: none;  
 }
 
 /* Fonts */

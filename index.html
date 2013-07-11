@@ -127,11 +127,11 @@
       margin-bottom: 1.5rem;
     }
 
-    #headers article section[role="region"] {
+    #headers section[role="region"] {
       display: inline;
     }
 
-    #headers section[role="region"] article header:first-child {
+    #headers article header:first-child {
       margin-top: 1.5rem;
     }
 
@@ -155,6 +155,19 @@
     div[role="slider"] > label.icon {
       background: no-repeat right top;
       background-size: 3rem auto;
+    }
+    
+    /* Tabs */
+    #tabs .content {
+      padding: 0;
+    }
+    #tabs .content .content {
+      padding: 1.5rem 3rem;
+    }
+
+    /* Filters */
+    [role="tablist"][data-type="filter"] {
+      margin-bottom: 2rem;
     }
   </style>
 </head>
@@ -362,89 +375,98 @@
   </section>
 
   <!--··························· Headers ···························-->
-  <section id="headers" data-position="right">
-     <section role="region">
-      <header class="fixed">
-        <a id="btn-headers-back" href="#"><span class="icon icon-back">back</span></a>
-        <h1>Headers</h1>
-      </header>
-      <article class="content scrollable header">
+  <section role="region" id="headers" data-position="right">
+    <header class="fixed">
+      <a id="btn-headers-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Headers</h1>
+    </header>
+    <article class="content scrollable header">
+      <section role="region">
+        <header>
+          <menu type="toolbar">
+            <a href="#"><span class="icon icon-edit">edit</span></a>
+            <a href="#"><span class="icon icon-add">add</span></a>
+          </menu>
+          <h1>Messages</h1>
+        </header>
+      </section>
+
+      <section role="region">
+        <header>
+          <a href="#"><span class="icon icon-back">back</span></a>
+          <menu type="toolbar">
+            <button><span class="icon icon-edit">edit</span></button>
+          </menu>
+          <h1>Mark Alfenito</h1>
+        </header>
+      </section>
+
+      <section role="region">
+        <header>
+          <button><span class="icon icon-menu">menu</span></button>
+          <menu type="toolbar">
+            <button><span class="icon icon-edit">edit</span></button>
+            <button><span class="icon icon-add">add</span></button>
+          </menu>
+          <h1>Inbox <em>(2)</em></h1>
+        </header>
+      </section>
+
+      <section role="region">
+        <header>
+          <button><span class="icon icon-close">close</span></button>
+          <menu type="toolbar">
+            <button>done</button>
+          </menu>
+          <h1>Title</h1>
+        </header>
+        <header>
+          <h2>Subheader text</h2>
+        </header>
+      </section>
+
+      <section role="region">
+        <header>
+          <button><span class="icon icon-back">back</span></button>
+          <menu type="toolbar">
+            <button><span class="icon icon-user">user</span></button>
+          </menu>
+          <form action="#">
+            <input type="text" placeholder="search" required="required">
+            <button type="reset">Remove text</button>
+          </form>
+        </header>
+      </section>
+
+      <section role="region" class="skin-dark">
+        <header>
+          <a href="#"><span class="icon icon-back">back</span></a>
+          <h1>Song title</h1>
+        </header>
+        <header>
+          <h2>Subheader text</h2>
+        </header>
+      </section>
+
+      <section role="region" class="skin-dark">
+        <header>
+          <h1>Song title</h1>
+        </header>
+      </section>
+
+      <section role="region" class="skin-organic">
+        <header>
+          <a href="#"><span class="icon icon-back">back</span></a>
+          <h1>Settings</h1>
+        </header>
+        <header>
+          <h2>Subheader text</h2>
+        </header>
+      </section>
+
+      <div class="skin-organic">
         <section role="region">
           <header>
-            <menu type="toolbar">
-              <a href="#"><span class="icon icon-edit">edit</span></a>
-              <a href="#"><span class="icon icon-add">add</span></a>
-            </menu>
-            <h1>Messages</h1>
-          </header>
-        </section>
-
-        <section role="region">
-          <header>
-            <a href="#"><span class="icon icon-back">back</span></a>
-            <menu type="toolbar">
-              <button><span class="icon icon-edit">edit</span></button>
-            </menu>
-            <h1>Mark Alfenito</h1>
-          </header>
-        </section>
-
-        <section role="region">
-          <header>
-            <button><span class="icon icon-menu">menu</span></button>
-            <menu type="toolbar">
-              <button><span class="icon icon-edit">edit</span></button>
-              <button><span class="icon icon-add">add</span></button>
-            </menu>
-            <h1>Inbox <em>(2)</em></h1>
-          </header>
-        </section>
-
-        <section role="region">
-          <header>
-            <button><span class="icon icon-close">close</span></button>
-            <menu type="toolbar">
-              <button>done</button>
-            </menu>
-            <h1>Title</h1>
-          </header>
-          <header>
-            <h2>Subheader text</h2>
-          </header>
-        </section>
-
-        <section role="region">
-          <header>
-            <button><span class="icon icon-back">back</span></button>
-            <menu type="toolbar">
-              <button><span class="icon icon-user">user</span></button>
-            </menu>
-            <form action="#">
-              <input type="text" placeholder="search" required="required">
-              <button type="reset">Remove text</button>
-            </form>
-          </header>
-        </section>
-
-        <section role="region" class="skin-dark">
-          <header>
-            <a href="#"><span class="icon icon-back">back</span></a>
-            <h1>Song title</h1>
-          </header>
-          <header>
-            <h2>Subheader text</h2>
-          </header>
-        </section>
-
-        <section role="region" class="skin-dark">
-          <header>
-            <h1>Song title</h1>
-          </header>
-        </section>
-
-        <section role="region" class="skin-organic">
-          <header>
-            <a href="#"><span class="icon icon-back">back</span></a>
             <h1>Settings</h1>
           </header>
           <header>
@@ -452,202 +474,187 @@
           </header>
         </section>
 
-        <div class="skin-organic">
-          <section role="region">
-            <header>
-              <h1>Settings</h1>
-            </header>
-            <header>
-              <h2>Subheader text</h2>
-            </header>
-          </section>
-
-          <section role="region">
-            <header>
-              <a href="#"><span class="icon icon-close">close</span></a>
-              <h1>Settings</h1>
-            </header>
-            <header>
-              <h2>Subheader text</h2>
-            </header>
-          </section>
-        </div>
-      </article>
-    </section>
+        <section role="region">
+          <header>
+            <a href="#"><span class="icon icon-close">close</span></a>
+            <h1>Settings</h1>
+          </header>
+          <header>
+            <h2>Subheader text</h2>
+          </header>
+        </section>
+      </div>
+    </article>
   </section>
 
   <!--·························· Input areas ··························-->
-  <section id="input-areas" data-position="right">
-     <section role="region">
-      <header class="fixed">
-        <a id="btn-input-areas-back" href="#"><span class="icon icon-back">back</span></a>
-        <h1>Input areas</h1>
-      </header>
-      <article class="content scrollable header">
-        <header><h2>Default inputs</h2></header>
-        <form>
-          <p>
-            <input type="text" placeholder="Placeholder" required>
-            <button type="reset">Clear</button>
-          </p>
+  <section role="region" id="input-areas" data-position="right">
+    <header class="fixed">
+      <a id="btn-input-areas-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Input areas</h1>
+    </header>
+    <article class="content scrollable header">
+      <header><h2>Default inputs</h2></header>
+      <form>
+        <p>
+          <input type="text" placeholder="Placeholder" required>
+          <button type="reset">Clear</button>
+        </p>
 
-          <p>
-            <textarea placeholder="Placeholder in textarea" required></textarea>
-          </p>
+        <p>
+          <textarea placeholder="Placeholder in textarea" required></textarea>
+        </p>
 
-          <p>
-            <input type="text" placeholder="Placeholder" value="Some written text" required>
-            <button type="reset">Clear</button>
-          </p>
-        </form>
+        <p>
+          <input type="text" placeholder="Placeholder" value="Some written text" required>
+          <button type="reset">Clear</button>
+        </p>
+      </form>
 
-        <header><h2>Fieldset</h2></header>
-         <form>
-          <fieldset>
-            <legend class="action">Mobile</legend>
-            <section>
-              <p>
-                <input type="tel" placeholder="Phone number" required>
-                <button type="reset">Clear</button>
-              </p>
-              <p>
-                <input type="text" placeholder="Name" value="Jessy James" required>
-                <button type="reset">Clear</button>
-              </p>
-            </section>
-          </fieldset>
+      <header><h2>Fieldset</h2></header>
+       <form>
+        <fieldset>
+          <legend class="action">Mobile</legend>
+          <section>
+            <p>
+              <input type="tel" placeholder="Phone number" required>
+              <button type="reset">Clear</button>
+            </p>
+            <p>
+              <input type="text" placeholder="Name" value="Jessy James" required>
+              <button type="reset">Clear</button>
+            </p>
+          </section>
+        </fieldset>
 
-          <fieldset>
-            <legend>Work</legend>
-            <section>
-              <p>
-                <input type="tel" placeholder="Email" required>
-                <button type="reset">Clear</button>
-              </p>
-            </section>
-          </fieldset>
-         </form>
+        <fieldset>
+          <legend>Work</legend>
+          <section>
+            <p>
+              <input type="tel" placeholder="Email" required>
+              <button type="reset">Clear</button>
+            </p>
+          </section>
+        </fieldset>
+       </form>
 
-        <header><h2>Forms: Input text</h2></header>
+      <header><h2>Forms: Input text</h2></header>
 
-        <form role="search">
-          <p>
-            <input type="text" placeholder="Search..." required>
-            <button type="reset">Clear</button>
-          </p>
-        </form>
+      <form role="search">
+        <p>
+          <input type="text" placeholder="Search..." required>
+          <button type="reset">Clear</button>
+        </p>
+      </form>
 
-        <form role="search">
-          <button type="submit">Cancel</button>
-          <p>
-            <input type="text" placeholder="Search..." required value="Some text here">
-            <button type="reset">Clear</button>
-          </p>
-        </form>
+      <form role="search">
+        <button type="submit">Cancel</button>
+        <p>
+          <input type="text" placeholder="Search..." required value="Some text here">
+          <button type="reset">Clear</button>
+        </p>
+      </form>
 
-        <form role="search" class="skin-dark">
-          <p>
-            <input type="text" placeholder="Search..." required>
-            <button type="reset">Clear</button>
-          </p>
-        </form>
+      <form role="search" class="skin-dark">
+        <p>
+          <input type="text" placeholder="Search..." required>
+          <button type="reset">Clear</button>
+        </p>
+      </form>
 
-        <form role="search" class="skin-dark">
-          <button type="submit">Cancel</button>
-          <p>
-            <input type="text" placeholder="Search..." required value="Some text here">
-            <button type="reset">Clear</button>
-          </p>
-        </form>
+      <form role="search" class="skin-dark">
+        <button type="submit">Cancel</button>
+        <p>
+          <input type="text" placeholder="Search..." required value="Some text here">
+          <button type="reset">Clear</button>
+        </p>
+      </form>
 
-        <header><h2>Forms: Text area</h2></header>
+      <header><h2>Forms: Text area</h2></header>
 
-        <form role="search" class="bottom">
-          <!-- this button should be enabled after start typing in the input field-->
-          <button type="submit" disabled>Send</button>
-          <p>
-            <textarea required></textarea>
-          </p>
-        </form>
+      <form role="search" class="bottom">
+        <!-- this button should be enabled after start typing in the input field-->
+        <button type="submit" disabled>Send</button>
+        <p>
+          <textarea required></textarea>
+        </p>
+      </form>
 
-        <form role="search" class="bottom">
-          <button class="icon icon-attachment">Attachment</button>
-          <button type="submit">Send</button>
-          <p>
-            <textarea required>Some text here</textarea>
-          </p>
-        </form> 
-      </article>
-    </section>
+      <form role="search" class="bottom">
+        <button class="icon icon-attachment">Attachment</button>
+        <button type="submit">Send</button>
+        <p>
+          <textarea required>Some text here</textarea>
+        </p>
+      </form> 
+    </article>
   </section>
 
   <!--····························· Switches ·····························-->
-  <section id="switches" data-position="right">
-     <section role="region">
-      <header class="fixed">
-        <a id="btn-switches-back" href="#"><span class="icon icon-back">back</span></a>
-        <h1>Switches</h1>
-      </header>
-      <article class="content scrollable header">
-        <header><h2>Checkbox, commonly used in edit mode</h2></header>
-        <label>
-          <input type="checkbox" checked>
-          <span></span>
-        </label>
+  <section role="region" id="switches" data-position="right">
+    <header class="fixed">
+      <a id="btn-switches-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Switches</h1>
+    </header>
+    <article class="content scrollable header">
+      <header><h2>Checkbox, commonly used in edit mode</h2></header>
+      <label>
+        <input type="checkbox" checked>
+        <span></span>
+      </label>
 
-        <label>
-          <input type="checkbox">
-          <span></span>
-        </label>
+      <label>
+        <input type="checkbox">
+        <span></span>
+      </label>
 
-        <label class="danger">
-          <input type="checkbox" checked>
-          <span></span>
-        </label>
+      <label class="danger">
+        <input type="checkbox" checked>
+        <span></span>
+      </label>
 
-        <label class="danger">
-          <input type="checkbox">
-          <span></span>
-        </label>
+      <label class="danger">
+        <input type="checkbox">
+        <span></span>
+      </label>
 
-        <header><h2>Radio, commonly used in settings</h2></header>
-        <label>
-          <input type="radio" name="example" checked>
-          <span></span>
-        </label>
+      <header><h2>Radio, commonly used in settings</h2></header>
+      <label>
+        <input type="radio" name="example" checked>
+        <span></span>
+      </label>
 
-        <label>
-          <input type="radio" name="example">
-          <span></span>
-        </label>
+      <label>
+        <input type="radio" name="example">
+        <span></span>
+      </label>
 
-        <label class="danger">
-          <input type="radio" name="example2" checked>
-          <span></span>
-        </label>
+      <label class="danger">
+        <input type="radio" name="example2" checked>
+        <span></span>
+      </label>
 
-        <label class="danger">
-          <input type="radio" name="example2">
-          <span></span>
-        </label>
+      <label class="danger">
+        <input type="radio" name="example2">
+        <span></span>
+      </label>
 
-        <header><h2>Switch, commonly used in settings</h2></header>
-        <label>
-          <input type="checkbox" data-type="switch" checked>
-          <span></span>
-        </label>
-        
-        <label>
-          <input type="checkbox" data-type="switch">
-          <span></span>
-        </label>
-      </article>
-    </section>
+      <header><h2>Switch, commonly used in settings</h2></header>
+      <label>
+        <input type="checkbox" data-type="switch" checked>
+        <span></span>
+      </label>
+      
+      <label>
+        <input type="checkbox" data-type="switch">
+        <span></span>
+      </label>
+    </article>
   </section>
 
   <!--····························· Drawer ·····························-->
   <!--section id="drawer_demo" data-position="right">
-     <section role="region">
+    <section role="region">
       <header class="fixed">
         <a id="btn-drawer-back" href="#"><span class="icon icon-back">back</span></a>
         <h1>drawer</h1>
@@ -690,139 +697,133 @@
   </section-->
 
   <!--····························· Lists ·····························-->
-  <section id="lists" data-position="right">
-     <section role="region">
-      <header class="fixed">
-        <a id="btn-lists-back" href="#"><span class="icon icon-back">back</span></a>
-        <h1>Lists</h1>
-      </header>
-      <article class="content scrollable header">
-        <section data-type="list">
-          <header>Title</header>
-          <ul>
-            <li>
+  <section role="region" id="lists" data-position="right">
+    <header class="fixed">
+      <a id="btn-lists-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Lists</h1>
+    </header>
+    <article class="content scrollable header">
+      <section data-type="list">
+        <header>Title</header>
+        <ul>
+          <li>
+            <p>Travis Gray</p>
+          </li>
+          <li>
+            <a href="#">
               <p>Travis Gray</p>
-            </li>
-            <li>
-              <a href="#">
-                <p>Travis Gray</p>
-                <p>Clickable item</p>
-              </a>
-            </li>
-            <li>
-              <aside class="pack-end">
-                <img alt="photo" src="images/photo.jpg">
+              <p>Clickable item</p>
+            </a>
+          </li>
+          <li>
+            <aside class="pack-end">
+              <img alt="photo" src="images/photo.jpg">
+            </aside>
+            <a href="#">
+              <p>Travis Gray</p>
+              <p>Beginning of message</p>
+            </a>
+          </li>
+        </ul>
+        <header>Another title</header>
+        <ul>
+          <li aria-disabled="true">
+            <aside class="pack-end">
+              <img alt="photo" src="images/photo.jpg">
+            </aside>
+            <a href="#">
+              <p>Travis Gray</p>
+              <p>Disabled item</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <aside class="icon comms-icon calllog-incomingcall">
+                asidecall
               </aside>
-              <a href="#">
-                <p>Travis Gray</p>
-                <p>Beginning of message</p>
-              </a>
-            </li>
-          </ul>
-          <header>Another title</header>
-          <ul>
-            <li aria-disabled="true">
-              <aside class="pack-end">
-                <img alt="photo" src="images/photo.jpg">
-              </aside>
-              <a href="#">
-                <p>Travis Gray</p>
-                <p>Disabled item</p>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <aside class="icon comms-icon calllog-incomingcall">
-                  asidecall
-                </aside>
-                <p>Travis Gray <em>(2)</em></p>
-                <p>
-                  <time datetime="17:43">5:43PM</time>
-                  Mobile
-                </p>
-              </a>
-            </li>
-          </ul>
-        </section>
-      </article>
-    </section>
+              <p>Travis Gray <em>(2)</em></p>
+              <p>
+                <time datetime="17:43">5:43PM</time>
+                Mobile
+              </p>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </article>
   </section>
 
   <!--···························· Progress ····························-->
-  <section id="progress" data-position="right">
-     <section role="region">
-      <header class="fixed">
-        <a id="btn-progress-back" href="#"><span class="icon icon-back">back</span></a>
-        <h1>Progress and activity</h1>
-      </header>
-      <article class="content scrollable header">
-        <header><h2>Spinner</h2></header>
-        <progress></progress>
+  <section role="region" id="progress" data-position="right">
+    <header class="fixed">
+      <a id="btn-progress-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Progress and activity</h1>
+    </header>
+    <article class="content scrollable header">
+      <header><h2>Spinner</h2></header>
+      <progress></progress>
 
-        <header><h2>Activity bar</h2></header>
-        <progress class="pack-activity" value="0" max="100"></progress>
+      <header><h2>Activity bar</h2></header>
+      <progress class="pack-activity" value="0" max="100"></progress>
 
-        <header><h2>Progress bar</h2></header>
-        <progress value="80" max="100"></progress>
+      <header><h2>Progress bar</h2></header>
+      <progress value="80" max="100"></progress>
 
-        <header><h2>Progress + activity bar</h2></header>
-        <progress class="pack-activity" value="80" max="100"></progress>
+      <header><h2>Progress + activity bar</h2></header>
+      <progress class="pack-activity" value="80" max="100"></progress>
 
-        <header><h2>Light progress + activity bar</h2></header>
-        <progress class="pack-activity light" value="0" max="100"></progress>
-      </article>
-    </section>
+      <header><h2>Light progress + activity bar</h2></header>
+      <progress class="pack-activity light" value="0" max="100"></progress>
+    </article>
   </section>
 
   <!--···························· Scrolling ····························-->
-  <section id="scrolling" data-position="right">
-     <section role="region">
-      <header class="fixed">
-        <a id="btn-scrolling-back" href="#"><span class="icon icon-back">back</span></a>
-        <h1>Scrolling</h1>
-      </header>
-      <article class="content scrollable header">
-        <nav data-type="scrollbar">
-          <p>A</p>
-          <ol>
-            <li><a href="#"><span class="pack-icon-search">Search</span></a></li>
-            <li><a href="#"><span class="pack-icon-favorites">favorites</span></a></li>
-            <li><a href="#">A</a></li>
-            <li><a href="#">B</a></li>
-            <li><a href="#">C</a></li>
-            <li><a href="#">D</a></li>
-            <li><a href="#">E</a></li>
-            <li><a href="#">F</a></li>
-            <li><a href="#">G</a></li>
-            <li><a href="#">H</a></li>
-            <li><a href="#">I</a></li>
-            <li><a href="#">J</a></li>
-            <li><a href="#">K</a></li>
-            <li><a href="#">L</a></li>
-            <li><a href="#">M</a></li>
-            <li><a href="#">N</a></li>
-            <li><a href="#">O</a></li>
-            <li><a href="#">P</a></li>
-            <li><a href="#">Q</a></li>
-            <li><a href="#">R</a></li>
-            <li><a href="#">S</a></li>
-            <li><a href="#">T</a></li>
-            <li><a href="#">U</a></li>
-            <li><a href="#">V</a></li>
-            <li><a href="#">W</a></li>
-            <li><a href="#">X</a></li>
-            <li><a href="#">Y</a></li>
-            <li><a href="#">Z</a></li>
-            <li><a href="#">#</a></li>
-          </ol>
-        </nav>
-      </article>
-    </section>
+  <section role="region" id="scrolling" data-position="right">
+    <header class="fixed">
+      <a id="btn-scrolling-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Scrolling</h1>
+    </header>
+    <article class="content scrollable header">
+      <nav data-type="scrollbar">
+        <p>A</p>
+        <ol>
+          <li><a href="#"><span class="pack-icon-search">Search</span></a></li>
+          <li><a href="#"><span class="pack-icon-favorites">favorites</span></a></li>
+          <li><a href="#">A</a></li>
+          <li><a href="#">B</a></li>
+          <li><a href="#">C</a></li>
+          <li><a href="#">D</a></li>
+          <li><a href="#">E</a></li>
+          <li><a href="#">F</a></li>
+          <li><a href="#">G</a></li>
+          <li><a href="#">H</a></li>
+          <li><a href="#">I</a></li>
+          <li><a href="#">J</a></li>
+          <li><a href="#">K</a></li>
+          <li><a href="#">L</a></li>
+          <li><a href="#">M</a></li>
+          <li><a href="#">N</a></li>
+          <li><a href="#">O</a></li>
+          <li><a href="#">P</a></li>
+          <li><a href="#">Q</a></li>
+          <li><a href="#">R</a></li>
+          <li><a href="#">S</a></li>
+          <li><a href="#">T</a></li>
+          <li><a href="#">U</a></li>
+          <li><a href="#">V</a></li>
+          <li><a href="#">W</a></li>
+          <li><a href="#">X</a></li>
+          <li><a href="#">Y</a></li>
+          <li><a href="#">Z</a></li>
+          <li><a href="#">#</a></li>
+        </ol>
+      </nav>
+    </article>
   </section>
 
   <!--···························· Seek bars ····························-->
-  <section id="seek-bars" data-position="right">
-     <section role="region">
+  <section role="region" id="seek-bars" data-position="right">
+    <section role="region">
       <header class="fixed">
         <a id="btn-seek-bars-back" href="#"><span class="icon icon-back">back</span></a>
         <h1>Seek bars</h1>
@@ -873,12 +874,31 @@
 
   <!--······························ Tabs ······························-->
   <section id="tabs" data-position="right">
-     <section role="region">
+    <section role="region">
       <header class="fixed">
         <a id="btn-tabs-back" href="#"><span class="icon icon-back">back</span></a>
         <h1>Tabs</h1>
       </header>
-      <iframe src="style_unstable/tabs/index.html" class="scrollable"></iframe>
+      <article class="content scrollable header">
+        <ul role="tablist" data-items="4" class="bottom">
+          <li id="panel2" role="tab">
+            <a href="#" class="icon comms-icon dailer-recentcalls">comms</a>
+            <div role="tabpanel"></div>
+          </li>
+          <li id="panel2" role="tab">
+            <a href="#" class="icon comms-icon dailer-contacts">contacts</a>
+            <div role="tabpanel"></div>
+          </li>
+          <li id="panel3" role="tab" aria-disabled="true">
+            <a class="icon comms-icon dailer-dialpad">dialer</a>
+            <div role="tabpanel"></div>
+          </li>
+          <li id="panel4" role="tab">
+            <a href="#">Tab name</a>
+            <div role="tabpanel"></div>
+          </li>
+        </ul>
+      </article>
     </section>
   </section>
 
@@ -889,7 +909,31 @@
         <a id="btn-filters-back" href="#"><span class="icon icon-back">back</span></a>
         <h1>Filters</h1>
       </header>
-      <iframe src="style_unstable/tabs/filters.html" class="scrollable"></iframe>
+      <article class="content scrollable header">
+        <header><h2>Default position</h2></header>
+        <ul role="tablist" data-type="filter" data-items="2">
+          <li id="filter1-1" role="tab"><a href="#">Action 01</a></li>
+          <li id="filter1-2" role="tab"><a href="#">Action 02</a></li>
+        </ul>
+        <ul role="tablist" data-type="filter" data-items="3">
+          <li id="filter2-1" role="tab"><a href="#">Action 01</a></li>
+          <li id="filter2-2" role="tab"><a href="#">Action 02</a></li>
+          <li id="filter2-3" role="tab"><a href="#">Action 02</a></li>
+        </ul>
+        <ul role="tablist" data-type="filter" data-items="4">
+          <li id="filter3-1" role="tab"><a href="#">Action 01</a></li>
+          <li id="filter3-2" role="tab"><a href="#">Action 02</a></li>
+          <li id="filter3-3" role="tab"><a href="#">Action 03</a></li>
+          <li id="filter3-4" role="tab"><a href="#">Action 04</a></li>
+        </ul>
+        <header><h2>Bottom position</h2></header>
+        <ul role="tablist" data-type="filter" class="bottom" data-items="4">
+          <li id="filter4-1" role="tab"><a href="#">Action 01</a></li>
+          <li id="filter4-2" role="tab"><a href="#">Action 02</a></li>
+          <li id="filter4-3" role="tab"><a href="#">Action 03</a></li>
+          <li id="filter4-4" role="tab"><a href="#">Action 04</a></li>
+        </ul>
+      </article>
     </section>
   </section>
 

@@ -107,6 +107,10 @@ textarea {
   -webkit-box-sizing: border-box;
 }
 
+textarea:focus, input:focus{
+  outline: none;
+}
+
 fieldset legend {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -221,3 +225,29 @@ div[role="slider"] button {
   -moz-transition: border 0.15s ease;
   -webkit-transition: border 0.15s ease;
 }
+
+/* Tabs */
+[role="tablist"][data-items="2"] > [role="tab"] {
+  width: 50%
+}
+[role="tablist"][data-items="3"] > [role="tab"] {
+  width: 33.33%
+}
+[role="tablist"][data-items="4"] > [role="tab"] {
+  width: 25%
+}
+[role="tablist"][data-items="5"] > [role="tab"] {
+  width: 20%
+}
+
+[role="tablist"].bottom  > [role="tab"] > a {
+  margin-top: -4rem;
+  top: 100%;
+}
+
+/* Filters */
+[role="tablist"][data-type="filter"] > [role="tab"] {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+

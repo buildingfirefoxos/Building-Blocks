@@ -72,7 +72,7 @@
 
 
 /* Selected state */
-[role="tablist"] > [role="tab"]:target > a,
+/*[role="tablist"] > [role="tab"]:target > a,
 [role="tablist"] > [role="tab"][aria-selected="true"] > a {
   color: #62c6f5
 }
@@ -81,7 +81,7 @@
 [role="tablist"] > [role="tab"][aria-selected="true"] > a.icon:after {
   background-position: center -4rem;
 }
-
+*/
 /* Disabled state */
 [role="tablist"] > [role="tab"][aria-disabled="true"] > a {
   color: #4d4d4d;
@@ -103,12 +103,12 @@
   overflow: auto;
 }
 
-[role="tablist"] :target [role="tabpanel"],
+/*[role="tablist"] :target [role="tabpanel"],
 [role="tablist"] [aria-selected="true"] [role="tabpanel"] {
   z-index: 1;
   visibility: visible;
 }
-
+*/
 /* Position bottom */
 [role="tablist"].bottom > [role="tab"] {
   height: 100%;
@@ -169,7 +169,7 @@
 }
 
 /* Selected state */
-[role="tablist"][data-type="filter"] > [role="tab"]:target,
+/*[role="tablist"][data-type="filter"] > [role="tab"]:target,
 [role="tablist"][data-type="filter"] > [role="tab"][aria-selected="true"] {
   background: #fff;
 }
@@ -184,7 +184,7 @@
   background-color: #008aaa;
   color: #fff;
 }
-
+*/
 /* Bottom position */
 [role="tablist"][data-type="filter"].bottom {
   bottom: 100%;
