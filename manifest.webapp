@@ -1,7 +1,7 @@
 {
   "name": "Building Blocks",
   "description": "Building Blocks Demo App",
-  "launch_path": "/index.html",
+  "launch_path": "/app.html",
   "orientation": ["portrait"],
   "developer": {
     "name": "Arnau March",
