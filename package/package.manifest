@@ -1,6 +1,6 @@
 {
   "name": "Building Blocks",
-  "package_path": "http://buildingfirefoxos.github.io/Building-Blocks//package/package.zip",
+  "package_path": "http://buildingfirefoxos.github.io/Building-Blocks/package/package.zip",
   "size": 1586262,
   "version": "1.0",
   "description": "Firefox OS Building Blocks demo app",
