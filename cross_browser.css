@@ -251,3 +251,10 @@ div[role="slider"] button {
   -webkit-box-sizing: border-box;
 }
 
+/* Collision: This should be added to Gaia */
+/* Switches and List buttons */
+ul.compact li label:not([for]), 
+ol.compact li label:not([for]) {
+  height: auto;
+  width: auto;
+}

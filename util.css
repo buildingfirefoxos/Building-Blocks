@@ -75,6 +75,14 @@ section[role="region"] > .content [data-type="list"] li > a:after {
   right: -1.5rem;
 }
 
+section[role="region"] > .content [data-type="list"] header {
+  padding: 0.5rem 1.5rem;
+}
+
+section[role="region"] > .content [data-type="list"] li > a > aside:not(.pack-end) {
+  margin-left: -1.5rem;
+}
+
 [aria-disabled="true"] {
   pointer-events: none;  
 }
