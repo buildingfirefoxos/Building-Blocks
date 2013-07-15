@@ -258,3 +258,10 @@ ol.compact li label:not([for]) {
   height: auto;
   width: auto;
 }
+
+/* Missing in BB */
+section[data-type="sidebar"] > header a, 
+section[data-type="sidebar"] > header button {
+  font-weight: normal;
+  text-decoration: none;
+}

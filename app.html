@@ -139,11 +139,24 @@
     section[role="region"]:not(#drawer) > header:first-child h1 {
       margin-left: 3rem;
     }
+    section[role="region"]#drawer > header:first-child h1 {
+      margin-left: 4.5rem;
+    }
     section[role="region"]:not(#drawer) > header:first-child > a {
       width: 5rem;
     }
+    section[role="region"]#drawer > header:first-child > a .icon {
+      width: 3.5rem;
+    }
+    section[data-type="sidebar"] + section[role="region"] > header:first-child > button, 
+    section[data-type="sidebar"] + section[role="region"] > header:first-child > a {
+      background-position: 3.5rem center;
+    }
     section[role="region"]:not(#drawer) > header:first-child > a .icon:after {
       width: 2rem;
+    }
+    section[role="region"]#drawer > header:first-child > a .icon:after {
+      width: 3.5rem;
     }
 
     /* Switches */
@@ -184,7 +197,7 @@
     <section data-type="sidebar">
       <header>
         <menu type="toolbar">
-          <a href="#"><span class="icon icon-add">add</span></a>
+          <a href="#">Done</a>
         </menu>
         <h1>Drawer demo</h1>
       </header>
