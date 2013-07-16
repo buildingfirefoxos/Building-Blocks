@@ -1068,6 +1068,12 @@
     document.querySelector('#btn-seek-bars').addEventListener ('click', function () {
       document.querySelector('#seek-bars').className = 'current';
       document.querySelector('[data-position="current"]').className = 'left';
+      var animend = (/webkit/i).test(navigator.appVersion) ? 'webkitAnimationEnd' : 'animationend';
+
+      document.addEventListener(animend, function animationend() {
+        document.removeEventListener(animend, animationend);
+        utils.seekbars.init();
+      });
     });
     document.querySelector('#btn-seek-bars-back').addEventListener ('click', function () {
       document.querySelector('#seek-bars').className = 'right';
