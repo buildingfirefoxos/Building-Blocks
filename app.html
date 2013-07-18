@@ -1100,18 +1100,19 @@
   </script>
 
   <script>
-    var mobile = (navigator.userAgent.search("Mobile") != -1);
-    if ( mobile ) {
-      var ww = window.innerWidth;
-      var wh = window.innerHeight;
-      //if landscape -> reduce font-size
-      if (ww/wh > 1) { 
-        var fs = window.getComputedStyle(document.documentElement).getPropertyValue( 'font-size' );
-        fs = parseInt(fs, 10) * 0.7;
-        console.log(fs)
+    //Let's reduce font-size when in landscape  
+    //fs: current font-size
+    var fs = parseInt(window.getComputedStyle(document.documentElement).getPropertyValue( 'font-size' ), 10);
+    var mql = window.matchMedia("(orientation: portrait)");
+
+    mql.addListener(function(m) {
+      if(m.matches) { //portrait
         document.documentElement.style.fontSize = fs + 'px';
       }
-    } 
+      else { //lanscape
+        document.documentElement.style.fontSize = fs * 0.7 + 'px';
+      }
+    });
   </script>
 </body>
 </html>
