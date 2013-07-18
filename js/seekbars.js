@@ -127,6 +127,13 @@ utils.seekbars = (function() {
           this.currentX = getX(evt);
           this.startX = this.handler.getBoundingClientRect().left +
                         this.halfHandlerWidth;
+
+          if (this.progressLeft > this.currentX) {
+            this.currentX = this.progressLeft;
+          }
+          if (this.progressRight < this.currentX) {
+            this.currentX = this.progressRight;
+          }
           this.updateUI();
 
           if (evt.target === this.handler) {
@@ -204,7 +211,9 @@ utils.seekbars = (function() {
     },
 
     placeHandler: function placeHandler(value) {
-      this.handler.style.left = (100 * value) + '%';
+
+      this.handler.style.left = ((this.progressWidth * value) + this.progressLeft -
+                                 this.progress.parentNode.getBoundingClientRect().left) + 'px';
       this.handler.style[transformProp] = 'translateX(0)';
     },
 

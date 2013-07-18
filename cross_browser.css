@@ -215,6 +215,10 @@ progress[value].pack-activity.light::-webkit-progress-bar {
 }
 
 /* Seek bars */
+div[role="slider"] > div {
+  padding: 0 2rem;
+}
+
 div[role="slider"] progress::-webkit-progress-value {
   height: 0.6rem;
   top: -0.3rem;
@@ -224,6 +228,13 @@ div[role="slider"] progress::-webkit-progress-value {
 div[role="slider"] button {
   -moz-transition: border 0.15s ease;
   -webkit-transition: border 0.15s ease;
+  background: url(style_unstable/seekbars/images/ui/handler.png) no-repeat center;
+  background-size: 2.8rem auto;
+}
+
+div[role="slider"] > label,
+div[role="slider"] > label:first-of-type {
+  padding: 0;
 }
 
 /* Tabs */
