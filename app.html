@@ -1097,9 +1097,22 @@
       document.querySelector('#toolbars').className = 'right';
       document.querySelector('[data-position="current"]').className = 'current';
     });
-
   </script>
 
+  <script>
+    var mobile = (navigator.userAgent.search("Mobile") != -1);
+    if ( mobile ) {
+      var ww = window.innerWidth;
+      var wh = window.innerHeight;
+      //if landscape -> reduce font-size
+      if (ww/wh > 1) { 
+        var fs = window.getComputedStyle(document.documentElement).getPropertyValue( 'font-size' );
+        fs = parseInt(fs, 10) * 0.7;
+        console.log(fs)
+        document.documentElement.style.fontSize = fs + 'px';
+      }
+    } 
+  </script>
 </body>
 </html>
 
