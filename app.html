@@ -113,6 +113,12 @@
       margin: 0 0 1.5rem 0;
     }
 
+    /* Lists */
+    /* to avoid double background effect on press */
+    [data-type=list] li>a:active { 
+      background-color: transparent;
+    }
+
     /* Drawer */
     section[role="region"]:not(#drawer) {
       transition: none;
@@ -176,6 +182,10 @@
     /* Filters */
     [role="tablist"][data-type="filter"] {
       margin-bottom: 2rem;
+    }
+
+    .bottom[role="tablist"][data-type="filter"] {
+      bottom: auto;
     }
 
     /* Device rotation */
