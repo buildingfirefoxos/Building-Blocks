@@ -2,6 +2,10 @@
   "name": "Building Blocks",
   "description": "Building Blocks Demo App",
   "launch_path": "/app.html",
+  "icons": {
+    "120": "/images/app_icon_120.png",
+    "60": "/images/app_icon_60.png"
+  },
   "developer": {
     "name": "Arnau March",
     "url": "http://buildingfirefoxos.com"
