@@ -1,0 +1,278 @@
+/* ----------------------------------------------------------------- */
+/* This CSS file will make your Firefox OS app using Building Blocks */
+/* compatible with: ie 9, Firefox 18, Chrome 24, Safari 5.1          */
+/* By Arnau March - @rnowm                                           */
+/* ----------------------------------------------------------------- */
+
+/* Action menu */
+form[role="dialog"][data-type="action"] > header:first-child, 
+form[role="dialog"][data-type="object"] > header:first-child {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* Buttons */
+button,
+a[role="button"],
+.button {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+button.danger:active,
+a[role="button"].danger:active,
+.button.danger:active {
+  background-image: none;
+}
+
+/* Confirm */
+form[role="dialog"][data-type="confirm"] > section {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+form[role="dialog"][data-type="confirm"] menu {
+  display: inline-block;
+  width: 100%;
+}
+
+form[role="dialog"][data-type="confirm"] menu button,
+form[role="dialog"][data-type="edit"] menu button {
+  width: 48%;
+}
+
+
+/* Edit mode */
+form[role="dialog"][data-type="edit"] header menu[type="toolbar"] button {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* headers */
+section[role="region"] > header:first-child input[type="text"] {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  line-height: 3rem;
+}
+
+section[role="region"] > header:first-child menu[type="toolbar"] a,
+section[role="region"] > header:first-child menu[type="toolbar"] button {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+section[role="region"] > header:first-child menu[type="toolbar"] a:last-child, 
+section[role="region"] > header:first-child menu[type="toolbar"] button:last-child {
+  background: url(style/headers/images/ui/separator.png) no-repeat left center;
+  background-size: auto 3.4rem;
+}
+
+section[role="region"] > header:first-child form button[type="reset"] {
+  background: url(style/headers/images/icons/clear.png) no-repeat center center;
+  background-size: 1.7rem auto;
+}
+
+section[role="region"] > header:first-child > button,
+section[role="region"] > header:first-child > a {
+  background: url(style/headers/images/ui/separator-large.png) no-repeat 2rem center;
+  background-size: auto 4.8rem;
+}
+
+section[role="region"] > header:first-child .icon {
+  background: transparent no-repeat center center;
+  background-size: 3rem auto;
+}
+
+section[role="region"] > header:first-child > button .icon:after,
+section[role="region"] > header:first-child > a .icon:after {
+  background: #9d3d26 url(style/headers/images/ui/negative.png) repeat-x left bottom;
+  background-size: auto 100%;
+}
+
+section[role="region"] header h2 {
+  background: url(style/headers/images/ui/subheader.png) repeat 0 100%;
+  background-size: auto 100%;
+}
+
+/* Input areas */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="search"],
+input[type="url"],
+input[type="number"],
+textarea {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+fieldset legend {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+form[role="search"] p {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+form[role="search"] p input {
+  line-height: 3rem;
+}
+
+/* Switches */
+label input[type="checkbox"][data-type="switch"] + span {
+  -moz-transition: background 0.2s ease, border 0.2s ease;
+  -webkit-transition: background 0.2s ease, border 0.2s ease;
+}
+
+label input[type="checkbox"][data-type="switch"].uninit + span {
+  -moz-transform: none;
+  -webkit-transform: none;
+}
+
+/* Drawer */
+section[role="region"]:target {
+  -moz-transform: translateX(80%);
+  -webkit-transform: translateX(80%);
+}
+
+section[data-type="sidebar"] > header menu[type="toolbar"] a, 
+section[data-type="sidebar"] > header menu[type="toolbar"] button {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box; 
+}
+
+section[data-type="sidebar"] > header {
+  background: url(style_unstable/drawer/images/ui/header.png) repeat-x left bottom;
+  background-size: 100% auto;
+}
+
+section[data-type="sidebar"] + section[role="region"] > header:first-child > button,
+section[data-type="sidebar"] + section[role="region"] > header:first-child > a {
+  background-position: 4rem center;
+}
+
+section[data-type="sidebar"] > header menu[type="toolbar"] a:last-child,
+section[data-type="sidebar"] > header menu[type="toolbar"] button:last-child {
+  background: url(style_unstable/drawer/images/ui/separator.png) no-repeat left center;
+  background-size: auto 3.1rem;
+}
+
+section[data-type="sidebar"] > header .icon {
+  background: transparent no-repeat center center;
+  background-size: 100% auto;
+}
+
+section[data-type="sidebar"] > nav > ul > li > a {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box; 
+}
+
+/* Progress and activity */
+progress {
+  -webkit-appearance: none;
+}
+
+progress:not([value]) {
+  -webkit-animation: 0.9s rotate infinite steps(30);
+}
+
+progress:not([value])::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+progress[value]::-webkit-progress-bar {
+  background: #333;
+}
+
+progress[value]::-webkit-progress-value {
+  background: #01c5ed;
+}
+
+progress[value].pack-activity::-webkit-progress-bar {
+  background-image: url(style_unstable/progress_activity/images/ui/activity.png);
+  -webkit-animation: 0.5s move infinite steps(15);
+}
+
+progress[value].pack-activity.light::-webkit-progress-bar {
+  background-color: #f4f4f4;
+}
+
+@-webkit-keyframes rotate {
+  from { -webkit-transform: rotate(1deg); }
+  to   { -webkit-transform: rotate(360deg); }
+}
+
+@-webkit-keyframes move {
+  from { background-position: 0 0; }
+  to   { background-position: 1rem 0; }
+}
+
+/* Seek bars */
+div[role="slider"] > div {
+  padding: 0 2rem;
+}
+
+div[role="slider"] progress::-webkit-progress-value {
+  height: 0.6rem;
+  top: -0.3rem;
+  position: relative;
+}
+
+div[role="slider"] button {
+  -moz-transition: border 0.15s ease;
+  -webkit-transition: border 0.15s ease;
+  background: url(style_unstable/seekbars/images/ui/handler.png) no-repeat center;
+  background-size: 2.8rem auto;
+}
+
+div[role="slider"] > label,
+div[role="slider"] > label:first-of-type {
+  padding: 0;
+}
+
+/* Tabs */
+[role="tablist"][data-items="2"] > [role="tab"] {
+  width: 50%
+}
+[role="tablist"][data-items="3"] > [role="tab"] {
+  width: 33.33%
+}
+[role="tablist"][data-items="4"] > [role="tab"] {
+  width: 25%
+}
+[role="tablist"][data-items="5"] > [role="tab"] {
+  width: 20%
+}
+
+[role="tablist"].bottom  > [role="tab"] > a {
+  margin-top: -4rem;
+  top: 100%;
+}
+
+/* Filters */
+[role="tablist"][data-type="filter"] > [role="tab"] {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* Collision: This should be added to Gaia */
+/* Switches and List buttons */
+ul.compact li label:not([for]), 
+ol.compact li label:not([for]) {
+  height: auto;
+  width: auto;
+}
+
+/* Missing in BB */
+section[data-type="sidebar"] > header a, 
+section[data-type="sidebar"] > header button {
+  font-weight: normal;
+  text-decoration: none;
+}

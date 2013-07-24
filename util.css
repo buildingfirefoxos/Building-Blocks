@@ -1,0 +1,141 @@
+/* Feel free to add any useful code */
+/* This will help you scroll just the content of your app. Eg:
+  <header class="fixed">
+  ...
+  <article class="scrollable header">
+*/
+
+html {
+  height: 100%;
+  font-size: 62.5%; /* Setting base font to 10px and define all your units in rem. 1rem = 10px */
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+section[role="region"] {
+  height: 100%;
+}
+
+section[role="region"] > header.fixed:first-child {
+  position: absolute;
+  width: 100%;
+}
+
+.scrollable {
+  overflow: scroll;
+  height: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  position: relative;
+}
+
+.scrollable.header {
+  border-top: transparent solid 5rem;
+}
+
+/* Setting proper paddings and margins */
+section[role="region"] > .content {
+  padding: 0 3rem 1.5rem 3rem;
+  background: #fff;
+}
+
+section[role="region"] > .content header h2 {
+  margin: 3rem -3rem 1.5rem -3rem;
+}
+
+section[role="region"] > .content header:first-child h2 {
+  margin-top: 0;
+}
+
+/* This should be fixed in lists BB */
+section[role="region"] > .content [data-type="list"] {
+  margin: 0 -3rem;
+}
+
+section[role="region"] > .content [data-type="list"] li > p {
+  margin: 0 1.5rem;
+}
+
+section[role="region"] > .content [data-type="list"] li > a {
+  margin: 0 1.5rem;
+}
+
+section[role="region"] > .content [data-type="list"] li > a:after {
+  left: -1.5rem;
+  right: -1.5rem;
+}
+
+section[role="region"] > .content [data-type="list"] header {
+  padding: 0.5rem 1.5rem;
+}
+
+section[role="region"] > .content [data-type="list"] li > a > aside:not(.pack-end) {
+  margin-left: -1.5rem;
+}
+
+[aria-disabled="true"] {
+  pointer-events: none;  
+}
+
+/* Fonts */
+h1 { /* Main header */
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+h2 { /* Subheader, Dialog title */
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+p {
+  font-size: 1.9rem;
+  font-weight: normal;
+  line-height: 2.5rem;
+}
+
+p.large { /* Dialog body */
+  font-size: 2.3rem;
+  font-weight: 300;
+  line-height: 3rem;
+}
+
+p.alt { /* Body medium, Buttons */
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 2.2rem;
+}
+
+p.small { /* Status bar */
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+p.mini { /* Fine print */
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+}
+
+p.micro { /* App icon label */
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+}
+
+ul, ol, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.9rem;
+  font-weight: normal;
+  line-height: 2.5rem;
+}

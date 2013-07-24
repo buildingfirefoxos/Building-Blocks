@@ -1,0 +1,14 @@
+{
+  "name": "Building Blocks",
+  "description": "Building Blocks Demo App",
+  "launch_path": "/app.html",
+  "icons": {
+    "128": "/images/app_icon_128.png",
+    "60": "/images/app_icon_60.png"
+  },
+  "developer": {
+    "name": "Arnau March",
+    "url": "http://buildingfirefoxos.com"
+  },
+  "default_locale": "en"
+}

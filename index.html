@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Building Blocks app</title>
+  <script>
+    // Trun it to false to always install 'normal' package
+    var supportHIDPI = false;
+    var isFFOS = ("mozApps" in navigator && navigator.userAgent.search("Mobile") != -1);
+
+    if ( isFFOS ) {
+      var manifestUrl = 'http://buildingfirefoxos.github.io/Building-Blocks/package/package.manifest';
+      var req = navigator.mozApps.installPackage(manifestUrl);
+      req.onsuccess = function() {
+        console.log(this.result.origin);
+      };
+      req.onerror = function() {
+        console.log(this.error.name);
+      };
+
+    } else {
+      window.location.href = "app.html"
+    }
+
+  </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>icons</title>
+
+  <link rel="stylesheet" type="text/css" href="../style/buttons.css">
+  <link rel="stylesheet" type="text/css" href="../style/headers.css">
+  <link rel="stylesheet" type="text/css" href="../style_unstable/lists.css">
+  <link rel="stylesheet" type="text/css" href="../style_unstable/tabs.css">
+  <link rel="stylesheet" type="text/css" href="../style_unstable/toolbars.css">
+
+  <link rel="stylesheet" type="text/css" href="../cross_browser.css">
+
+  <link rel="stylesheet" type="text/css" href="styles/action_icons.css">
+  <link rel="stylesheet" type="text/css" href="styles/media_icons.css">
+  <link rel="stylesheet" type="text/css" href="styles/comms_icons.css">
+  <link rel="stylesheet" type="text/css" href="styles/settings_icons.css">
+
+  <style>
+    /* Styles to make this demo work, don't need to use them in your apps */
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-size: 10px;
+      background-color: #fff;
+    }
+    h2 {
+      font-size: 1.8rem;
+      font-weight: lighter;
+      color: #666;
+      margin: -1px 0 0;
+      background-color: #f5f5f5;
+      padding: 0.4rem 0.4rem 0.4rem 3rem;
+      border: solid 1px #e8e8e8;
+      margin: 30px 0 10px 0;
+    }
+    h2:first-child {
+      margin-top: 0;
+    }
+    section.icons {
+      margin-bottom: 20px;
+      display: block;
+      overflow: hidden;
+    }
+    section.icons ul {
+      list-style: none;
+      margin: 0;
+      padding: 0 30px;
+      display: block;
+      overflow: hidden;
+    }
+    section.icons li.action-icon,
+    section.icons li.comms-icon,
+    section.icons li.settings-icon,
+    section.icons li.media-icon {
+      line-height: 30px;
+      font-size: 16px;
+      margin-bottom: 10px;
+      position: relative;
+      float: left;
+      width: 270px;
+    }
+    section.icons li.action-icon:after,
+    section.icons li.comms-icon:after,
+    section.icons li.settings-icon:after,
+    section.icons li.media-icon:after {
+        background: rgba(0,0,0, 0.8);
+        content: "";
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 0;
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+    }
+    section.icons li.settings-icon:after {
+        background: #fff;
+    }
+    section.icons li.comms-icon.dark:after {
+        background: rgba(0,0,0, 0.4);
+    }
+    section.icons li.action-icon:before,
+    section.icons li.comms-icon:before,
+    section.icons li.settings-icon:before,
+    section.icons li.media-icon:before {
+        z-index: 1;
+    }
+    section.icons li.action-icon span,
+    section.icons li.comms-icon span,
+    section.icons li.settings-icon span,
+    section.icons li.media-icon span {
+        padding-left: 40px;
+    }
+
+    section.examples .action-icon {
+      margin: 0 0 0 30px;
+      width: 14rem;
+    }
+    section.examples [role="toolbar"] {
+      display: block;
+      overflow: hidden;
+      position: relative;
+      margin: 0 0 30px 0;
+    }
+    section.examples [role="tablist"] {
+      height: 5rem;
+      display: block;
+      overflow: hidden;
+      position: relative;
+      margin: 0 0 30px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="icons">
+    <h2>Action icons</h2>
+    <ul>
+      <li class="action-icon alarm-stop"><span>alarm-stop</span></li>
+      <li class="action-icon back"><span>back</span></li>
+      <li class="action-icon bluetooth"><span>bluetooth</span></li>
+      <li class="action-icon bluetooth-transfer"><span>bluetooth-transfer</span></li>
+      <li class="action-icon bookmark"><span>bookmark</span></li>
+      <li class="action-icon bookmarked"><span>bookmarked</span></li>
+      <li class="action-icon browser-back"><span>browser-back</span></li>
+      <li class="action-icon browser-forward"><span>browser-forward</span></li>
+      <li class="action-icon calendar-agendaview"><span>calendar-agendaview</span></li>
+      <li class="action-icon calendar-dayview"><span>calendar-dayview</span></li>
+      <li class="action-icon calendar-monthview"><span>calendar-monthview</span></li>
+      <li class="action-icon calendar-today"><span>calendar-today</span></li>
+      <li class="action-icon calendar-weekview"><span>calendar-weekview</span></li>
+      <li class="action-icon cancel"><span>cancel</span></li>
+      <li class="action-icon clock-addalarm"><span>clock-addalarm</span></li>
+      <li class="action-icon compose"><span>compose</span></li>
+      <li class="action-icon contacts"><span>contacts</span></li>
+      <li class="action-icon copy"><span>copy</span></li>
+      <li class="action-icon cut"><span>cut</span></li>
+      <li class="action-icon delete"><span>delete</span></li>
+      <li class="action-icon dismisskeyboard"><span>dismisskeyboard</span></li>
+      <li class="action-icon download"><span>download</span></li>
+      <li class="action-icon downloaddark"><span>downloaddark</span></li>
+      <li class="action-icon editcontact"><span>editcontact</span></li>
+      <li class="action-icon email-editlist"><span>email-editlist</span></li>
+      <li class="action-icon email-flag"><span>email-flag</span></li>
+      <li class="action-icon email-forward"><span>email-forward</span></li>
+      <li class="action-icon email-markread"><span>email-markread</span></li>
+      <li class="action-icon email-markunread"><span>email-markunread</span></li>
+      <li class="action-icon email-reply"><span>email-reply</span></li>
+      <li class="action-icon email-replyall"><span>email-replyall</span></li>
+      <li class="action-icon email-send"><span>email-send</span></li>
+      <li class="action-icon email-share"><span>email-share</span></li>
+      <li class="action-icon email-sync"><span>email-sync</span></li>
+      <li class="action-icon forward"><span>forward</span></li>
+      <li class="action-icon lock"><span>lock</span></li>
+      <li class="action-icon menu"><span>menu</span></li>
+      <li class="action-icon move"><span>move</span></li>
+      <li class="action-icon new"><span>new</span></li>
+      <li class="action-icon paste"><span>paste</span></li>
+      <li class="action-icon search"><span>search</span></li>
+      <li class="action-icon selectall"><span>selectall</span></li>
+      <li class="action-icon settings"><span>settings</span></li>
+      <li class="action-icon sms"><span>sms</span></li>
+      <li class="action-icon snooze"><span>snooze</span></li>
+      <li class="action-icon unlock"><span>unlock</span></li>
+      <li class="action-icon user"><span>user</span></li>
+      <li class="action-icon ut-airplanemode"><span>ut-airplanemode</span></li>
+      <li class="action-icon ut-bluetooth"><span>ut-bluetooth</span></li>
+      <li class="action-icon ut-settings"><span>ut-settings</span></li>
+      <li class="action-icon ut-settings-data"><span>ut-settings-data</span></li>
+      <li class="action-icon ut-settings-data-2g"><span>ut-settings-data-2g</span></li>
+      <li class="action-icon ut-settings-data-3g"><span>ut-settings-data-3g</span></li>
+      <li class="action-icon ut-settings-data-4g"><span>ut-settings-data-4g</span></li>
+      <li class="action-icon ut-settings-data-e"><span>ut-settings-data-e</span></li>
+      <li class="action-icon ut-settings-data-hp"><span>ut-settings-data-hp</span></li>
+      <li class="action-icon ut-settings-data-h"><span>ut-settings-data-h</span></li>
+      <li class="action-icon ut-settings-data-o"><span>ut-settings-data-o</span></li>
+      <li class="action-icon ut-wifi"><span>ut-wifi</span></li>
+    </ul>
+
+    <h2>Media icons</h2>
+    <ul class="icons-view">
+      <li class="media-icon camera"><span>camera</span></li>
+      <li class="media-icon camera-cameraback"><span>camera-cameraback</span></li>
+      <li class="media-icon camera-camerafront"><span>camera-camerafront</span></li>
+      <li class="media-icon camera-flashauto"><span>camera-flashauto</span></li>
+      <li class="media-icon camera-flashoff"><span>camera-flashoff</span></li>
+      <li class="media-icon camera-gridview"><span>camera-gridview</span></li>
+      <li class="media-icon camera-select"><span>camera-select</span></li>
+      <li class="media-icon gallery-crop1x1"><span>gallery-crop1x1</span></li>
+      <li class="media-icon gallery-crop2x3"><span>gallery-crop2x3</span></li>
+      <li class="media-icon gallery-crop3x2"><span>gallery-crop3x2</span></li>
+      <li class="media-icon gallery-editphoto"><span>gallery-editphoto</span></li>
+      <li class="media-icon gallery-freecrop"><span>gallery-freecrop</span></li>
+      <li class="media-icon gallery-slideshow"><span>gallery-slideshow</span></li>
+      <li class="media-icon media-albumfilter"><span>media-albumfilter</span></li>
+      <li class="media-icon media-alphabetical"><span>media-alphabetical</span></li>
+      <li class="media-icon media-artistfilter"><span>media-alphabetical</span></li>
+      <li class="media-icon media-date"><span>media-date</span></li>
+      <li class="media-icon media-gridview"><span>media-gridview</span></li>
+      <li class="media-icon media-pause"><span>media-pause</span></li>
+      <li class="media-icon media-play"><span>media-play</span></li>
+      <li class="media-icon media-playlistfilter"><span>media-playlistfilter</span></li>
+      <li class="media-icon media-repeatinfinite"><span>media-repeatinfinite</span></li>
+      <li class="media-icon media-repeatoff"><span>media-repeatoff</span></li>
+      <li class="media-icon media-repeatonce"><span>media-repeatonce</span></li>
+      <li class="media-icon media-seekbackward"><span>media-seekbackward</span></li>
+      <li class="media-icon media-seekfroward"><span>media-seekfroward</span></li>
+      <li class="media-icon media-shuffleoff"><span>media-shuffleoff</span></li>
+      <li class="media-icon media-shuffleon"><span>media-shuffleon</span></li>
+      <li class="media-icon media-skipbackwards"><span>media-skipbackwards</span></li>
+      <li class="media-icon media-skipforward"><span>media-skipforward</span></li>
+      <li class="media-icon media-songsfilter"><span>media-songsfilter</span></li>
+      <li class="media-icon media-stop"><span>media-stop</span></li>
+      <li class="media-icon undo"><span>undo</span></li>
+      <li class="media-icon videorecorder"><span>videorecorder</span></li>
+    </ul>
+
+    <h2>Communications icons</h2>
+    <ul class="icons-view">
+      <li class="comms-icon activecall-dismisskeyboard"><span>activecall-dismisskeyboard</span></li>
+      <li class="comms-icon dark calllog-incomingcall"><span>calllog-incomingcall</span></li>
+      <li class="comms-icon dark calllog-incomingsms"><span>calllog-incomingsms</span></li>
+      <li class="comms-icon dark calllog-missedcallgrey"><span>calllog-missedcallgrey</span></li>
+      <li class="comms-icon dark calllog-missedcallred"><span>calllog-missedcallred</span></li>
+      <li class="comms-icon dark calllog-outgoingcall"><span>calllog-outgoingcall</span></li>
+      <li class="comms-icon dark calllog-outgoingsms"><span>calllog-outgoingsms</span></li>
+      <li class="comms-icon contacts-addfavorite"><span>contacts-addfavorite</span></li>
+      <li class="comms-icon contacts-email"><span>contacts-email</span></li>
+      <li class="comms-icon contacts-facebook"><span>contacts-facebook</span></li>
+      <li class="comms-icon contacts-favorite"><span>contacts-favorite</span></li>
+      <li class="comms-icon contacts-importfromsim"><span>contacts-importfromsim</span></li>
+      <li class="comms-icon contacts-link"><span>contacts-link</span></li>
+      <li class="comms-icon contacts-location"><span>contacts-location</span></li>
+      <li class="comms-icon contacts-phone"><span>contacts-phone</span></li>
+      <li class="comms-icon contacts-sms"><span>contacts-sms</span></li>
+      <li class="comms-icon contacts-twitter"><span>contacts-twitter</span></li>
+      <li class="comms-icon dailer-contacts"><span>dailer-contacts</span></li>
+      <li class="comms-icon dailer-dialpad"><span>dailer-dialpad</span></li>
+      <li class="comms-icon dailer-recentcalls"><span>dailer-recentcalls</span></li>
+    </ul>
+
+    <h2>Communications icons</h2>
+    <ul class="icons-view">
+      <li class="settings-icon aboutphone"><span>aboutphone</span></li>
+      <li class="settings-icon accessibility"><span>accessibility</span></li>
+      <li class="settings-icon airplanemode"><span>airplanemode</span></li>
+      <li class="settings-icon apppermissions"><span>apppermissions</span></li>
+      <li class="settings-icon apps"><span>apps</span></li>
+      <li class="settings-icon battery"><span>battery</span></li>
+      <li class="settings-icon bluetooth"><span>bluetooth</span></li>
+      <li class="settings-icon brightness"><span>brightness</span></li>
+      <li class="settings-icon call-waiting-disabled"><span>call-waiting-disabled</span></li>
+      <li class="settings-icon callsettings"><span>callsettings</span></li>
+      <li class="settings-icon datetime"><span>datetime</span></li>
+      <li class="settings-icon developer"><span>developer</span></li>
+      <li class="settings-icon devicestorage"><span>devicestorage</span></li>
+      <li class="settings-icon donottrack"><span>donottrack</span></li>
+      <li class="settings-icon email"><span>email</span></li>
+      <li class="settings-icon enableusbstorage"><span>enableusbstorage</span></li>
+      <li class="settings-icon feedback"><span>feedback</span></li>
+      <li class="settings-icon gps"><span>gps</span></li>
+      <li class="settings-icon help"><span>help</span></li>
+      <li class="settings-icon import-from-sd-card"><span>import-from-sd-card</span></li>
+      <li class="settings-icon import-from-sim-card"><span>import-from-sim-card</span></li>
+      <li class="settings-icon keyboard"><span>keyboard</span></li>
+      <li class="settings-icon languages"><span>languages</span></li>
+      <li class="settings-icon lower-brightness"><span>lower-brightness</span></li>
+      <li class="settings-icon mediastorage"><span>mediastorage</span></li>
+      <li class="settings-icon network"><span>network</span></li>
+      <li class="settings-icon notifications"><span>notifications</span></li>
+      <li class="settings-icon permissions-camera"><span>permissions-camera</span></li>
+      <li class="settings-icon permissions-contacts"><span>permissions-contacts</span></li>
+      <li class="settings-icon permissions-devicestorage"><span>permissions-devicestorage</span></li>
+      <li class="settings-icon permissions-fmradio"><span>permissions-fmradio</span></li>
+      <li class="settings-icon permissions-geolocation"><span>permissions-geolocation</span></li>
+      <li class="settings-icon permissions-wifiinfo"><span>permissions-wifiinfo</span></li>
+      <li class="settings-icon persona"><span>persona</span></li>
+      <li class="settings-icon phonelock"><span>phonelock</span></li>
+      <li class="settings-icon simcardlock"><span>simcardlock</span></li>
+      <li class="settings-icon simtoolkit"><span>simtoolkit</span></li>
+      <li class="settings-icon sound"><span>sound</span></li>
+      <li class="settings-icon tethering"><span>tethering</span></li>
+      <li class="settings-icon topUp"><span>topUp</span></li>
+      <li class="settings-icon topUpAndPay"><span>topUpAndPay</span></li>
+      <li class="settings-icon topUpWithCode"><span>topUpWithCode</span></li>
+      <li class="settings-icon updateBalance"><span>updateBalance</span></li>
+      <li class="settings-icon wallpaper"><span>topUpWithCode</span></li>
+      <li class="settings-icon wifi"><span>wifi</span></li>
+      <li class="settings-icon wifi-locked"><span>wifi-locked</span></li>
+      <li class="settings-icon wifi-locked-connected-1"><span>wifi-locked-connected-1</span></li>
+      <li class="settings-icon wifi-locked-connected-2"><span>wifi-locked-connected-2</span></li>
+      <li class="settings-icon wifi-locked-connected-3"><span>wifi-locked-connected-3</span></li>
+      <li class="settings-icon wifi-locked-connected-4"><span>wifi-locked-connected-4</span></li>
+      <li class="settings-icon wifi-locked-not-connected-1"><span>wifi-locked-not-connected-1</span></li>
+      <li class="settings-icon wifi-locked-not-connected-2"><span>wifi-locked-not-connected-2</span></li>
+      <li class="settings-icon wifi-locked-not-connected-3"><span>wifi-locked-not-connected-3</span></li>
+      <li class="settings-icon wifi-locked-not-connected-4"><span>wifi-locked-not-connected-4</span></li>
+      <li class="settings-icon wifi-open"><span>wifi-locked-open</span></li>
+      <li class="settings-icon wifi-open-connected-1"><span>wifi-open-connected-1</span></li>
+      <li class="settings-icon wifi-open-connected-2"><span>wifi-open-connected-2</span></li>
+      <li class="settings-icon wifi-open-connected-3"><span>wifi-open-connected-3</span></li>
+      <li class="settings-icon wifi-open-connected-4"><span>wifi-open-connected-4</span></li>
+      <li class="settings-icon wifi-open-not-connected-1"><span>wifi-open-not-connected-1</span></li>
+      <li class="settings-icon wifi-open-not-connected-2"><span>wifi-open-not-connected-2</span></li>
+      <li class="settings-icon wifi-open-not-connected-3"><span>wifi-open-not-connected-3</span></li>
+      <li class="settings-icon wifi-open-not-connected-4"><span>wifi-open-not-connected-4</span></li>
+    </ul>
+  </section>
+
+  <section class="examples">
+    <h2>Example: <strong>header</strong></h2>
+
+    <section role="region">
+      <header>
+        <menu type="toolbar">
+          <a href="#"><span class="icon action-icon email-editlist">edit</span></a>
+          <a href="#"><span class="icon action-icon new">add</span></a>
+        </menu>
+        <h1>Messages</h1>
+      </header>
+    </section>
+    
+    <h2>Example: <strong>button</strong></h2>
+    <div>
+      <a class="action-icon downloaddark"role="button" href="#">download</a>
+      <button class="action-icon download recommend">download</button>
+    </div>
+    
+    <h2>Example: <strong>List</strong></h2>
+    <section data-type="list">
+      <ul>
+        <li>
+          <aside class="icon comms-icon calllog-incomingcall">
+            asidecall
+          </aside>
+          <a href="#">
+            <p>Travis Gray</p>
+            <p>Home</p>
+          </a>
+        </li>
+        <li>
+          <aside class="icon comms-icon calllog-missedcallred">
+            asidecall
+          </aside>
+          <p>Travis Gray <em>(2)</em></p>
+          <p>
+            <time datetime="17:43">5:43PM</time>
+            Mobile
+          </p>
+        </li>
+      </ul>
+    </section>
+    
+    <h2>Example: <strong>Tabs</strong></h2>
+    <ul role="tablist" data-items="3" class="bottom">
+      <li id="panel1" role="tab">
+        <a href="#panel1" class="icon comms-icon dailer-recentcalls">comms</a>
+        <div role="tabpanel"></div>
+      </li>
+      <li id="panel2" role="tab">
+        <a href="#panel2" class="icon comms-icon dailer-contacts">contacts</a>
+        <div role="tabpanel"></div>
+      </li>
+      <li id="panel3" role="tab">
+        <a class="icon comms-icon dailer-dialpad">dialer</a>
+        <div role="tabpanel"></div>
+      </li>
+    </ul>
+
+    <h2>Example: <strong>Toolbar</strong></h2>
+    <div role="toolbar">
+      <ul>
+        <li><button class="media-icon gallery-editphoto">Edit</button></li>
+        <li><button class="media-icon gallery-slideshow">Slideshow</button></li>
+        <li><button class="media-icon media-gridview">Grid</button></li>
+      </ul>
+      <ul></ul>
+    </div>
+  </section>
+</body>
+</html>
