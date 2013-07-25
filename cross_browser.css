@@ -45,6 +45,7 @@ form[role="dialog"][data-type="confirm"] > section {
 form[role="dialog"][data-type="confirm"] menu button,
 form[role="dialog"][data-type="edit"] menu button {
   width: 48%;
+  float: left;
 }
 
 form[role="dialog"][data-type="confirm"] menu button:last-child,
@@ -91,23 +92,12 @@ section[role="region"] > header:first-child form button[type="reset"] {
 section[role="region"] > header:first-child > button,
 section[role="region"] > header:first-child > a {
   background: url(style/headers/images/ui/separator-large.png) no-repeat 2rem center;
-  background-size: auto 4.8rem;
+  background-size: 0.2rem 5rem;
 }
 
 section[role="region"] > header:first-child .icon {
   background: transparent no-repeat center center;
   background-size: 3rem auto;
-}
-
-section[role="region"] > header:first-child > button .icon:after,
-section[role="region"] > header:first-child > a .icon:after {
-  background: #9d3d26 url(style/headers/images/ui/negative.png) repeat-x left bottom;
-  background-size: auto 100%;
-}
-
-section[role="region"] header h2 {
-  background: url(style/headers/images/ui/subheader.png) repeat 0 100%;
-  background-size: auto 100%;
 }
 
 /* Input areas */
