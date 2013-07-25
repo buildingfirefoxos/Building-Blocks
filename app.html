@@ -251,6 +251,11 @@
               </a>
             </li>
             <li>
+              <a id="btn-confirm" href="#">
+                <p>Confirm</p>
+              </a>
+            </li>
+            <li>
               <a id="btn-edit-mode" href="#">
                 <p>Edit mode</p>
               </a>
@@ -335,91 +340,98 @@
   </section>
 
   <!--···························· Buttons ····························-->
-  <!--section role="region" id="headers" data-position="right">
-    <header class="fixed">
-      <a id="btn-headers-back" href="#"><span class="icon icon-back">back</span></a>
-      <h1>Headers</h1>
-    </header>
-    <article class="content scrollable header"-->
-
   <section role="region" id="buttons" data-position="right">
-      <header class="fixed">
-        <a id="btn-buttons-back" href="#"><span class="icon icon-back">back</span></a>
-        <h1>Buttons</h1>
-      </header>
+    <header class="fixed">
+      <a id="btn-buttons-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Buttons</h1>
+    </header>
 
-      <article class="content scrollable header">
-        <header><h2>Normal</h2></header>
-        <div>
-          <button>Default</button>
-          <button class="recommend">Recommend</button>
-          <button class="danger">Danger</button>
-         </div>
+    <article class="content scrollable header">
+      <header><h2>Normal</h2></header>
+      <div>
+        <button>Default</button>
+        <button class="recommend">Recommend</button>
+        <button class="danger">Danger</button>
+       </div>
 
-        <header><h2>Disabled</h2></header>
-        <div>
-          <button disabled>Default</button>
-          <a href="#" role="button" aria-disabled="true" class="recommend">Recommend</a>
-          <button disabled class="danger">Danger</button>
-        </div>
+      <header><h2>Disabled</h2></header>
+      <div>
+        <button disabled>Default</button>
+        <a href="#" role="button" aria-disabled="true" class="recommend">Recommend</a>
+        <button disabled class="danger">Danger</button>
+      </div>
 
-        <header><h2>Disabled with dark background</h2></header>
-        <div>
-          <button disabled>Default</button>
-          <a href="#" role="button" aria-disabled="true" class="recommend">Recommend</a>
-          <button disabled class="danger">Danger</button>
-        </div>
+      <header><h2>Disabled with dark background</h2></header>
+      <div>
+        <button disabled>Default</button>
+        <a href="#" role="button" aria-disabled="true" class="recommend">Recommend</a>
+        <button disabled class="danger">Danger</button>
+      </div>
 
-        <header><h2>Button List</h2></header>
-        <div>
-          <ul>
-            <li>
-              <button>Default</button>
-            </li>
-            <li>
-              <button disabled="disabled">Disabled</button>
-            </li>
-            <li>
-              <button class="icon icon-view">
-                View Name
-              </button>
-            </li>
-            <li>
-              <button disabled="disabled" class="icon icon-view">
-                View Name
-              </button>
-            </li>
-            <li>
-              <a role="button" class="icon icon-dialog">
-                Tuesday September 18, 2012
-              </a>
-            </li>
-            <li>
-              <a role="button" aria-disabled="true" class="icon icon-dialog">
-                Tuesday September 18, 2012
-              </a>
-            </li>
-          </ul>
-        </div>
+      <header><h2>Button List</h2></header>
+      <div>
+        <ul>
+          <li>
+            <button>Default</button>
+          </li>
+          <li>
+            <button disabled="disabled">Disabled</button>
+          </li>
+          <li>
+            <button class="icon icon-view">
+              View Name
+            </button>
+          </li>
+          <li>
+            <button disabled="disabled" class="icon icon-view">
+              View Name
+            </button>
+          </li>
+          <li>
+            <a role="button" class="icon icon-dialog">
+              Tuesday September 18, 2012
+            </a>
+          </li>
+          <li>
+            <a role="button" aria-disabled="true" class="icon icon-dialog">
+              Tuesday September 18, 2012
+            </a>
+          </li>
+        </ul>
+      </div>
 
-        <header><h2>Button List (compact mode)</h2></header>
-        <div>
-          <ul class="compact">
-            <li>
-              <label>Description</label>
-              <button class="icon icon-dialog">Action 1</button>
-            </li>
-            <li>
-              <label>Description</label>
-              <button class="icon icon-dialog">Action 2</button>
-            </li>
-            <li>
-              <label>This is a large description for this action</label>
-              <button class="icon icon-dialog" disabled >Action 3 (disabled)</button>
-            </li>
-          </ul>
-        </div>
-      </article>
+      <header><h2>Button List (compact mode)</h2></header>
+      <div>
+        <ul class="compact">
+          <li>
+            <label>Description</label>
+            <button class="icon icon-dialog">Action 1</button>
+          </li>
+          <li>
+            <label>Description</label>
+            <button class="icon icon-dialog">Action 2</button>
+          </li>
+          <li>
+            <label>This is a large description for this action</label>
+            <button class="icon icon-dialog" disabled >Action 3 (disabled)</button>
+          </li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <!--·························· Action menu ··························-->
+  <section id="confirm" data-position="back" class="fullscreen">
+    <form role="dialog" data-type="confirm">
+      <section>
+        <h1>Confirmation</h1>
+        <p>Are you sure you want to delete this contact?</p>
+      </section>
+      <menu>
+        <button>Cancel</button>
+        <button class="danger">Delete</button>
+      </menu>
+    </form>
   </section>
 
   <!--·························· Edit mode ··························-->

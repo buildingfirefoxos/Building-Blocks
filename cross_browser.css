@@ -5,6 +5,15 @@
 /* ----------------------------------------------------------------- */
 
 /* Action menu */
+form[role="dialog"][data-type="action"],
+form[role="dialog"][data-type="object"],
+form[role="dialog"][data-type="confirm"] {
+  background:
+    url(style/action_menu/images/ui/pattern.png) repeat left top,
+    url(style/action_menu/images/ui/gradient.png) no-repeat left top;
+  background-size: auto, 100%;
+}
+
 form[role="dialog"][data-type="action"] > header:first-child, 
 form[role="dialog"][data-type="object"] > header:first-child {
   box-sizing: border-box;
@@ -16,6 +25,7 @@ button,
 a[role="button"],
 .button {
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
 
@@ -28,12 +38,8 @@ a[role="button"].danger:active,
 /* Confirm */
 form[role="dialog"][data-type="confirm"] > section {
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-}
-
-form[role="dialog"][data-type="confirm"] menu {
-  display: inline-block;
-  width: 100%;
 }
 
 form[role="dialog"][data-type="confirm"] menu button,
@@ -41,6 +47,16 @@ form[role="dialog"][data-type="edit"] menu button {
   width: 48%;
 }
 
+form[role="dialog"][data-type="confirm"] menu button:last-child,
+form[role="dialog"][data-type="edit"] menu button:last-child {
+  float: right;
+  margin-left: 0;
+}
+
+form[role="dialog"][data-type="confirm"] menu button:first-child:last-child,
+form[role="dialog"][data-type="edit"] menu button:first-child:last-child {
+  width: 100%;
+}
 
 /* Edit mode */
 form[role="dialog"][data-type="edit"] header menu[type="toolbar"] button {
