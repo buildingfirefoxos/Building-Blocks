@@ -14,6 +14,22 @@ section[role="region"] > header:first-child h1 {
   color: #00ff99;
 }
 
+section[role="region"] > header:first-child h1 em {
+  border-radius: 0.8rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  line-height: 1.8rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  background: #00ff99;
+  color: #005466;
+  display: inline-block;
+  text-align: center;
+  position: absolute;
+  top: 0.7rem;
+  left: 1.8rem;
+}
+
 section[role="region"] > header:first-child input[type="text"] {
   border: none;
   background: none;
@@ -23,71 +39,15 @@ section[role="region"] > header:first-child input[type="text"] {
 
 section[role="region"] > header:first-child input[type="text"]::-moz-placeholder {
   opacity: 0.35;
-
 }
-
 
 /* Generic set of actions in toolbar */
-section[role="region"] > header:first-child menu[type="toolbar"] {
-  height: 100%;
-  float: right;
-}
-
-section[role="region"] > header:first-child menu[type="toolbar"] a,
-section[role="region"] > header:first-child menu[type="toolbar"] button {
-  -moz-box-sizing: border-box;
-  position: relative;
-  float: left;
-  width: auto;
-  min-width: 5rem;
-  height: 4.9rem;
-  margin-bottom: 0;
-  padding: 0 1rem;
-  border-radius: 0;
-  line-height: 4.9rem;
-  background: none;
-  text-align: center;
-  text-shadow: none;
-  z-index: 5;
-}
-
 section[role="region"] > header:first-child menu[type="toolbar"] a:last-child,
 section[role="region"] > header:first-child menu[type="toolbar"] button:last-child {
-  background: url(headers/images/ui/separator.png) no-repeat left center / auto 4.8rem;
-  margin-left: -0.2rem;
-  z-index: 1;
+  background: none;
 }
-
-section[role="region"] > header:first-child menu[type="toolbar"] {
-  padding: 0;
-  margin: 0;
-}
-
-section[role="region"] > header:first-child a,
-section[role="region"] > header:first-child button {
-  border: none;
-  padding: 0;
-  overflow: hidden;
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 1.1em;
-  color: #fff;
-  border-radius: 0;
-  text-decoration: none;
-}
-
 
 /* Pressed state */
-section[role="region"] > header:first-child a::-moz-focus-inner,
-section[role="region"] > header:first-child button::-moz-focus-inner,
-section[role="region"] > header:first-child a:active,
-section[role="region"] > header:first-child button:active,
-section[role="region"] > header:first-child a:focus,
-section[role="region"] > header:first-child button:focus {
-  outline: none !important;
-  border: none !important;
-}
-
 section[role="region"] > header:first-child > a:not([aria-disabled="true"]):active:after,
 section[role="region"] > header:first-child > button:not(:disabled):active:after,
 section[role="region"] > header:first-child menu[type="toolbar"] a:not([aria-disabled="true"]):active,
@@ -103,99 +63,35 @@ section[role="region"] > header:first-child menu[type="toolbar"] button[disabled
 
 /* Icon definitions */
 section[role="region"] > header:first-child .icon {
-  position: relative;
-  float: none;
-  display: inline-block;
-  vertical-align: top;
-  width: 3rem;
-  height: 4.9rem;
-  margin: 0 -1rem;
-  background: transparent no-repeat center center / 3rem auto;
-  font-size: 0;
-  overflow: hidden;
+  padding-top: 1rem;
 }
 
-section[role="region"] > header:first-child .icon.icon-add {
-  background-image: url(headers/images/icons/add.png);
-}
-
-section[role="region"] > header:first-child .icon.icon-compose {
-  background-image: url(headers/images/icons/compose.png);
-}
-
-section[role="region"] > header:first-child .icon.icon-edit {
-  background-image: url(headers/images/icons/edit.png);
-}
-
-section[role="region"] > header:first-child .icon.icon-send {
-  background-image: url(headers/images/icons/send.png);
-}
-
-section[role="region"] > header:first-child .icon.icon-close {
-  background-image: url(headers/images/icons/close.png);
-}
-
-section[role="region"] > header:first-child .icon.icon-back {
-  background-image: url(headers/images/icons/back.png);
-}
-
-section[role="region"] > header:first-child .icon.icon-menu {
-  background-image: url(headers/images/icons/menu.png);
-}
-
-section[role="region"] > header:first-child .icon.icon-user {
-  background-image: url(headers/images/icons/user.png);
-}
-
-section[role="region"] > header:first-child .icon.icon-reply {
-  background-image: url(headers/images/icons/reply.png);
-}
-
-section[role="region"] > header:first-child .icon.icon-reply-all {
-  background-image: url(headers/images/icons/reply-all.png);
+section[role="region"] > header:first-child .icon {
+  background: none !important;
 }
 
 /* Navigation links (back, cancel, etc) */
 section[role="region"] > header:first-child > button,
 section[role="region"] > header:first-child > a {
-  position: relative;
-  width: 5rem;
-  height: 4.9rem;
-  background: none;
-  float: left;
-  overflow: visible;
-  margin: 0 -4rem 0 0;
+  margin: 0 -3.5rem 0 0;
 }
 
 section[role="region"] > header:first-child > button:after,
 section[role="region"] > header:first-child > a:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  width: 3.2rem;
-  height: 4.9rem;
+  width: 3.5rem;
   background: rgba(0,0,0,0.05);
 }
 
-section[role="region"] > header:first-child > button::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-section[role="region"] > header:first-child > button .icon,
-section[role="region"] > header:first-child > a .icon {
-  display: block;
-  margin: 0;
-  font-size: 0;
+section[role="region"] > header:first-child > button .icon:before,
+section[role="region"] > header:first-child > a .icon:before {
+  color: rgba(255,255,255,0.5);
 }
 
 /* ----------------------------------
  * HEADERS: subheader
  * ---------------------------------- */
 
-section[role="region"] > header {
+/*section[role="region"] > header {
   z-index: 0;
   height: auto;
 }
@@ -212,98 +108,70 @@ section[role="region"] header h2 {
   font-size: 1.5rem;
   line-height: 1.8rem;
   border-bottom: solid 0.1rem #e6e6e6;
-}
+}*/
 
 /* ----------------------------------
- * HEADERS: dark
+ * Theme: A
  * ---------------------------------- */
-section[role="region"].skin-dark > header:first-child,
-.skin-dark section[role="region"] > header:first-child {
-  background-image: url(headers/images/ui/dark/header.png);
+
+.theme-A section[role="region"] > header:first-child {
+  background: #009966;
 }
 
-section[role="region"].skin-dark > header:first-child menu[type="toolbar"] a:last-child,
-.skin-dark section[role="region"] > header:first-child menu[type="toolbar"] a:last-child,
-section[role="region"].skin-dark > header:first-child menu[type="toolbar"] button:last-child,
-.skin-dark section[role="region"] > header:first-child menu[type="toolbar"] button:last-child {
-  background-image: url(headers/images/ui/dark/separator.png);
-}
-
-/* Navigation links (back, cancel, etc) */
-section[role="region"].skin-dark > header:first-child a:after,
-.skin-dark section[role="region"] > header:first-child a:after,
-section[role="region"].skin-dark > header:first-child button:after,
-.skin-dark section[role="region"] > header:first-child button:after {
-  background-image: url(headers/images/ui/dark/separator.png);
-}
-
-section[role="region"].skin-dark header h2,
-.skin-dark section[role="region"] header h2 {
-  background: #2e3c3f url(headers/images/ui/organic/subheader.png);
+.theme-A section[role="region"] > header:first-child h1 {
   color: #fff;
-  border: none;
+}
+
+.theme-A section[role="region"] > header:first-child h1 em {
+  color: #009966;
+  background: #fff;
+}
+
+.theme-A section[role="region"] > header:first-child menu[type="toolbar"] a, 
+.theme-A section[role="region"] > header:first-child menu[type="toolbar"] button {
+  color: #80cc33;
 }
 
 /* ----------------------------------
- * HEADERS: organic
+ * Theme: B
  * ---------------------------------- */
 
-section[role="region"].skin-organic > header:first-child,
-.skin-organic section[role="region"] > header:first-child {
-  background-image: url(headers/images/ui/noise-pattern.png), url(headers/images/ui/organic/header.png);
-  background-size: auto;
+.theme-B section[role="region"] > header:first-child {
+  background: #ff6633;
 }
 
-section[role="region"].skin-organic > header:first-child menu[type="toolbar"] a:last-child,
-.skin-organic section[role="region"] > header:first-child menu[type="toolbar"] a:last-child,
-section[role="region"].skin-organic > header:first-child menu[type="toolbar"] button:last-child,
-.skin-organic section[role="region"] > header:first-child menu[type="toolbar"] button:last-child {
-  background-image: url(headers/images/ui/organic/separator.png);
-}
-
-/* Navigation links (back, cancel, etc) */
-section[role="region"].skin-organic > header:first-child a:after,
-.skin-organic section[role="region"] > header:first-child a:after,
-section[role="region"].skin-organic > header:first-child button:after,
-.skin-organic section[role="region"] > header:first-child button:after {
-  background-image: url(headers/images/ui/organic/separator.png);
-}
-
-section[role="region"].skin-organic header h2,
-.skin-organic section[role="region"] header h2 {
-  background: #5c6a6d url(headers/images/ui/organic/subheader.png);
+.theme-B section[role="region"] > header:first-child h1 {
   color: #fff;
-  border: none;
+}
+
+.theme-B section[role="region"] > header:first-child h1 em {
+  color: #ff6633;
+  background: #fff;
+}
+
+.theme-B section[role="region"] > header:first-child menu[type="toolbar"] a, 
+.theme-B section[role="region"] > header:first-child menu[type="toolbar"] button {
+  color: #ffb319;
 }
 
 /* ----------------------------------
- * HEADERS: right-to-left tweaks
+ * Theme: C
  * ---------------------------------- */
 
-html[dir="rtl"] section[role="region"] > header:first-child h1 {
-  text-align: right;
-  margin: 0 3rem 0 0;
+.theme-C section[role="region"] > header:first-child {
+  background: #00c5d9;
 }
 
-html[dir="rtl"] section[role="region"] > header:first-child button,
-html[dir="rtl"] section[role="region"] > header:first-child a {
-  left: inherit;
-  right: 0;
+.theme-C section[role="region"] > header:first-child h1 {
+  color: #fff;
 }
 
-html[dir="rtl"] section[role="region"] > header:first-child > button .icon,
-html[dir="rtl"] section[role="region"] > header:first-child > a .icon {
-  margin-left: 0;
-  margin-right: -2rem;
+.theme-C section[role="region"] > header:first-child h1 em {
+  color: #00c5d9;
+  background: #fff;
 }
 
-html[dir="rtl"] section[role="region"] > header:first-child > button .icon:after,
-html[dir="rtl"] section[role="region"] > header:first-child > a .icon:after {
-  left: inherit;
-  right: 0;
+.theme-C section[role="region"] > header:first-child menu[type="toolbar"] a, 
+.theme-C section[role="region"] > header:first-child menu[type="toolbar"] button {
+  color: #fff;
 }
-
-html[dir="rtl"] section[role="region"] > header:first-child .icon.icon-back {
-  background-image: url(headers/images/icons/back-rtl.png);
-}
-
