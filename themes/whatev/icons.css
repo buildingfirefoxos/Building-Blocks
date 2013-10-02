@@ -18,6 +18,7 @@
 	-moz-osx-font-smoothing: grayscale;
 	font-size: 3rem;
 	color: #fff;
+	position: absolute;
 }
 
 [data-icon]:before {
