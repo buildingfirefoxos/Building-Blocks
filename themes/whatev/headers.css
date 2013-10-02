@@ -64,10 +64,11 @@ section[role="region"] > header:first-child menu[type="toolbar"] button[disabled
 /* Icon definitions */
 section[role="region"] > header:first-child .icon {
   padding-top: 1rem;
+  background: none !important;
 }
 
-section[role="region"] > header:first-child .icon {
-  background: none !important;
+section[role="region"] > header:first-child .icon:before {
+  position: relative;
 }
 
 /* Navigation links (back, cancel, etc) */
