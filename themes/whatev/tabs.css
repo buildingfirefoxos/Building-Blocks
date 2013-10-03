@@ -21,10 +21,13 @@
   display: none;
 }
 
-[role="tablist"] > [role="tab"] > a:active,
+[role="tablist"] > [role="tab"] > a:active {
+  color: #003144;
+  background: rgba(0,0,0,0.3);
+}
+
 [role="tablist"] > [role="tab"] > a.icon:active:before {
-  color: #a5a5a0;
-  background: #003144;
+  color: #003144;
 }
 
 [role="tablist"] > [role="tab"][aria-disabled="true"] > a,
