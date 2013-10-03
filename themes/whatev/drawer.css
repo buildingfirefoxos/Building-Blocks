@@ -2,42 +2,9 @@
 * Drawer
 * ---------------------------------- */
 
-/* Main region */
-section[role="region"] {
-  width: 100%;
-  transition: all 0.25s ease;
-  position: relative;
-  z-index: 100;
-}
-
-section[role="region"]:target {
-  transform: translateX(80%);
-}
-
-/* Hide anchor to change target */
-section[role="region"] > header:first-child > a:first-of-type {
-  display: none;
-}
-section[role="region"]:target > header:first-child > a:first-of-type {
-  display: block;
-}
-section[role="region"] > header:first-child > a:last-of-type {
-  display: block;
-}
-section[role="region"]:target > header:first-child > a:last-of-type {
-  display: none;
-}
-
-
 /* Sidebar */
 section[data-type="sidebar"] {
-  position: absolute;
-  width: 80%;
-  background: url(drawer/images/ui/pattern.png) repeat;
-  height: 100%;
-  top: 0;
-  left: 0;
-  overflow: hidden;
+  background: #004256;
 }
 
 /* Sidebar header */
@@ -46,113 +13,47 @@ section[data-type="sidebar"] > header {
   z-index: 10;
   height: 5rem;
   color: #fff;
-  background: url(drawer/images/ui/header.png) repeat-x left bottom / 100% auto;
+  background: #003144;
 }
 
 section[data-type="sidebar"] > header:after {
-  content: "";
-  height: 0.3rem;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: url(drawer/images/ui/shadow_header.png) repeat-x left top;
-  background-size: auto 100%;
-}
-
-section[data-type="sidebar"] > header h1 {
-  font-size: 2.2rem;
-  line-height: 4.8rem;
-  text-align: left;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  display: block;
-  overflow: hidden;
-  margin: 0 0 0 3rem;
-  height: 100%
-}
-
-section[data-type="sidebar"] > header h1 em {
-  font-weight: bold;
-  font-size: 1.5rem;
-  line-height: 1em;
+  display: none;
 }
 
 /* Generic set of actions in toolbar */
-section[data-type="sidebar"] > header menu[type="toolbar"] {
-  height: 100%;
-  float: right;
-}
-
-section[data-type="sidebar"] > header menu[type="toolbar"] a,
-section[data-type="sidebar"] > header menu[type="toolbar"] button {
-  height: 4.9rem;
-  line-height: 4.9rem;
-  float: left;
-  background: none;
-  padding: 0 1.75rem;
-  -moz-box-sizing: border-box;
-  min-width: 5rem;
-  text-align: center;
-}
-
 section[data-type="sidebar"] > header menu[type="toolbar"] a:last-child,
 section[data-type="sidebar"] > header menu[type="toolbar"] button:last-child {
-  background: url(drawer/images/ui/separator.png) no-repeat left center / auto 3.1rem;
-}
-
-section[data-type="sidebar"] > header menu[type="toolbar"] {
-  padding: 0;
-  margin: 0;
-}
-
-section[data-type="sidebar"] > header a,
-section[data-type="sidebar"] > header button {
-  border: none;
   background: none;
-  padding: 0;
-  overflow: hidden;
-  font-weight: 600;
-  font-size: 1.4rem;
-  line-height: 1.1em;
-  color: #fff;
 }
 
+/* This should be removed in drawer BB */
 section[data-type="sidebar"] > header a:first-letter,
 section[data-type="sidebar"] > header button:first-letter {
-  text-transform: uppercase;
+  text-transform: none;
+}
+
+/* Pressed state */
+section[data-type="sidebar"] > header menu[type="toolbar"] a:active, 
+section[data-type="sidebar"] > header menu[type="toolbar"] button:active {
+  background: rgba(0,0,0,0.3);
 }
 
 /* Icon definitions */
 section[data-type="sidebar"] > header .icon {
-  display: inline-block;
-  width: 3rem;
-  height: 3rem;
-  margin: 0 -1rem;
-  background: transparent no-repeat center center / 100% auto;
-  font-size: 0;
-  overflow: hidden;
-  position: relative;
-  height: 4.9rem;
+  padding-top: 1rem;
+  background: none;
+}
+
+section[data-type="sidebar"] > header .icon:before {
+  margin-left: -1.5rem;
 }
 
 section[data-type="sidebar"]:after {
-  content: "";
-  width: 1rem;
-  background: url(drawer/images/ui/shadow.png) right top repeat-y;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 5;
+  width: 0.1rem;
+  background: #003144;
 }
 
-section[data-type="sidebar"] > nav {
-  overflow-y: auto;
-  max-height: 100%;
-  margin-right: -0.8rem;
-}
-
+/*
 section[data-type="sidebar"] > nav > h2 {
   font-weight: bold;
   font-size: 1.4rem;
@@ -199,4 +100,4 @@ section[data-type="sidebar"] > nav > ul > li > a {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-}
+}*/
