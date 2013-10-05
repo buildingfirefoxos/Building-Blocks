@@ -2,7 +2,11 @@
   "name": "Building Blocks",
   "package_path": "http://buildingfirefoxos.github.io/Building-Blocks/package/package.zip",
   "size": 1586262,
-  "version": "1.0",
+  "version": "1.1",
+  "icons": {
+    "128": "/images/app_icon_128.png",
+    "60": "/images/app_icon_60.png"
+  },
   "description": "Firefox OS Building Blocks demo app",
   "launch_path": "app.html",
   "orientation": ["portrait"],

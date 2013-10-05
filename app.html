@@ -138,31 +138,10 @@
       z-index: 0;
       padding-left: 0;
     }
-    /*section[role="region"]:not(#drawer) > header:first-child {
-      margin-left: 0;
-    }
-    section[role="region"]:not(#drawer) > header:first-child h1 {
-      margin-left: 3rem;
-    }
-    section[role="region"]#drawer > header:first-child h1 {
-      margin-left: 4.5rem;
-    }
-    section[role="region"]:not(#drawer) > header:first-child > a {
-      width: 5rem;
-    }
-    section[role="region"]#drawer > header:first-child > a .icon {
-      width: 3.5rem;*/
-    }
     section[data-type="sidebar"] + section[role="region"] > header:first-child > button, 
     section[data-type="sidebar"] + section[role="region"] > header:first-child > a {
       background-position: 3.5rem center;
     }
-   /* section[role="region"]:not(#drawer) > header:first-child > a .icon:after {
-      width: 2rem;
-    }
-    section[role="region"]#drawer > header:first-child > a .icon:after {
-      width: 3.5rem;
-    }*/
 
     /* Switches */
     #switches label:last-child {
@@ -202,7 +181,7 @@
 
     /* Device rotation */
     .landscape section[role="region"]#drawer > header:first-child {
-      background: green;
+      /* Whatever needs to be changed on landscape */
     }
   </style>
 </head>
@@ -988,7 +967,7 @@
   <script type="text/javascript" defer src="js/app.js"></script>
 
   <script>
-    var mobile = (navigator.userAgent.search("Mobile") != -1);
+    /*var mobile = (navigator.userAgent.search("Mobile") != -1);
     if ( mobile ) {
       //Let's reduce font-size when in landscape  
       //fs: current font-size
@@ -1013,7 +992,7 @@
           document.body.classList.add('landscape');
         }
       });
-    }
+    }*/
   </script>
 </body>
 </html>
