@@ -99,7 +99,7 @@ form[role="dialog"][data-type="action"] > menu {
   padding: 0;
   width: 100%;
   display: inline-block;
-  overflow-y: scroll;
+  /*overflow-y: scroll;*/
   max-height: 100%;
   vertical-align: middle;
   white-space: normal;
