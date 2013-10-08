@@ -46,24 +46,7 @@ section[data-type="sidebar"] > nav > h2 {
   border-bottom: 0.1rem solid rgba(0,0,0,0.1);
   color: rgba(255,255,255,0.5);
 }
-/*
-section[data-type="sidebar"] [role="toolbar"] {
-  position: absolute;
-}
 
-section[data-type="sidebar"] > nav > ul {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-section[data-type="sidebar"] > nav > ul > li {
-  color: #fff;
-  list-style: none;
-  transition: background 0.2s ease;
-}
-
-*/
 section[data-type="sidebar"] > nav > ul > li:active,
 section[data-type="sidebar"] > nav > ul > li.active {
   background: rgba(0,0,0,0.3);

@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="../../style/headers.css">
   <link rel="stylesheet" href="headers.css">
   <link rel="stylesheet" href="../../style_unstable/drawer.css">
+  <link rel="stylesheet" href="buttons.css">
+  <link rel="stylesheet" href="toolbars.css">
   <link rel="stylesheet" href="drawer.css">
   <link rel="stylesheet" href="icons.css">
 
@@ -43,7 +45,7 @@
 
     div[role="main"] {
       background: #fff;
-      height: calc(100% - 5rem);
+      height: calc(100% - 4.5rem);
       overflow: hidden;
     }
 
@@ -72,6 +74,12 @@
         <li><a href="#">label</a></li>
       </ul>
     </nav>
+    <div role="toolbar">
+      <ul>
+        <li><button>Log out</button></li>
+      </ul>
+      <ul><button class="icon icon-delete"></button></ul>
+    </div>
   </section>
 
   <section id="drawer" role="region">

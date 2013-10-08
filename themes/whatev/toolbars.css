@@ -3,20 +3,21 @@
 * ---------------------------------- */
 
 [role="toolbar"] {
-  height: 4rem;
+  height: 5.5rem;
+  -moz-box-sizing: border-box;
   width: 100%;
   position: fixed;
   bottom: 0;
   left: 0;
   z-index: 100;
-  background: rgba(0,0,0, 0.85);
+  border-top: 0.1rem dashed rgba(0,0,0,0.2);
 }
 
 [role="toolbar"] ul {
   float: left;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 1rem 1rem 0;
 }
 
 [role="toolbar"] ul:last-child {
@@ -25,18 +26,21 @@
 
 [role="toolbar"] li {
   float: left;
+  margin-left: 1rem;
 }
 
-[role="toolbar"] button {
-  width: 5.5rem;
-  height: 4rem;
-  border: none;
-  font-size: 0;
-  background: transparent no-repeat 50% 50% / 3rem auto;
-  padding: 0;
-  border-radius: 0;
+[role="toolbar"] li:first-child {
+  margin-left: 0;
 }
 
-[role="toolbar"] button:active {
-  background-color: #008aaa;
+[role="toolbar"] li button,
+[role="toolbar"] li a {
+  color: rgba(255,255,255,0.8);
+}
+
+.theme-D li button,
+.theme-D li a,
+li button.theme-D,
+li a.theme-D {
+  color: #666;
 }
