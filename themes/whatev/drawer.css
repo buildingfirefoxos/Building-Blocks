@@ -8,16 +8,9 @@ section[data-type="sidebar"] {
 }
 
 /* Sidebar header */
-section[data-type="sidebar"] > header {
-  position: relative;
-  z-index: 10;
-  height: 5rem;
-  color: #fff;
+section[data-type="sidebar"]:after {
   background: #003144;
-}
-
-section[data-type="sidebar"] > header:after {
-  display: none;
+  width: 0.1rem;
 }
 
 /* Generic set of actions in toolbar */
@@ -39,33 +32,21 @@ section[data-type="sidebar"] > header menu[type="toolbar"] button:active {
 }
 
 /* Icon definitions */
-section[data-type="sidebar"] > header .icon {
-  padding-top: 1rem;
-  background: none;
+section[data-type="sidebar"] > header {
+  display: none;
 }
 
-section[data-type="sidebar"] > header .icon:before {
-  margin-left: -1.5rem;
-}
-
-section[data-type="sidebar"]:after {
-  width: 0.1rem;
-  background: #003144;
-}
-
-/*
 section[data-type="sidebar"] > nav > h2 {
-  font-weight: bold;
+  background: none;
   font-size: 1.4rem;
-  line-height: 3.3rem;
-  text-indent: 3rem;
-  color: #fff;
-  background: url(drawer/images/ui/pattern_subheader.png) repeat left top;
-  border-bottom: 0.1rem solid #596068;
-  margin: 0;
-  padding-right: 0.8rem;
+  height: 4.5rem;
+  line-height: 6rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-bottom: 0.1rem solid rgba(0,0,0,0.1);
+  color: rgba(255,255,255,0.5);
 }
-
+/*
 section[data-type="sidebar"] [role="toolbar"] {
   position: absolute;
 }
@@ -82,22 +63,35 @@ section[data-type="sidebar"] > nav > ul > li {
   transition: background 0.2s ease;
 }
 
-section[data-type="sidebar"] > nav > ul > li:active {
-  background: #00ABCC;
+*/
+section[data-type="sidebar"] > nav > ul > li:active,
+section[data-type="sidebar"] > nav > ul > li.active {
+  background: rgba(0,0,0,0.3);
 }
 
 section[data-type="sidebar"] > nav > ul > li > a {
   text-decoration: none;
   color: #fff;
-  font-size: 1.6rem;
-  line-height: 4.35rem;
-  border-bottom: 0.1rem solid #596068;
+  font-size: 1.8rem;
+  font-weight: normal;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  border-bottom: 0.1rem solid rgba(0,0,0,0.05);
   text-indent: 3rem;
   padding-right: 0.8rem;
   width: 100%;
+  color: rgba(255,255,255,0.8);
   -moz-box-sizing: border-box;
   display: block;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-}*/
+}
+
+section[data-type="sidebar"] > nav > ul > li:last-child > a {
+  border-bottom: none;
+}
+
+section[data-type="sidebar"] > nav > ul > li.active a {
+  color: rgba(255,255,255,1);
+}
