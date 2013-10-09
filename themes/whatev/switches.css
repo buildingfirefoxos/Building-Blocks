@@ -28,36 +28,63 @@ label.pack-radio input + span {
   position: absolute;
   left: 50%;
   top: 50%;
-  margin: -1.1rem 0 0 -1.1rem;
-  width: 2.2rem;
-  height: 2.2rem;
+  margin: -1rem 0 0 -1rem;
+  width: 2rem;
+  height: 2rem;
   pointer-events: none;
-}
-
-label.pack-checkbox input + span {
-  background: url(switches/images/check/default.png) no-repeat center top / 2.2rem auto;
+  -moz-box-sizing: border-box;
+  border: 0.2rem solid #00caf2;
+  background: #fff;
 }
 
 label.pack-radio input + span {
-  background: url(switches/images/radio/default.png) no-repeat center top / 2.2rem auto;
+  margin: -1.1rem 0 0 -1.1rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 1.1rem;
 }
 
-label.pack-checkbox input:checked + span,
-label.pack-radio input:checked + span,
-label.pack-switch input:checked + span {
-  background-position: center bottom;
+label.pack-checkbox input + span {
+  border-radius: 0.4rem;
+}
+
+label.pack-checkbox input:checked + span {
+  background: #00caf2;
+}
+
+label.pack-checkbox input + span:before {
+  top: -0.6rem;
+  left: -0.8rem;
+}
+
+label.pack-radio input + span:before {
+  position: absolute;
+  content: "";
+  top: 0.4rem;
+  left: 0.4rem;
+  right: 0.4rem;
+  bottom: 0.4rem;
+  background: #fff;
+  border-radius: 0.5rem;
+}
+
+label.pack-radio input:checked + span:before {
+  background: #00caf2;
 }
 
 /* 'Dangerous' switches */
-
-label.pack-checkbox.danger input + span {
-  background-image: url(switches/images/check/danger.png);
-}
-
+label.pack-checkbox.danger input + span,
 label.pack-radio.danger input + span {
-  background-image: url(switches/images/radio/danger.png);
+  border-color: #b91800;
 }
 
+label.pack-checkbox.danger input:checked + span {
+  background: #b91800;
+}
+
+label.pack-radio.danger input:checked + span:before {
+  background: #b91800;
+}
 
 /* ----------------------------------
  * ON/OFF SWITCHES
@@ -67,24 +94,27 @@ label.pack-switch input + span {
   position: absolute;
   left: 50%;
   top: 50%;
-  margin: -1.1rem 0 0 -2.7rem;
-  width: 5.1rem;
-  height: 2.1rem;
+  margin: -1rem 0 0 -1.9rem;
+  width: 3.8rem;
+  height: 2rem;
   pointer-events: none;
-  border-radius: 1.2rem;
-  border: 0.1rem solid #c2c2c2;
+  border-radius: 1.1rem;
+  border: 0.1rem solid #dfdfdf;
   overflow: hidden;
-  background: #e6e6e6 url(switches/images/switch/background_off.png) no-repeat -3.2rem 0 / 8.3rem 2.1rem;
+  background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNjBweCIgaGVpZ2h0PSIxOHB4IiB2aWV3Qm94PSIwIDAgNjAgMTgiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxyZWN0IHg9IjMwIiBmaWxsPSIjRUNFQUU5IiB3aWR0aD0iMzAiIGhlaWdodD0iMTgiLz48cmVjdCB4PSIwIiBmaWxsPSIjRjI2NzM5IiB3aWR0aD0iMzAiIGhlaWdodD0iMTgiLz48Y2lyY2xlIGZpbGw9IiNFQ0VBRTkiIGN4PSIzMCIgY3k9IjkiIHI9IjkuNSIvPjxjaXJjbGUgZmlsbD0iI0ZGRkZGRiIgc3Ryb2tlPSIjOTk5OTk5IiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIGN4PSIzMCIgY3k9IjkiIHI9IjguNSIvPjwvc3ZnPg==) no-repeat -2.1rem 0 / 6rem 1.8rem;
   transition: background 0.2s ease, border 0.2s ease;
+  -moz-box-sizing: border-box;
 }
 
 /* switch: 'ON' state */
 label.pack-switch input:checked + span {
-  background: #e6e6e6 url(switches/images/switch/background.png) no-repeat 0 0 / 8.3rem 2.1rem;
-  border-color: #00abcd;
+  background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNjBweCIgaGVpZ2h0PSIxOHB4IiB2aWV3Qm94PSIwIDAgNjAgMTgiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxyZWN0IHg9IjMwIiBmaWxsPSIjRUNFQUU5IiB3aWR0aD0iMzAiIGhlaWdodD0iMTgiLz48cmVjdCBmaWxsPSIjRjI2NzM5IiB3aWR0aD0iMzAiIGhlaWdodD0iMTgiLz48Y2lyY2xlIGZpbGw9IiNGMjY3MzkiIGN4PSIzMCIgY3k9IjkiIHI9IjkuNSIvPjxjaXJjbGUgZmlsbD0iI0ZGRkZGRiIgc3Ryb2tlPSIjNjg2ODY4IiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIGN4PSIzMCIgY3k9IjkiIHI9IjguNSIvPjwvc3ZnPg==) no-repeat -0.3rem 0 / 6rem 1.8rem;
+  border-color: #f26739;
 }
 
-/* switch: disabled state */
+/* disabled state */
+label.pack-checkbox input:disabled + span,
+label.pack-radio input:disabled + span,
 label.pack-switch input:disabled + span {
   opacity: 0.4;
 }

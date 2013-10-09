@@ -73,8 +73,8 @@ button.theme-A,
 
 button.theme-B,
 [role="button"].theme-B,
-.theme-C button,
-.theme-C [role="button"] {
+.theme-B button,
+.theme-B [role="button"] {
   background: #FF6633;
 }
 
