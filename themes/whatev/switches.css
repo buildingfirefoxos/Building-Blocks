@@ -52,9 +52,17 @@ label.pack-checkbox input:checked + span {
   background: #00caf2;
 }
 
-label.pack-checkbox input + span:before {
+label.pack-checkbox input:checked + span:before {
   top: -0.6rem;
   left: -0.8rem;
+  position: absolute;
+  content: "d";
+  width: 2rem;
+  font-size: 3rem;
+  height: 2rem;
+  color: #fff;
+  font-family: "whatev";
+  -moz-osx-font-smoothing: grayscale;
 }
 
 label.pack-radio input + span:before {
