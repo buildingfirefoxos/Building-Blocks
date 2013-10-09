@@ -6,9 +6,7 @@
   <title>Drawer</title>
   <meta name="description" content="Hidden menu options triggered by the menu button in the header">
 
-  <link rel="stylesheet" href="../../style/headers.css">
   <link rel="stylesheet" href="headers.css">
-  <link rel="stylesheet" href="../../style_unstable/drawer.css">
   <link rel="stylesheet" href="buttons.css">
   <link rel="stylesheet" href="toolbars.css">
   <link rel="stylesheet" href="drawer.css">
@@ -58,7 +56,7 @@
 
 <body role="application">
 
-  <section data-type="sidebar">
+  <section data-type="sidebar" class="has-toolbar">
     <nav>
       <ul>
         <li><a href="#">label</a></li>
@@ -74,6 +72,7 @@
         <li><a href="#">label</a></li>
       </ul>
     </nav>
+
     <div role="toolbar">
       <ul>
         <li><button>Log out</button></li>
@@ -84,8 +83,8 @@
 
   <section id="drawer" role="region">
     <header>
-      <a href="#"><span class="icon icon-menu">hide sidebar</span></a>
-      <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
+      <a href="#" class="icon icon-menu">hide sidebar</a>
+      <a href="#drawer" class="icon icon-menu">show sidebar</a>
       <h1>Inbox</h1>
     </header>
     <div role="main"></div>

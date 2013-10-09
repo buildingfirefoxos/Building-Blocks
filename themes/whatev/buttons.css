@@ -89,7 +89,7 @@ button.theme-D,
 [role="button"].theme-D,
 .theme-D button,
 .theme-D [role="button"] {
-  background: #fff;
+  background: transparent;
   color: #666;
 }
 
@@ -97,7 +97,6 @@ button.theme-D:before,
 [role="button"].theme-D:before,
 .theme-D button:before,
 .theme-D [role="button"]:before {
-  background: #fff;
   color: #666;
 }
 

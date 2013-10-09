@@ -15,13 +15,12 @@ textarea {
   width: 100%;
   height: 4rem;
   resize: none;
-  padding: 0 1.2rem;
-  font-size: 1.8rem;
+  padding: 0 1rem;
+  font-size: 2rem;
   line-height: 4rem;
-  border: 0.1rem solid #ccc;
-  border-radius: 0.3rem;
+  border: 0.1rem solid #bdc3c7;
   box-shadow: none; /* override the box-shadow from the system (performance issue) */
-  background: #fff url(input_areas/images/ui/shadow.png) repeat-x;
+  background: #fff;
 }
 
 textarea {
@@ -38,15 +37,20 @@ textarea:invalid {
   color: #b90000;
 }
 
-input::-moz-placeholder,
-textarea::-moz-placeholder {
-  color: #858585;
-  opacity: 1;
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="search"]:focus,
+input[type="url"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  border-color: #01bfd6;
 }
 
-input:-moz-placeholder,
-textarea:-moz-placeholder {
-  color: #858585;
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #bdc3c7;
   opacity: 1;
 }
 
@@ -74,10 +78,6 @@ form p textarea + button[type="reset"] {
   background: transparent url(input_areas/images/icons/clear.png) no-repeat 50% 50% / 1.7rem auto;
 }
 
-form.skin-dark p input + button[type="reset"],
-form.skin-dark p textarea + button[type="reset"] {
-  background-image: url(input_areas/images/icons/clear-dark.png);
-}
 
 /* To avoid colission with BB butons */
 li input + button[type="reset"]:after,
@@ -93,10 +93,6 @@ form p textarea + button[type="reset"] {
 
 textarea {
   padding: 1.2rem;
-}
-
-form p input:focus {
-  padding-right: 3rem;
 }
 
 form p input:focus + button[type="reset"],
@@ -178,80 +174,38 @@ fieldset section p:last-child {
 /* Tidy (search/submit) */
 form[role="search"] {
   position: relative;
-  height: 3.7rem;
-  background: #dbe3eb;
-}
-
-form[role="search"].skin-dark {
-  background: url(input_areas/images/ui/background-dark.png) repeat;
-  background-size: 2rem;
-}
-
-form[role="search"].bottom {
-  background: #fff;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  background: #eceae9;
+  border-bottom: 0.1rem solid #dfdfdf;
+  padding: 0;
 }
 
 form[role="search"]:before {
-  content: "";
+  content: "8";
+  font-family: "whatev";
+  font-size: 2.5rem;
   position: absolute;
-  top: 1rem;
-  left: 1rem;
-  height: 1.6rem;
-  width: 1.6rem;
-  background: url(input_areas/images/icons/search.png) no-repeat;
-  background-size: 1.6rem;
-}
-
-form[role="search"].bottom:before {
-  display: none;
-}
-
-form[role="search"].skin-dark:before {
-  background-image: url(input_areas/images/icons/search-dark.png);
-}
-
-form[role="search"]:after {
-  content: "";
-  position: absolute;
-  top: 3.6rem;
-  right: 0;
-  left: 0;
-  height: 0.4rem;
-  background: url(input_areas/images/ui/shadow-search.png) repeat-x left top;
-  border-top: 0.1rem solid #fff;
-}
-
-form[role="search"].bottom:after {
-  content: "";
-  position: absolute;
-  top: -0.4rem;
-  background: url(input_areas/images/ui/shadow-invert.png) repeat-x 0 100%;
-  border-color: transparent;
-}
-form[role="search"].skin-dark:after {
-  border-color: #2b3538;
-}
-
-section[role="region"] > header:first-child + form[role="search"]:after{
-  background: none;
+  top: 0;
+  left: 1.8rem;
+  height: 2rem;
+  width: 2rem;
+  color: #c2c1c1;
 }
 
 form[role="search"] p {
-  padding: 0.4rem 1.2rem 0 3.2rem;
+  padding: 0 1rem 0 4.5rem;
   overflow: hidden;
-}
-
-form[role="search"].bottom p {
-  padding: 0.4rem 1.2rem 0 1.2rem;
 }
 
 form[role="search"] p input,
 form[role="search"] p textarea {
-  height: 3rem;
+  height: 3.5rem;
+  line-height: 3.5rem;
   border: none;
   background: none;
-  font-size: 1.8rem;
-  padding: 0.5rem 0;
+  font-size: 1.6rem;
+  padding: 0;
 }
 
 form[role="search"] p input:focus {
@@ -261,27 +215,6 @@ form[role="search"] p input:focus {
 form[role="search"] p input:invalid, 
 form[role="search"] p textarea:invalid {
   border: none;
-}
-
-form[role="search"].skin-dark p input,
-form[role="search"].skin-dark p textarea {
-  color: #fff;
-}
-
-form[role="search"] button.icon {
-  float: left;
-  height: 3.7rem;
-  width: 3rem;
-  border: none;
-  font-size: 0;
-  background: url(input_areas/images/ui/separator.png) no-repeat 100% 50%,
-              url(input_areas/images/ui/background.png) repeat-x 0 100%;
-  background-size: auto 100%;
-  border-radius: 0;
-  margin: 0;
-  padding: 0;
-  margin: 0;
-  position: relative;
 }
 
 form[role="search"] button.icon:before {
@@ -300,31 +233,6 @@ form[role="search"] p button[type="reset"] {
 
 form[role="search"] button[type="submit"] {
   float: right;
-  min-width: 6rem;
-  height: 3.7rem;
-  padding: 0 1.5rem;
-  border: none;
-  color: #000;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 3.2rem;
-  background: url(input_areas/images/ui/separator.png) no-repeat 0 50%;
-  background-size: auto 100%;
-  border-radius: 0;
-  width: auto;
-  border-radius: 0;
-  margin: 0;
-}
-
-form[role="search"].bottom button[type="submit"] {
-  color: #333;
-  background: url(input_areas/images/ui/separator.png) no-repeat 0 50%,
-              url(input_areas/images/ui/active.png) repeat-x 0 100%;
-}
-
-form[role="search"].skin-dark button[type="submit"] {
-  color: #fff;
-  background-image: url(input_areas/images/ui/separator-dark.png);
 }
 
 form[role="search"] button[type="submit"] + p > textarea {
@@ -333,37 +241,15 @@ form[role="search"] button[type="submit"] + p > textarea {
   font-size: 1.8rem;
 }
 
-form[role="search"] button[type="submit"] + p button {
-  height: 3.7rem;
-}
-
 form[role="search"].full button[type="submit"] {
   display: none;
-}
-
-form[role="search"] button.icon:active,
-form[role="search"] button[type="submit"]:active {
-  background: #008caa;
-  text-shadow: 0.1rem 0.1rem 0 rgba(255,255,255,.3);
-}
-
-form[role="search"] button[type="submit"][disabled] {
-  color: #adadad;
-  background: url(input_areas/images/ui/separator.png) no-repeat 0 50%,
-              url(input_areas/images/ui/background.png) repeat-x 0 100%;
-}
-
-form p button[type="reset"]:focus,
-form p button[type="reset"]::-moz-focus-inner {
-  border: none;
-  outline: none;
 }
 
 /******************************************************************************
  * Right-to-Left layout
  */
 
-html[dir="rtl"] form p input:valid,
+/*html[dir="rtl"] form p input:valid,
 html[dir="rtl"] form p input:valid:focus {
   padding: 0 1.2rem 0 3rem;
 }
@@ -392,4 +278,4 @@ html[dir="rtl"] form[role="search"] p input:focus {
 
 html[dir="rtl"] form[role="search"] button[type="submit"] + p > button {
   left: 0;
-}
+}*/
