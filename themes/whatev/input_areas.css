@@ -63,19 +63,41 @@ form p + p {
   margin-top: 1rem;
 }
 
+form p input:focus {
+  padding: 0 3rem 0 1rem;
+}
+
 form p input + button[type="reset"],
 form p textarea + button[type="reset"] {
   position: absolute;
   top: 50%;
-  right: 0;
-  width: 3rem;
-  height: 4rem;
+  right: 1rem;
+  width: 1.6rem;
+  min-width: 1.6rem;
+  height: 1.6rem;
   padding: 0;
   border: none;
   font-size: 0;
   opacity: 0;
+  margin: -0.8rem 0 0 0;
   pointer-events: none;
-  background: transparent url(input_areas/images/icons/clear.png) no-repeat 50% 50% / 1.7rem auto;
+  border-radius: 1.5rem;
+  background: #939393;
+}
+
+form p input + button[type="reset"]:before,
+form p textarea + button[type="reset"]:before {
+  top: -0.2rem;
+  left: -0.7rem;
+  position: absolute;
+  content: "f";
+  width: 2rem;
+  font-size: 3rem;
+  height: 2rem;
+  line-height: 2rem;
+  color: #fff;
+  font-family: "whatev";
+  -moz-osx-font-smoothing: grayscale;
 }
 
 
@@ -83,12 +105,6 @@ form p textarea + button[type="reset"] {
 li input + button[type="reset"]:after,
 li textarea + button[type="reset"]:after {
   background: none;
-}
-
-form p input + button[type="reset"],
-form p textarea + button[type="reset"] {
-  top: 0;
-  margin: 0;
 }
 
 textarea {
@@ -107,11 +123,10 @@ fieldset {
   overflow: hidden;
   margin: 0;
   padding: 0;
-  border-radius: 0.3rem;
   border: 0.1rem solid rgba(0,0,0,.2);
   font-size: 1.8rem;
   line-height: 1em;
-  background: #fff url(input_areas/images/ui/shadow.png) repeat-x left top;
+  background: #fff;
 }
 
 fieldset  + fieldset {
@@ -130,10 +145,6 @@ fieldset legend {
   color: #333;
   line-height: 4rem;
   text-transform: uppercase;
-}
-
-fieldset legend.action {
-  background: url(input_areas/images/icons/arrow.png) no-repeat 100% 100% / 1.2rem;
 }
 
 fieldset legend:active {
@@ -194,7 +205,7 @@ form[role="search"]:before {
 }
 
 form[role="search"] p {
-  padding: 0 1rem 0 4.5rem;
+  margin: 0 1rem 0 4.5rem;
   overflow: hidden;
 }
 
