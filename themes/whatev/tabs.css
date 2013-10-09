@@ -1,14 +1,54 @@
 /* ----------------------------------
 * Tabs
 * ---------------------------------- */
+[role="tablist"] {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+[role="tablist"] > [role="tab"] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+/* Items calcs */
+[role="tablist"][data-items="2"] > [role="tab"] {
+  width: 50%;
+}
+
+[role="tablist"][data-items="3"] > [role="tab"] {
+  width: 33.33%;
+}
+
+[role="tablist"][data-items="4"] > [role="tab"] {
+  width: 25%;
+}
+
+[role="tablist"][data-items="5"] > [role="tab"] {
+  width: 20%;
+}
 
 [role="tablist"] > [role="tab"] > a {
+  text-decoration: none;
+  text-align: center;
+  float: left;
+  width: 100%;
+  position: relative;
   background: #eceae9;
   border-bottom: 1px solid #dfdfdf;
   color: #a5a5a0;
   font-size: 1.4rem;
   height: 3.9rem;
   line-height: 3.9rem;
+}
+
+[role="tablist"] > [role="tab"] > a.icon {
+  font-size: 0;
 }
 
 [role="tablist"] > [role="tab"] > a.icon:before {
@@ -30,6 +70,7 @@
   color: #003144;
 }
 
+/* Disabled state */
 [role="tablist"] > [role="tab"][aria-disabled="true"] > a,
 [role="tablist"] > [role="tab"][aria-disabled="true"] > a:before {
   pointer-events: none;
@@ -46,12 +87,29 @@
   color: #003144;
 }
 
-/* Disabled state */
-[role="tablist"] > [role="tab"][aria-disabled="true"] > a {
-  pointer-events: none;
+[role="tablist"] [role="tabpanel"] {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  visibility: hidden;
+  width: 100%;
+  height: calc(100% - 4rem);
+  z-index: 10;
+  display: block;
+  overflow: auto;
+}
+
+[role="tablist"] :target [role="tabpanel"],
+[role="tablist"] [aria-selected="true"] [role="tabpanel"] {
+  z-index: 1;
+  visibility: visible;
 }
 
 /* Position bottom */
+[role="tablist"].bottom > [role="tab"] {
+  height: 100%;
+}
+
 [role="tablist"].bottom  > [role="tab"] > a {
   position: relative;
   height: 3.9rem;
@@ -60,13 +118,22 @@
   border-bottom: none;
 }
 
+[role="tablist"].bottom [role="tabpanel"] {
+  top: 0;
+}
+
 /* ----------------------------------
  * Filters
  * ---------------------------------- */
 
 [role="tablist"][data-type="filter"] {
-  margin-top: -0.4rem;
-  background: transparent;
+  display: inline-block;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: -0.4rem 0 0 0;
+  position: relative;
+  height: 4rem;
 }
 
 [role="tablist"][data-type="filter"] > [role="tab"] {
