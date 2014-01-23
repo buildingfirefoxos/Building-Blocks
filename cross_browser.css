@@ -152,13 +152,13 @@ section[data-type="sidebar"] > header menu[type="toolbar"] button {
 }
 
 section[data-type="sidebar"] > header {
-  background: url(style_unstable/drawer/images/ui/header.png) repeat-x left bottom;
+  background: url(style/drawer/images/ui/header.png) repeat-x left bottom;
   background-size: 100% auto;
 }
 
 section[data-type="sidebar"] > header menu[type="toolbar"] a:last-child,
 section[data-type="sidebar"] > header menu[type="toolbar"] button:last-child {
-  background: url(style_unstable/drawer/images/ui/separator.png) no-repeat left center;
+  background: url(style/drawer/images/ui/separator.png) no-repeat left center;
   background-size: auto 3.1rem;
 }
 
@@ -194,7 +194,7 @@ progress[value]::-webkit-progress-value {
 }
 
 progress[value].pack-activity::-webkit-progress-bar {
-  background-image: url(style_unstable/progress_activity/images/ui/activity.png);
+  background-image: url(style/progress_activity/images/ui/activity.png);
   -webkit-animation: 0.5s move infinite steps(15);
 }
 
@@ -226,7 +226,7 @@ div[role="slider"] progress::-webkit-progress-value {
 div[role="slider"] button {
   -moz-transition: border 0.15s ease;
   -webkit-transition: border 0.15s ease;
-  background: url(style_unstable/seekbars/images/ui/handler.png) no-repeat center;
+  background: url(style/seekbars/images/ui/handler.png) no-repeat center;
   background-size: 2.8rem auto;
 }
 
