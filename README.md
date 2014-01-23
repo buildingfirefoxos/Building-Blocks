@@ -3,9 +3,6 @@ Building-Blocks
 
 Reusable components for Firefox OS
 
-'style' and 'style_unstable' folders contain all Building Blocks from [gaia's repo](https://github.com/mozilla-b2g/gaia).
-Feel free to use them, although we are using the word 'unstable' :) 
-
 
 Cross brower support
 -----------------------
@@ -17,9 +14,9 @@ Install
 
 1. You can git clone the code from github `https://github.com/buildingfirefoxos/Building-Blocks.git`
 
-2. Or if you have bower installed, run command:
+2. Or if you have bower installed ([http://bower.io/](http://bower.io/)), run command:
 
-  $ bower install building-blocks
+  `$ bower install building-blocks`
 
 to download the building-blocks
 
