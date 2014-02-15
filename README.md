@@ -8,7 +8,6 @@ The code you will find here could be useful to anyone interested in creating a F
 You can find more information on how to use Building Blocks in [buildingfirefoxos.com](buildingfirefoxos.com).
 All examples showed there are also available inside "style" forlder, but in a more friendly manner.
 
-This repo is maintained by [@rnowm](https://github.com/rnowm). Feel free to add your suggestions in issues section.
 
 Cross brower support
 -----------------------
@@ -22,3 +21,11 @@ Install
 1. You can git clone the code from github `https://github.com/buildingfirefoxos/Building-Blocks.git`
 
 2. Or if you have bower installed ([http://bower.io/](http://bower.io/)), run command: `$ bower install building-blocks`
+
+
+Contact a human
+------------------
+
+This repo is maintained by [@rnowm](https://github.com/rnowm). Feel free to add your suggestions in issues section.
+
+In case you want to discuss why Firefox OS Building Blocks are coded like that and propose improvements, you should write to [Gaia's mailing list](dev-gaia@lists.mozilla.org). 
