@@ -23,6 +23,7 @@ body {
 
 section[role="region"] {
   height: 100%;
+  background: #fff;
 }
 
 section[role="region"] > header.fixed:first-child {
@@ -44,48 +45,25 @@ section[role="region"] > header.fixed:first-child {
 }
 
 /* Setting proper paddings and margins */
-section[role="region"] > .content {
-  padding: 0 3rem 1.5rem 3rem;
-  background: #fff;
-}
-
-section[role="region"] > .content header h2 {
-  margin: 3rem -3rem 1.5rem -3rem;
-}
-
-section[role="region"] > .content header:first-child h2 {
-  margin-top: 0;
-}
-
 /* This should be fixed in lists BB */
-section[role="region"] > .content [data-type="list"] {
-  margin: 0 -3rem;
+[data-type="list"] {
+  padding: 0;
 }
 
-section[role="region"] > .content [data-type="list"] li > p {
+[data-type="list"] ul {
+  padding: 0 1.5rem;
+  overflow: auto;
+}
+
+[data-type="list"] header {
   margin: 0 1.5rem;
 }
 
-section[role="region"] > .content [data-type="list"] li > a {
-  margin: 0 1.5rem;
+[data-type="list"] li p,
+[data-type="list"] li p:first-of-type {
+  padding-left: 1.5rem;
 }
 
-section[role="region"] > .content [data-type="list"] li > a:after {
-  left: -1.5rem;
-  right: -1.5rem;
-}
-
-section[role="region"] > .content [data-type="list"] header {
-  padding: 0.5rem 1.5rem;
-}
-
-section[role="region"] > .content [data-type="list"] li > a > aside:not(.pack-end) {
-  margin-left: -1.5rem;
-}
-
-[aria-disabled="true"] {
-  pointer-events: none;  
-}
 
 /* Fonts */
 h1 { /* Main header */
