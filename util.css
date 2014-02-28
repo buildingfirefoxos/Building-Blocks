@@ -46,7 +46,14 @@ section[role="region"] > header.fixed:first-child {
 }
 
 /* Setting proper paddings and margins */
-/* This should be fixed in lists BB */
+.paddings {
+  padding: 1.5rem;
+}
+
+.center {
+  text-align: center;
+}
+
 [data-type="list"] {
   padding: 0;
 }

@@ -14,7 +14,7 @@ form[role="dialog"][data-type="confirm"] {
   background-size: auto, 100%;
 }
 
-form[role="dialog"][data-type="action"] > header:first-child, 
+form[role="dialog"][data-type="action"] > header:first-child,
 form[role="dialog"][data-type="object"] > header:first-child {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -145,10 +145,10 @@ section[role="region"]:target {
   height: 100%;
 }
 
-section[data-type="sidebar"] > header menu[type="toolbar"] a, 
+section[data-type="sidebar"] > header menu[type="toolbar"] a,
 section[data-type="sidebar"] > header menu[type="toolbar"] button {
   box-sizing: border-box;
-  -webkit-box-sizing: border-box; 
+  -webkit-box-sizing: border-box;
 }
 
 section[data-type="sidebar"] > header {
@@ -169,7 +169,7 @@ section[data-type="sidebar"] > header .icon {
 
 section[data-type="sidebar"] > nav > ul > li > a {
   box-sizing: border-box;
-  -webkit-box-sizing: border-box; 
+  -webkit-box-sizing: border-box;
 }
 
 /* Progress and activity */
@@ -254,22 +254,16 @@ div[role="slider"] > label:first-of-type {
   top: 100%;
 }
 
-/* Filters */
-[role="tablist"][data-type="filter"] > [role="tab"] {
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-
 /* Collision: This should be added to Gaia */
 /* Switches and List buttons */
-ul.compact li label:not([for]), 
+ul.compact li label:not([for]),
 ol.compact li label:not([for]) {
   height: auto;
   width: auto;
 }
 
 /* Missing in BB */
-section[data-type="sidebar"] > header a, 
+section[data-type="sidebar"] > header a,
 section[data-type="sidebar"] > header button {
   font-weight: normal;
   text-decoration: none;

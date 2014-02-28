@@ -29,13 +29,13 @@
 
   <!-- Transitions -->
   <link rel="stylesheet" href="transitions.css">
-  
+
   <!-- Util CSS: some extra tricks -->
   <link rel="stylesheet" href="util.css">
   <link rel="stylesheet" href="fonts.css">
 
   <!-- Additional markup to make Building Blocks kind of cross browser -->
-  <link rel="stylesheet" href="cross_browser.css">
+  <!--link rel="stylesheet" href="cross_browser.css"-->
 
   <style>
     #index {
@@ -127,7 +127,7 @@
 
     /* Lists */
     /* to avoid double background effect on press */
-    [data-type=list] li>a:active { 
+    [data-type=list] li>a:active {
       background-color: transparent;
     }
 
@@ -138,14 +138,14 @@
       z-index: 0;
       padding-left: 0;
     }
-    section[data-type="sidebar"] + section[role="region"] > header:first-child > button, 
+    section[data-type="sidebar"] + section[role="region"] > header:first-child > button,
     section[data-type="sidebar"] + section[role="region"] > header:first-child > a {
       background-position: 3.5rem center;
     }
 
     /* Switches */
     #switches label:last-child {
-      margin-left: 2rem;  
+      margin-left: 2rem;
     }
 
     /* Scrolling */
@@ -161,7 +161,7 @@
       background: no-repeat right top;
       background-size: 3rem auto;
     }
-    
+
     /* Tabs */
     #tabs .content {
       padding: 0;
@@ -169,14 +169,19 @@
     #tabs .content .content {
       padding: 1.5rem 3rem;
     }
+    #panel1 a {
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAABaCAYAAACv+ebYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpDM0IyRDEwMTRCQ0ExMUUzOEI3MkZFOEM1MTY1MUU0NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpDM0IyRDEwMjRCQ0ExMUUzOEI3MkZFOEM1MTY1MUU0NSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkMzQjJEMEZGNEJDQTExRTM4QjcyRkU4QzUxNjUxRTQ1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkMzQjJEMTAwNEJDQTExRTM4QjcyRkU4QzUxNjUxRTQ1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+RALCTwAAAgdJREFUeNrsmLFKA0EQhnNeULhOwSIQrAQFraI2FkKsBLGSdIakClj4BNa+gQhWSayUlBYWKQSLYEBtYsRCEAKKYKGgiKQ5Z2ACR7jd7N5NFGQGfoJzs/vlbjdz6+/4vp/4ixhJ/FEIWMACZotkWNJxHO2gQqHgwcc0/fkA+tLVVyoVMzBMrJpjHLSHJSCPcgitgnZBb7HuWBGToAvQbF8ev8A2KAtaAb1yr/F+CDQYeO2Ae3OlQTmDuk2qZQMv454zqHOolg3sWSyJxwluWYBbnOAbUNugrk21bGA8ppRAXU1Nl2p87p9TA7QG6oRc69C1xjAaCMY5aAa0AZqn3C3oFPQdu1cPCATUSEN9OyVp7XC35jV1W3T3JZMbGgSeAjVBh/Roywo4QvEVNEe1TRobCYyt7xKUCeTcEHieoG4gl6Gx6ShrfARKheR78F6U+6C9SNEcqzbgRXrNqSIIdzV1WZrryvRRLxlsOncAVDuXCjzGeLwatQF/MII/bcBPjOBnG/AdI/jeBoxN/4UBinM82jaQOgO4HqVzHTOAT6J0rjPQREzwu/JUKB6IgAUsYAELWMAC/vUIPfoUi0XtoOr6jpWJ6ucWzI4+Tu1aNUckEzUMLCaqzh0QEzVWrZioyh6QEBNVTFQxUcVENXzUYqLGCTFRtWAxUaOGmKjyb6qABfyPwD8CDADIZJaymr3BjwAAAABJRU5ErkJggg==);
+    }
+    #panel2 a {
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAABaCAYAAACv+ebYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5NjZEOTM1MTRCQ0UxMUUzOEI3MkZFOEM1MTY1MUU0NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5NjZEOTM1MjRCQ0UxMUUzOEI3MkZFOEM1MTY1MUU0NSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjlEMUREOTkyNEJDQjExRTM4QjcyRkU4QzUxNjUxRTQ1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjk2NkQ5MzUwNEJDRTExRTM4QjcyRkU4QzUxNjUxRTQ1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+XJ6+IQAAA0pJREFUeNrsmF1IVEEUx+fqwmoRRS9FREUf9lSs9lBERNSjRBB9PAQtGZWla+ZDH/QQ9VAQ9GVqIaH1YFRgRAW99BAUBVFa9BBREhm9FIVGUQm5/Q+eibvj3L0zd3e1jznwY53r7Px35p6Ze+7fS6fTYjSiSIxSOGEn7IT/fuGY53k5DZBMJuP42AjOAeNjMIYv0mcpOAJ2gwFL7RLQCirADlNxudQnwU7QBqIuQTVoMf1+DCwFW7i9AbwF+wL6HwArlWvFivggqDERPqH8yr2gF5zR9C8HC0LGpOU+Ct6ECc/WXD8NPoMO5Xo3mKqZccLXbgwTlcK3wWrNYG08wD3f9YOMP8aDPv67CdSbJldHwP8ou99ZJFczqLPJ6psBAofAa4MxvoMqkFJEPU7aeJDwACeDGg8MZ/oDtGtEW3h/l2Tbx62a2ZVH3M9StDosueRypXjZZdTxfRu0FG5WRO+An0qfG8WJxO+d8BLMAfO5PRF8BA8tRKdpknUymKLQrz6dapU9SOf3XAvhXt7H/ngCHit0x5ROfbyn74IxYCwv/2LwwVC8nnOnltvLaIYmz+MusNmXpXSy3QKTDIXTnB9NUQqBS/y0kkHn831QZilexYlrVYHQeb3f154JHoFtmu9RUi3UiLfzPrcufQ4rx+A4cBY853u4iO/pM942a4wrEIM+NPP3/OtL+VoZX1fjMmgAp/JV7NGAS3i7hI1H1cyxsErEpsrs4sPlokHfBk7QeL7K234uj1aBnpC+68DxfNfV18E8sCvLM/s82FOIgv4b389ZnM1XwSfwFCwHm8CXXLLa5HncyRTx1gutQjzngThhJ+yEnbATdsJO+P8R9tjLjBwXKlORTFRPXKH3sJxMVOlz0TuVM1GzLjV5EhXKdVoynYl6jV9fwmKG+FNNVJpxpxhuogpOshUi00TNllyCfQ8jP9OZqP74N01UeXJRVIpME/WVGLITbU1UEt3ua5OlONxEFWu3ysaImqj+GVNM4F84ndtfxZCr98JCvJETLeuMVWHBp5g0UeWS25ioHh9ANb7JjJiJmhLORLUsfQpmouqSSxfrRaaJGhS0552Jmpfy1pmokU1U06y2eTNxJqoTdsJOuLDxS4ABAHTFDfqZk4Q5AAAAAElFTkSuQmCC);
+    }
+    #panel3 a {
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAABQCAYAAAAOYsW+AAAA30lEQVRo3u2YMQrCQBBFv95ICXqTtDmJKfQk01olED2DiugF1MImjXqBWNisEIZVFIKFvFftzmdnt3kwrAQAAB/S84Usy0aS1q68N7NhyKeSJi6fmVke8p2kgcvHZrZpF/qRx1witesX+e2TnrGLz5IaVzu9WD85ttYHlzWh5/uLzewuqXQHF639SlLd2teh9mTpHl6GnoDHePxbjwt3sPrC48o9vMBjPMZjPAYAAACAjuZqzbfRuVppMgx5dK5WmuQhj87VShPmakeadP7PFXoCHuMxHgMe4zEeA8C/8ABPaein4jLEkQAAAABJRU5ErkJggg==);
+    }
 
     /* Filters */
     [role="tablist"][data-type="filter"] {
       margin-bottom: 2rem;
-    }
-
-    .bottom[role="tablist"][data-type="filter"] {
-      bottom: auto;
     }
 
     /* Device rotation */
@@ -552,7 +557,7 @@
     </header>
     <article class="content scrollable header">
       <header><h2>Default inputs</h2></header>
-      <form>
+      <form class="paddings">
         <p>
           <input type="text" placeholder="Placeholder" required>
           <button type="reset">Clear</button>
@@ -569,7 +574,7 @@
       </form>
 
       <header><h2>Fieldset</h2></header>
-       <form>
+      <form class="paddings">
         <fieldset>
           <legend class="action">Mobile</legend>
           <section>
@@ -643,7 +648,7 @@
         <p>
           <textarea required>Some text here</textarea>
         </p>
-      </form> 
+      </form>
     </article>
   </section>
 
@@ -655,57 +660,64 @@
     </header>
     <article class="content scrollable header">
       <header><h2>Checkbox, commonly used in edit mode</h2></header>
-      <label class="pack-checkbox">
-        <input type="checkbox" checked>
-        <span></span>
-      </label>
+      <div class="paddings">
+        <label class="pack-checkbox">
+          <input type="checkbox" checked>
+          <span></span>
+        </label>
 
-      <label class="pack-checkbox">
-        <input type="checkbox">
-        <span></span>
-      </label>
+        <label class="pack-checkbox">
+          <input type="checkbox">
+          <span></span>
+        </label>
 
-      <label class="pack-checkbox danger">
-        <input type="checkbox" checked>
-        <span></span>
-      </label>
+        <label class="pack-checkbox danger">
+          <input type="checkbox" checked>
+          <span></span>
+        </label>
 
-      <label class="pack-checkbox danger">
-        <input type="checkbox">
-        <span></span>
-      </label>
+        <label class="pack-checkbox danger">
+          <input type="checkbox">
+          <span></span>
+        </label>
+      </div>
 
       <header><h2>Radio, commonly used in settings</h2></header>
-      <label class="pack-radio">
-        <input type="radio" name="example" checked>
-        <span></span>
-      </label>
+      <div class="paddings">
+        <label class="pack-radio">
+          <input type="radio" name="example" checked>
+          <span></span>
+        </label>
 
-      <label class="pack-radio">
-        <input type="radio" name="example">
-        <span></span>
-      </label>
+        <label class="pack-radio">
+          <input type="radio" name="example">
+          <span></span>
+        </label>
 
-      <label class="pack-radio danger">
-        <input type="radio" name="example2" checked>
-        <span></span>
-      </label>
+        <label class="pack-radio danger">
+          <input type="radio" name="example2" checked>
+          <span></span>
+        </label>
 
-      <label class="pack-radio danger">
-        <input type="radio" name="example2">
-        <span></span>
-      </label>
+        <label class="pack-radio danger">
+          <input type="radio" name="example2">
+          <span></span>
+        </label>
+      </div>
 
       <header><h2>Switch, commonly used in settings</h2></header>
-      <label class="pack-switch">
-        <input type="checkbox" checked>
-        <span></span>
-      </label>
-      
-      <label class="pack-switch">
-        <input type="checkbox">
-        <span></span>
-      </label>
+      <div class="paddings">
+         <label class="pack-switch">
+          <input type="checkbox" checked>
+          <span></span>
+        </label>
+
+        <label class="pack-switch">
+          <input type="checkbox">
+          <span></span>
+        </label>
+      </div>
+
     </article>
   </section>
 
@@ -774,19 +786,29 @@
     </header>
     <article class="content scrollable header">
       <header><h2>Spinner</h2></header>
-      <progress></progress>
+      <div class="paddings center">
+        <progress></progress>
+      </div>
 
       <header><h2>Activity bar</h2></header>
-      <progress class="pack-activity" value="0" max="100"></progress>
+      <div class="paddings">
+        <progress class="pack-activity" value="0" max="100"></progress>
+      </div>
 
       <header><h2>Progress bar</h2></header>
-      <progress value="80" max="100"></progress>
+      <div class="paddings">
+        <progress value="80" max="100"></progress>
+      </div>
 
       <header><h2>Progress + activity bar</h2></header>
-      <progress class="pack-activity" value="80" max="100"></progress>
+      <div class="paddings">
+        <progress class="pack-activity" value="80" max="100"></progress>
+      </div>
 
       <header><h2>Light progress + activity bar</h2></header>
-      <progress class="pack-activity light" value="0" max="100"></progress>
+      <div class="paddings">
+        <progress class="pack-activity light" value="0" max="100"></progress>
+      </div>
     </article>
   </section>
 
@@ -843,7 +865,7 @@
       </header>
       <article class="content scrollable header">
         <header><h2>Default seeker</h2></header>
-        <div role="slider" aria-valuemin="0" aria-valuenow="80" aria-valuemax="100" aria-valuetext="slider description">
+        <div class="paddings" role="slider" aria-valuemin="0" aria-valuenow="80" aria-valuemax="100" aria-valuetext="slider description">
           <div>
             <progress value="80" max="100"></progress>
             <button>handler</button>
@@ -851,7 +873,7 @@
         </div>
 
         <header><h2>Value seeker</h2></header>
-        <div role="slider" aria-valuemin="0" aria-valuenow="80" aria-valuemax="100" aria-valuetext="slider description">
+        <div class="paddings" role="slider" aria-valuemin="0" aria-valuenow="80" aria-valuemax="100" aria-valuetext="slider description">
           <label>0</label>
           <label>100</label>
           <div>
@@ -861,7 +883,7 @@
         </div>
 
         <header><h2>Icon seeker</h2></header>
-        <div role="slider" aria-valuemin="0" aria-valuenow="10" aria-valuemax="100" aria-valuetext="slider description">
+        <div class="paddings" role="slider" aria-valuemin="0" aria-valuenow="10" aria-valuemax="100" aria-valuetext="slider description">
           <label class="icon settings-icon lower-brightness">0</label>
           <label class="icon settings-icon brightness">100</label>
           <div>
@@ -882,16 +904,16 @@
       </header>
       <article class="content scrollable header">
         <ul role="tablist" data-items="4" class="bottom">
-          <li id="panel2" role="tab">
-            <a href="#" class="icon comms-icon dailer-recentcalls">comms</a>
+          <li id="panel1" role="tab">
+            <a href="#" class="icon">comms</a>
             <div role="tabpanel"></div>
           </li>
           <li id="panel2" role="tab">
-            <a href="#" class="icon comms-icon dailer-contacts">contacts</a>
+            <a href="#" class="icon">contacts</a>
             <div role="tabpanel"></div>
           </li>
           <li id="panel3" role="tab" aria-disabled="true">
-            <a class="icon comms-icon dailer-dialpad">dialer</a>
+            <a class="icon">dialer</a>
             <div role="tabpanel"></div>
           </li>
           <li id="panel4" role="tab">
@@ -911,28 +933,25 @@
         <h1>Filters</h1>
       </header>
       <article class="content scrollable header">
-        <header><h2>Default position</h2></header>
-        <ul role="tablist" data-type="filter" data-items="2">
-          <li id="filter1-1" role="tab"><a href="#">Action 01</a></li>
-          <li id="filter1-2" role="tab"><a href="#">Action 02</a></li>
+        <header><h2>Default filters</h2></header>
+        <ul role="tablist" data-type="filter">
+          <li id="filter1-1" role="tab"><a href="#filter1-1">Action 01</a></li>
+          <li id="filter1-2" role="tab"><a href="#filter1-2">Action 02</a></li>
         </ul>
-        <ul role="tablist" data-type="filter" data-items="3">
-          <li id="filter2-1" role="tab"><a href="#">Action 01</a></li>
-          <li id="filter2-2" role="tab"><a href="#">Action 02</a></li>
-          <li id="filter2-3" role="tab"><a href="#">Action 02</a></li>
+        <ul role="tablist" data-type="filter" class="skin-grey">
+          <li id="filter2-1" role="tab"><a href="#filter2-1">Action 01</a></li>
+          <li id="filter2-2" role="tab"><a href="#filter2-2">Action 02</a></li>
+          <li id="filter2-3" role="tab"><a href="#filter2-3">Action 02</a></li>
         </ul>
-        <ul role="tablist" data-type="filter" data-items="4">
-          <li id="filter3-1" role="tab"><a href="#">Action 01</a></li>
-          <li id="filter3-2" role="tab"><a href="#">Action 02</a></li>
-          <li id="filter3-3" role="tab"><a href="#">Action 03</a></li>
-          <li id="filter3-4" role="tab"><a href="#">Action 04</a></li>
+        <header><h2>Grey theme</h2></header>
+        <ul role="tablist" data-type="filter" class="bottom">
+          <li id="filter-bottom1-1" role="tab"><a href="#filter-bottom1-1">Action 01</a></li>
+          <li id="filter-bottom1-2" role="tab"><a href="#filter-bottom1-2">Action 02</a></li>
         </ul>
-        <header><h2>Bottom position</h2></header>
-        <ul role="tablist" data-type="filter" class="bottom" data-items="4">
-          <li id="filter4-1" role="tab"><a href="#">Action 01</a></li>
-          <li id="filter4-2" role="tab"><a href="#">Action 02</a></li>
-          <li id="filter4-3" role="tab"><a href="#">Action 03</a></li>
-          <li id="filter4-4" role="tab"><a href="#">Action 04</a></li>
+        <ul role="tablist" data-type="filter" class="skin-grey bottom">
+          <li id="filter-bottom2-1" role="tab"><a href="#filter-bottom2-1">Action 01</a></li>
+          <li id="filter-bottom2-2" role="tab"><a href="#filter-bottom2-2">Action 02</a></li>
+          <li id="filter-bottom2-3" role="tab"><a href="#filter-bottom2-3">Action 02</a></li>
         </ul>
       </article>
     </section>
@@ -969,7 +988,7 @@
   <script>
     /*var mobile = (navigator.userAgent.search("Mobile") != -1);
     if ( mobile ) {
-      //Let's reduce font-size when in landscape  
+      //Let's reduce font-size when in landscape
       //fs: current font-size
       var fs = parseInt(window.getComputedStyle(document.documentElement).getPropertyValue( 'font-size' ), 10);
       var mql = window.matchMedia("(orientation: portrait)");
@@ -996,4 +1015,3 @@
   </script>
 </body>
 </html>
-
