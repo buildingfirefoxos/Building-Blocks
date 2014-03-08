@@ -1,8 +1,8 @@
 {
   "name": "Building Blocks",
   "package_path": "http://buildingfirefoxos.github.io/Building-Blocks/package/package.zip",
-  "size": 1586262,
-  "version": "1.1",
+  "size": 514247,
+  "version": "1.2",
   "icons": {
     "128": "/images/app_icon_128.png",
     "60": "/images/app_icon_60.png"
