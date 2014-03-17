@@ -110,7 +110,16 @@
       opacity: 1;
     }
 
+    /* Active state */
+    .active {
+      background-color: #b2f2ff;
+      color: #fff;
+    }
+
     /* Headers */
+    #headers .content {
+      margin-top: -1.5rem;
+    }
     #headers section[role="region"] {
       margin-bottom: 1.5rem;
     }
@@ -143,7 +152,10 @@
     }
 
     /* Switches */
-    #switches label:last-child {
+    #switches div:last-child label:last-child {
+      margin-left: 2rem;
+    }
+    #switches div:last-child {
       margin-left: 2rem;
     }
 
@@ -219,7 +231,7 @@
         <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
         <h1>Building Blocks <em>demo</em></h1>
       </header>
-      <article class="content scrollable header">
+      <article class="content no-margins scrollable header">
         <div data-type="list">
           <ul>
             <li>
@@ -322,7 +334,7 @@
   </section>
 
   <!--···························· Buttons ····························-->
-  <section role="region" id="buttons" data-position="right">
+  <section class="skin-dark" role="region" id="buttons" data-position="right">
     <header class="fixed">
       <a id="btn-buttons-back" href="#"><span class="icon icon-back">back</span></a>
       <h1>Buttons</h1>
@@ -525,26 +537,24 @@
         </header>
       </section>
 
-      <div class="skin-organic">
-        <section role="region">
-          <header>
-            <h1>Settings</h1>
-          </header>
-          <header>
-            <h2>Subheader text</h2>
-          </header>
-        </section>
+      <section class="skin-organic" role="region">
+        <header>
+          <h1>Settings</h1>
+        </header>
+        <header>
+          <h2>Subheader text</h2>
+        </header>
+      </section>
 
-        <section role="region">
-          <header>
-            <a href="#"><span class="icon icon-close">close</span></a>
-            <h1>Settings</h1>
-          </header>
-          <header>
-            <h2>Subheader text</h2>
-          </header>
-        </section>
-      </div>
+      <section class="skin-organic" role="region">
+        <header>
+          <a href="#"><span class="icon icon-close">close</span></a>
+          <h1>Settings</h1>
+        </header>
+        <header>
+          <h2>Subheader text</h2>
+        </header>
+      </section>
     </article>
   </section>
 
@@ -556,7 +566,7 @@
     </header>
     <article class="content scrollable header">
       <header><h2>Default inputs</h2></header>
-      <form class="paddings">
+      <form>
         <p>
           <input type="text" placeholder="Placeholder" required>
           <button type="reset">Clear</button>
@@ -573,7 +583,7 @@
       </form>
 
       <header><h2>Fieldset</h2></header>
-      <form class="paddings">
+      <form>
         <fieldset>
           <legend class="action">Mobile</legend>
           <section>
@@ -659,7 +669,7 @@
     </header>
     <article class="content scrollable header">
       <header><h2>Checkbox, commonly used in edit mode</h2></header>
-      <div class="paddings">
+      <div>
         <label class="pack-checkbox">
           <input type="checkbox" checked>
           <span></span>
@@ -682,7 +692,7 @@
       </div>
 
       <header><h2>Radio, commonly used in settings</h2></header>
-      <div class="paddings">
+      <div>
         <label class="pack-radio">
           <input type="radio" name="example" checked>
           <span></span>
@@ -705,7 +715,7 @@
       </div>
 
       <header><h2>Switch, commonly used in settings</h2></header>
-      <div class="paddings">
+      <div>
          <label class="pack-switch">
           <input type="checkbox" checked>
           <span></span>
@@ -785,27 +795,27 @@
     </header>
     <article class="content scrollable header">
       <header><h2>Spinner</h2></header>
-      <div class="paddings center">
+      <div class="center">
         <progress></progress>
       </div>
 
       <header><h2>Activity bar</h2></header>
-      <div class="paddings">
+      <div>
         <progress class="pack-activity" value="0" max="100"></progress>
       </div>
 
       <header><h2>Progress bar</h2></header>
-      <div class="paddings">
+      <div>
         <progress value="80" max="100"></progress>
       </div>
 
       <header><h2>Progress + activity bar</h2></header>
-      <div class="paddings">
+      <div>
         <progress class="pack-activity" value="80" max="100"></progress>
       </div>
 
       <header><h2>Light progress + activity bar</h2></header>
-      <div class="paddings">
+      <div>
         <progress class="pack-activity light" value="0" max="100"></progress>
       </div>
     </article>
@@ -864,7 +874,7 @@
       </header>
       <article class="content scrollable header">
         <header><h2>Default seeker</h2></header>
-        <div class="paddings" role="slider" aria-valuemin="0" aria-valuenow="80" aria-valuemax="100" aria-valuetext="slider description">
+        <div role="slider" aria-valuemin="0" aria-valuenow="80" aria-valuemax="100" aria-valuetext="slider description">
           <div>
             <progress value="80" max="100"></progress>
             <button>handler</button>
@@ -872,7 +882,7 @@
         </div>
 
         <header><h2>Value seeker</h2></header>
-        <div class="paddings" role="slider" aria-valuemin="0" aria-valuenow="80" aria-valuemax="100" aria-valuetext="slider description">
+        <div role="slider" aria-valuemin="0" aria-valuenow="80" aria-valuemax="100" aria-valuetext="slider description">
           <label>0</label>
           <label>100</label>
           <div>
@@ -882,7 +892,7 @@
         </div>
 
         <header><h2>Icon seeker</h2></header>
-        <div class="paddings" role="slider" aria-valuemin="0" aria-valuenow="10" aria-valuemax="100" aria-valuetext="slider description">
+        <div role="slider" aria-valuemin="0" aria-valuenow="10" aria-valuemax="100" aria-valuetext="slider description">
           <label class="icon settings-icon lower-brightness">0</label>
           <label class="icon settings-icon brightness">100</label>
           <div>
@@ -984,33 +994,5 @@
   <script type="text/javascript" defer src="js/seekbars.js"></script>
   <script type="text/javascript" defer src="js/app.js"></script>
 
-  <script>
-    /*var mobile = (navigator.userAgent.search("Mobile") != -1);
-    if ( mobile ) {
-      //Let's reduce font-size when in landscape
-      //fs: current font-size
-      var fs = parseInt(window.getComputedStyle(document.documentElement).getPropertyValue( 'font-size' ), 10);
-      var mql = window.matchMedia("(orientation: portrait)");
-
-      if(mql.matches) { //portrait
-        document.documentElement.style.fontSize = fs + 'px';
-        document.body.classList.remove('landscape');
-      } else { // landscape
-        document.documentElement.style.fontSize = fs * 0.7 + 'px';
-        document.body.classList.add('landscape');
-      }
-
-      mql.addListener(function(m) {
-        if(m.matches) { //portrait
-          document.documentElement.style.fontSize = fs + 'px';
-          document.body.classList.remove('landscape');
-        }
-        else { //landscape
-          document.documentElement.style.fontSize = fs * 0.7 + 'px';
-          document.body.classList.add('landscape');
-        }
-      });
-    }*/
-  </script>
 </body>
 </html>

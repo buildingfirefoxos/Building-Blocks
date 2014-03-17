@@ -47,8 +47,20 @@ section[role="region"] > header.fixed:first-child {
 }
 
 /* Setting proper paddings and margins */
-.paddings {
+.content {
   padding: 1.5rem;
+}
+
+.content.no-margins {
+  padding: 0;
+}
+
+section[role="region"] .content header {
+  margin: 1.5rem -1.5rem;
+}
+
+section[role="region"] .content header:first-child {
+  margin-top: -1.5rem;
 }
 
 .center {
@@ -126,3 +138,7 @@ ul, ol, li {
   font-weight: normal;
   line-height: 2.5rem;
 }
+
+/* Themes */
+.skin-dark { background: #000; }
+.skin-organic { background: #f4f4f4; }
