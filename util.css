@@ -51,16 +51,16 @@ section[role="region"] > header.fixed:first-child {
   padding: 1.5rem;
 }
 
-.content.no-margins {
-  padding: 0;
-}
-
 section[role="region"] .content header {
   margin: 1.5rem -1.5rem;
 }
 
 section[role="region"] .content header:first-child {
   margin-top: -1.5rem;
+}
+
+.content [data-type="list"] {
+  margin: -1.5rem;
 }
 
 .center {
@@ -76,7 +76,7 @@ section[role="region"] .content header:first-child {
   overflow: auto;
 }
 
-[data-type="list"] header {
+section[role="region"] .content [data-type="list"] header {
   margin: 0 1.5rem;
 }
 
