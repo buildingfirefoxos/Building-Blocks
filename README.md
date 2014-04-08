@@ -5,7 +5,7 @@ Reusable components for Firefox OS.
 The main folder in this repo "style" is fetched from [Gaia](https://github.com/mozilla-b2g/gaia) once a day.
 The code you will find here could be useful to anyone interested in creating a Firefox OS application and use the look and feel of core applications in the OS, without having to clone the complete Gaia repo.
 
-You can find more information on how to use Building Blocks in [buildingfirefoxos.com](buildingfirefoxos.com).
+You can find more information on how to use Building Blocks in [buildingfirefoxos.com](http://www.buildingfirefoxos.com).
 All examples showed there are also available inside "style" forlder, but in a more friendly manner.
 
 
