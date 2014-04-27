@@ -9,7 +9,7 @@ You can find more information on how to use Building Blocks in [buildingfirefoxo
 All examples showed there are also available inside "style" forlder, but in a more friendly manner.
 
 
-Cross brower support
+Cross browser support
 -----------------------
 Include `cross_browser.css` if you want your webapp can run on any modern browser.
 Please test your app in your target browsers, as "style" folder is pulled automatically from the original source, if some styles changes before we have the change to update this file, we cannot guarantee it will always work as expected.
