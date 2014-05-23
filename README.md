@@ -2,6 +2,9 @@ Building-Blocks
 ===============
 
 Reusable components for Firefox OS.
+
+[![Bower version](https://badge.fury.io/bo/building-blocks.svg)](http://badge.fury.io/bo/building-blocks)
+
 The main folder in this repo "style" is fetched from [Gaia](https://github.com/mozilla-b2g/gaia) once a day.
 The code you will find here could be useful to anyone interested in creating a Firefox OS application and use the look and feel of core applications in the OS, without having to clone the complete Gaia repo.
 
