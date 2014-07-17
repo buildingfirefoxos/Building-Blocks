@@ -31,4 +31,4 @@ Contact a human
 
 This repo is maintained by [@rnowm](https://github.com/rnowm). Feel free to add your suggestions in issues section.
 
-In case you want to discuss why Firefox OS Building Blocks are coded like that and propose improvements, you should write to [Gaia's mailing list](dev-gaia@lists.mozilla.org). 
+In case you want to discuss why Firefox OS Building Blocks are coded like that and propose improvements, you should write to [Gaia's mailing list](mailto:dev-gaia@lists.mozilla.org). 
