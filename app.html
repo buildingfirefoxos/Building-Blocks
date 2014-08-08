@@ -414,7 +414,7 @@
     </article>
   </section>
 
-  <!--·························· Action menu ··························-->
+  <!--···························· Confirm ····························-->
   <section id="confirm" data-position="back" class="fullscreen">
     <form role="dialog" data-type="confirm">
       <section>
@@ -431,20 +431,20 @@
   <!--·························· Edit mode ··························-->
   <section id="edit-mode" data-position="edit-mode">
     <form role="dialog" data-type="edit">
-    <section>
-      <header>
-        <button><span class="icon icon-close">close</span></button>
-        <menu type="toolbar">
-          <button>done</button>
-        </menu>
-        <h1>Edit</h1>
-      </header>
-    </section>
-    <menu>
-      <button>Delete all</button>
-      <button>Delete selected</button>
-    </menu>
-  </form>
+      <section role="region">
+        <header>
+          <button><span class="icon icon-close">close</span></button>
+          <menu type="toolbar">
+            <button>done</button>
+          </menu>
+          <h1>Edit</h1>
+        </header>
+      </section>
+      <menu>
+        <button disabled>Deselect all</button>
+        <button>Select all</button>
+      </menu>
+    </form>
   </section>
 
   <!--··························· Headers ···························-->
