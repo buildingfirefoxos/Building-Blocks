@@ -1,0 +1,121 @@
+/* ----------------------------------
+ * Progress + activities
+ * ---------------------------------- */
+
+/* Spinner */
+progress:not([value]) {
+  background: url(progress_activity/images/ui/default.png) no-repeat center center / 100% auto;
+  animation: 0.9s rotate infinite steps(30);
+  width: 2.9rem;
+  height: 2.9rem;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+progress:not([value]).light {
+  background-image: url(progress_activity/images/ui/light.png);
+}
+
+progress:not([value])::-moz-progress-bar {
+ background: none;
+}
+
+/* Progress bar */
+progress[value] {
+  width: 100%;
+  background: #333;
+  border: none;
+  border-radius: 0;
+  height: 0.4rem;
+  display: block;
+}
+
+progress[value]::-moz-progress-bar {
+  background: #01c5ed;
+  border-radius: 0;
+}
+
+/* Progress bar */
+progress[value].pack-activity {
+  background-size: 15rem;
+}
+html[dir="ltr"] progress[value].pack-activity {
+  animation: 1.5s move-right steps(15) infinite;
+  background-image: repeating-linear-gradient(135deg, #92F4FE, #92F4FE 5rem, #00CDF0 5rem, #00CDF0 10rem);
+}
+html[dir="rtl"] progress[value].pack-activity {
+  animation: 1.5s move-left steps(15) infinite;
+  background-image: repeating-linear-gradient(-135deg, #92F4FE, #92F4FE 5rem, #00CDF0 5rem, #00CDF0 10rem);
+}
+
+/* Labels */
+p[role="status"] {
+  padding: 0.5rem;
+  font-weight: 300;
+  font-size: 2.25rem;
+  line-height: 1.4em;
+  color: #fff;
+}
+
+p[role="status"] progress:not([value]) {
+  margin-inline-end: 0.5rem;
+}
+
+p[role="status"] progress:not([value]) + span {
+  margin-bottom: 0;
+}
+
+p[role="status"] span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0.5rem;
+}
+
+/* Progress steps */
+.bb-steps {
+  position: relative;
+  height: 0.3rem;
+}
+html[dir="ltr"] .bb-steps { transform: scaleX(1); }
+html[dir="rtl"] .bb-steps { transform: scaleX(-1); }
+
+.bb-steps:before {
+  position: absolute;
+  content: "";
+  height: 0;
+  left: 0;
+  top: 0.1rem;
+  right: 0;
+  border-top: 0.1rem solid #b7b7b7;
+  border-bottom: 0.1rem solid #fff;
+}
+
+.bb-steps progress[value] {
+  position: absolute;
+  height: 0.3rem;
+  left: 0;
+  top: 0;
+  background: #858585;
+  transition: transform 0.35s cubic-bezier(0, 1, 0.5, 1.1);
+}
+
+.bb-steps progress[value]::-moz-progress-bar {
+  background: none;
+}
+
+/* Animations */
+@keyframes rotate {
+  from { transform: rotate(1deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes move-right {
+  from { background-position: -15rem 0; }
+  to   { background-position: 0 0; }
+}
+
+@keyframes move-left {
+  from { background-position: 0 0; }
+  to   { background-position: -15rem 0; }
+}

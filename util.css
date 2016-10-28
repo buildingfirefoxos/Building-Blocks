@@ -15,6 +15,7 @@ body {
   height: 100%;
   display: block;
   overflow: hidden;
+  font-family: sans-serif;
 }
 
 .hidden {
@@ -23,6 +24,7 @@ body {
 
 section[role="region"] {
   height: 100%;
+  background: #fff;
 }
 
 section[role="region"] > header.fixed:first-child {
@@ -31,7 +33,7 @@ section[role="region"] > header.fixed:first-child {
 }
 
 .scrollable {
-  overflow: scroll;
+  overflow: auto;
   height: 100%;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -40,52 +42,49 @@ section[role="region"] > header.fixed:first-child {
 }
 
 .scrollable.header {
-  border-top: transparent solid 5rem;
+  height: calc(100% - 5rem);
+  top: 5rem;
 }
 
 /* Setting proper paddings and margins */
-section[role="region"] > .content {
-  padding: 0 3rem 1.5rem 3rem;
-  background: #fff;
+.content {
+  padding: 1.5rem;
 }
 
-section[role="region"] > .content header h2 {
-  margin: 3rem -3rem 1.5rem -3rem;
+section[role="region"] .content header {
+  margin: 1.5rem -1.5rem;
 }
 
-section[role="region"] > .content header:first-child h2 {
-  margin-top: 0;
+section[role="region"] .content header:first-child {
+  margin-top: -1.5rem;
 }
 
-/* This should be fixed in lists BB */
-section[role="region"] > .content [data-type="list"] {
-  margin: 0 -3rem;
+.content [data-type="list"] {
+  margin: -1.5rem;
 }
 
-section[role="region"] > .content [data-type="list"] li > p {
+.center {
+  text-align: center;
+}
+
+[data-type="list"] {
+  padding: 0;
+}
+
+[data-type="list"] ul {
+  padding: 0 1.5rem;
+  overflow: auto;
+}
+
+section[role="region"] .content [data-type="list"] header {
   margin: 0 1.5rem;
 }
 
-section[role="region"] > .content [data-type="list"] li > a {
-  margin: 0 1.5rem;
+[data-type="list"] li p,
+[data-type="list"] li p:first-of-type {
+  padding-left: 1.5rem;
 }
 
-section[role="region"] > .content [data-type="list"] li > a:after {
-  left: -1.5rem;
-  right: -1.5rem;
-}
-
-section[role="region"] > .content [data-type="list"] header {
-  padding: 0.5rem 1.5rem;
-}
-
-section[role="region"] > .content [data-type="list"] li > a > aside:not(.pack-end) {
-  margin-left: -1.5rem;
-}
-
-[aria-disabled="true"] {
-  pointer-events: none;  
-}
 
 /* Fonts */
 h1 { /* Main header */
@@ -139,3 +138,7 @@ ul, ol, li {
   font-weight: normal;
   line-height: 2.5rem;
 }
+
+/* Themes */
+.skin-dark { background: #000; }
+.skin-organic { background: #f4f4f4; }

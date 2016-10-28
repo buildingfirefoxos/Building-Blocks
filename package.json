@@ -1,0 +1,22 @@
+{
+  "name": "firefox-os-building-blocks",
+  "version": "2.0",
+  "description": "Building blocks for Firefox OS",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/buildingfirefoxos/Building-Blocks.git"
+  },
+  "keywords": [
+    "firefox",
+    "firefox os",
+    "building",
+    "blocks",
+    "css",
+    "framework"
+  ],
+  "license": "apache",
+  "bugs": {
+    "url": "https://github.com/buildingfirefoxos/Building-Blocks/issues"
+  },
+  "homepage": "http://buildingfirefoxos.com/"
+}
